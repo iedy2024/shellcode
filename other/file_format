@@ -1,0 +1,49 @@
+IN ASSEMBLY FILES:
+
+
+    Comment at the start with title, claimed_effect (optional), author
+
+    Commennt in between each line of code also sometimes explining what each line
+of assembly is from the finished line of code.
+Ex :
+    /*
+      soc_des = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+     */
+
+    mov %r0, $2     /* AF_INET */
+    mov %r1, $2     /* SOCK_DGRAM */
+    mov %r2, $17        /* IPPRTOTO_UDP */
+    push {%r0, %r1, %r2}
+    mov %r0, $1     /* socket */
+    mov %r1, %sp
+    svc 0x00900066
+    add %sp, %sp, $12
+
+    mov %r6, %r0        /* r6 = soc_des */
+
+    Varations:
+
+IN C FILES:
+
+    Large comment at the start with title, date, arhitecture, website, e-mail,
+author, hosts and a DISSASEMBLY of the .text
+
+    After that comes the C code, libs at the top, the shelcode is in a char*
+made entirly from hex. Some line have comment at the end with explinations.
+Lastly there is the main call where we fprintf the shellcode.
+
+    Varations:
+        There can be multiple versions based on how many nytes you want it on,
+    the other versions are in comment above the standard one.
+
+
+WARNING:
+    The comments are not written in the same format
+    Some start with /* ... */ and // others use ;
+    Comments with ; are also sorounded by ----- lines top and bottom
+    Not everything has dissademblies, its actually rare. The general dinamic is
+saying what the shellcode does at the start in some comment, then the instruction
+can be sometimes found before assembly code representing what line if code the
+assembly is equivalent to.
+    There are also some cases where there is not a lot of data. One comment at the
+start with a bit of info and thats it.
