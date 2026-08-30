@@ -35,7 +35,33 @@ def classify(path: Path) -> str:
     #    real \x array below. If asm ran first, return "asm" fires and these
     #    bytes are never read. The array declaration is the honest signal;
     #    a ;\x48 comment has no `char x[] =` in front of it, so it won't match.
-    if re.search(r'(unsigned\s+char|char)\s+(\w+\s*\[\s*\]|\*\s*\w+)\s*=\s*\\?\s*"', text):
+    #    Between `=` and the opening `"` we skip any run of: /* */ or // comments
+    #    and `\` line-continuations (the `char *SC = /* ... */ "\x.."` variant).
+    #    (?s) so a /* */ block comment can span newlines.
+    DECL = re.compile(r"""
+    (?s)                          # DOTALL: '.' also matches newlines
+                                  #   (so a multi-line /* */ comment is skipped whole)
+
+    (unsigned\s+char | char)      # the type:  'unsigned char'  or  'char'
+    \s+
+
+    (\w+\s*\[\s*\] | \*\s*\w+ )   # arry format: name[] OR *name
+
+    \s* = \s*                     # the '='  (whitespace either side)
+
+    (?:                           # then any run of "gap junk", zero or more times:
+        (?:
+              /\* .*? \*/         #   a  /* block comment */   (lazy: stops at first */)
+            | // [^\n]*           #   or a  // line comment   (to end of line)
+            | \\                  #   or a line-continuation backslash
+            | {                   #   or a stray '{'
+        )
+        \s*
+    )*
+
+    "                             # ...until the opening quote of the byte string
+""", re.VERBOSE)
+    if re.search(DECL, text):
         if re.search(r"\\x[0-9a-fA-F]{2}", text):
             return "hex"
         else:
@@ -56,7 +82,6 @@ def main(root: str) -> None:
         if ".git" in p.parts:
             continue
         bucket = classify(p)
-        print(f"{bucket:6} {p}")
         total[bucket] += 1
         if bucket == "other":
             others.append(p)
