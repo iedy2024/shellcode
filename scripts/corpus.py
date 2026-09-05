@@ -28,7 +28,7 @@ Usage:
 import argparse
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 # --- scope ------------------------------------------------------------------
@@ -175,6 +175,53 @@ def check_fresh(manifest: Path, generator: Path) -> str | None:
             f"Pass --allow-stale to select from it anyway.")
 
 
+def ensure_arch_coverage(selected, pool):
+    """
+    Guarantee both architectures appear whenever the pool holds both.
+
+    Per-category quotas cannot express a global invariant. At N == 12 every
+    category gets a single slot, and a slot can hold only one architecture, so
+    whichever rule decides that slot decides the whole corpus: spending every
+    one on the scarce architecture inverts the split (9 x86_64 to 3 x86), and
+    spending every one on the larger group erases the scarce architecture
+    entirely (12 x86, 0 x86_64). Both are wrong for the same reason -- the
+    harness has two code paths and the corpus has to exercise both.
+
+    So the split stays proportional by default and this pass repairs the
+    corner: if an architecture is missing outright, swap one selected record
+    for a pool record of the missing architecture, preferring a swap inside
+    the same category so category coverage is preserved. N and the per-category
+    counts are unchanged.
+    """
+    chosen = {r["path"] for r in selected}
+    for missing in ("x86_64", "x86"):
+        if any(r["arch"] == missing for r in selected):
+            continue
+        available = [x for x in pool if x["arch"] == missing]
+        if not available:
+            continue                      # pool genuinely has none; nothing to fix
+        for i, r in enumerate(selected):
+            same_cat = sorted(
+                (x for x in available
+                 if x["category"] == r["category"] and x["path"] not in chosen),
+                key=lambda x: (x["doc_ratio"], x["path"]))
+            if same_cat:
+                chosen.discard(r["path"])
+                selected[i] = same_cat[0]
+                chosen.add(same_cat[0]["path"])
+                break
+        else:
+            # No selected category has material in the missing architecture.
+            # Take the best available and displace a record from the largest
+            # category, which can most afford to lose one.
+            counts = Counter(r["category"] for r in selected)
+            victim = max(range(len(selected)),
+                         key=lambda i: counts[selected[i]["category"]])
+            best = sorted(available, key=lambda x: (x["doc_ratio"], x["path"]))[0]
+            selected[victim] = best
+    return selected
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", default="manifest.json")
@@ -250,11 +297,27 @@ def main():
                       key=lambda r: (r["doc_ratio"], r["path"]))
         rest = sorted((r for r in group if r["arch"] == "x86"),
                       key=lambda r: (r["doc_ratio"], r["path"]))
-        want_wide = min(len(wide), quota[c] // 2 or (1 if wide else 0))
-        want_rest = min(len(rest), quota[c] - want_wide)
-        want_wide = min(len(wide), quota[c] - want_rest)   # absorb any shortfall
+        q = quota[c]
+        if q == 0:
+            continue
+        if q == 1:
+            # One slot cannot hold both architectures. Take from whichever
+            # group is larger, preferring x86 on a tie. An earlier version
+            # always spent a single slot on x86_64 to guarantee the scarce
+            # architecture appeared, which inverted the global split: at
+            # N == 12 every category has a quota of 1, and the nine holding
+            # 64-bit material each yielded 64-bit only, giving 9 x86_64 to
+            # 3 x86 out of a pool that is roughly 90% x86.
+            want_wide = 1 if len(wide) > len(rest) else 0
+        else:
+            # At two slots or more, both architectures appear whenever the
+            # category has material for both.
+            want_wide = min(len(wide), q // 2)
+        want_rest = min(len(rest), q - want_wide)
+        want_wide = min(len(wide), q - want_rest)   # absorb any shortfall
         selected.extend(spread(wide, want_wide) + spread(rest, want_rest))
 
+    ensure_arch_coverage(selected, pool)
     selected.sort(key=lambda r: r["path"])          # deterministic on disk
     Path(args.out).write_text(json.dumps(selected, indent=2) + "\n")
 
