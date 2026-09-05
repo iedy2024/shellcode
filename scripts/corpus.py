@@ -128,6 +128,43 @@ def truncated(path: Path, bucket: str, length: int) -> bool:
     return found > 0 and length < found
 
 
+# Smallest payload that could possibly implement each effect. Only categories
+# where "too short to be real" is a matter of physics are listed: a socket
+# plus bind/listen/accept plus dup2 plus execve cannot fit in 20 bytes, and
+# neither can opening /etc/passwd and writing a line to it. Categories where
+# short really is legitimate are deliberately absent -- exit(0) is 3 bytes,
+# sys_sync is 6, and an egghunter is short by design because the payload it
+# searches for is not part of it.
+MIN_PLAUSIBLE = {
+    "bind_shell": 20,
+    "reverse_shell": 20,
+    "net_other": 20,
+    "add_user": 20,
+}
+
+
+def implausible(category: str, length: int) -> bool:
+    """
+    True if the payload is too short to be what it claims.
+
+    Catches extraction failures that the truncated() check cannot see because
+    they happen in the hex bucket, where the extractor reads a real (but
+    wrong) declaration rather than a partial one. The live example is
+    Linux/x86/connect_back&send;&exit;_-etc-shadow.c, which yields 2 bytes:
+    its file documents a `char shellcode[]="\x31\xdb"` snippet inside a `;`
+    asm comment, and comment stripping upstream only handles /* */ and //, so
+    the snippet is matched as the declaration.
+
+    A ratio test was tried first and rejected -- extracted-versus-present
+    ratios form a continuous distribution in which real egghunters (16%) sit
+    below real truncations (11%), so no threshold separates them. Absolute
+    floors reason about the payload instead of about the extractor, so they
+    do not misfire on payloads that are legitimately tiny.
+    """
+    floor = MIN_PLAUSIBLE.get(category)
+    return floor is not None and length < floor
+
+
 def spread(items, k):
     """Take k items evenly spaced across a sorted list, always including both ends."""
     if k >= len(items):
@@ -157,20 +194,23 @@ def main():
         if not r["supported"]:
             continue
         src = Path(args.root) / r["path"]
+        category = categorise(r["claimed_effect"])
         if truncated(src, r["bucket"], r["length"]):
-            excluded.append(r["path"])
+            excluded.append(("truncated", r["path"], r["length"]))
+            continue
+        if implausible(category, r["length"]):
+            excluded.append(("implausible", r["path"], r["length"]))
             continue
         pool.append({
             "path": r["path"],
             "os": r["os"],
             "arch": r["arch"],
             "claimed_effect": r["claimed_effect"],
-            "category": categorise(r["claimed_effect"]),
+            "category": category,
             "length": r["length"],
             "bytes": r["bytes"],
             "bucket": r["bucket"],
-            "doc_ratio": round(doc_ratio(Path(args.root) / r["path"]), 3),
-            "flags": [],
+            "doc_ratio": round(doc_ratio(src), 3),
         })
 
     # 2. select
@@ -216,10 +256,10 @@ def main():
 
     # summary
     if excluded:
-        print(f"EXCLUDED {len(excluded)} record(s) with truncated extraction "
-              f"(see truncated() -- upstream defect in manifest.py):")
-        for e in excluded:
-            print(f"  {e}")
+        print(f"EXCLUDED {len(excluded)} record(s) -- upstream extraction "
+              f"defects in manifest.py, see truncated() and implausible():")
+        for reason, path, length in sorted(excluded):
+            print(f"  {reason:12} {length:4}b  {path}")
         print()
     print(f"pool (in scope, bytes extracted): {len(pool)}")
     print(f"selected: {len(selected)} -> {args.out}\n")

