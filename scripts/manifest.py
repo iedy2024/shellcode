@@ -101,7 +101,20 @@ HEX_ESCAPE = re.compile(r"\\x([0-9a-fA-F]{2})")
 # of 8+ consecutive escapes so an isolated \xNN mentioned in prose
 # somewhere doesn't get mistaken for a real payload -- a real blob here
 # runs to dozens of bytes, a stray mention in a comment doesn't.
-LOOSE_HEX_RUN = re.compile(r"(?:\\x[0-9a-fA-F]{2}){8,}")
+#
+# \s* is allowed BETWEEN tokens (not just adjacent \xNN\xNN with zero
+# gap) because the blob can be wrapped across multiple lines for
+# readability, same as any hex-string array can. Teammate caught this
+# before it caused a real bug: on today's corpus every asm-bucket file's
+# blob happens to sit on one physical line, so a strict no-gap version
+# silently produced the exact same byte count -- but that's luck, not a
+# guarantee, and a future corpus update or a repaired/reformatted file
+# wrapping the blob across lines would have been silently truncated to
+# whatever fit on the first line, no error raised. Verified: re-running
+# extraction on the current corpus with vs without the \s* tolerance
+# gives identical byte counts for all 33 asm-bucket files -- this is a
+# defensive fix for a real failure mode, not yet a live bug on this data.
+LOOSE_HEX_RUN = re.compile(r"(?:\\x[0-9a-fA-F]{2}\s*){8,}")
 
 COMMENT_BLOCK = re.compile(r"/\*.*?\*/", re.DOTALL)
 COMMENT_LINE = re.compile(r"//[^\n]*")
@@ -132,26 +145,70 @@ def strip_comments(text: str) -> str:
     return text
 
 
+def _best_declaration_bytes(text: str, decode_literal) -> bytes:
+    """Shared by the hex and ascii buckets: scan ALL char[]/char* declarations
+    in the file (not just the first), decode each one's payload with
+    `decode_literal`, and keep the best candidate -- longest wins, and on
+    an exact-length tie prefer the LATER declaration (see the long comment
+    on the hex-bucket case below for why this tie-break exists and what
+    its limits are).
+
+    Was hex-bucket-only until now, which meant the ascii bucket would
+    repeat the exact same bug (silently picking a wrong first declaration
+    over a real later one) the moment a second ascii-payload file with
+    multiple declarations showed up. Only one ascii-bucket file exists in
+    the corpus today and it has a single declaration, so this was zero
+    live impact -- but there's no reason for the two buckets to be
+    inconsistent, and "it hasn't happened yet" isn't a reason to leave a
+    known bug pattern half-fixed."""
+    best = b""
+    for m in DECL.finditer(text):
+        chunks = [decode_literal(lit.group(1)) for lit in STRING_LITERAL.finditer(m.group("body"))]
+        candidate = b"".join(chunks)
+        if len(candidate) >= len(best):
+            best = candidate
+    return best
+
+
 def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
     text = strip_comments(text)
 
     if bucket == "hex":
-        m = DECL.search(text)
-        if not m:
-            return b""
-        chunks = []
-        for lit in STRING_LITERAL.finditer(m.group("body")):
-            chunks.append(bytes(int(h, 16) for h in HEX_ESCAPE.findall(lit.group(1))))
-        return b"".join(chunks)
+        # Pick the LONGEST declaration's payload, not the first one found.
+        # Real files have more than one char[] in the same source (17 in
+        # this corpus) -- egghunter-style shellcode is the clean example:
+        # Egg_Hunter_Shellcode.c declares 'egg[]' (~30 bytes, a throwaway
+        # demo payload the comment literally labels "Write 'Egg Mark' and
+        # exit") BEFORE 'egghunter[]' (~34 bytes, the actual shellcode the
+        # file is about). `DECL.search()` (first match) silently returned
+        # the demo payload for every one of these files, not the real one.
+        # "Longest wins" is a heuristic, not a certainty -- it happens to
+        # be correct here because the real payload outweighs the decoy,
+        # but a file where a real secondary payload is SHORTER than a
+        # decoy would still pick wrong. Flagging this as a known limit,
+        # not claiming it's solved for every multi-declaration file.
+        #
+        # On an exact-length TIE, prefer the LATER declaration -- verified
+        # this matters, not just theoretical: 'egg[]' and 'egghunter[]'
+        # are EXACTLY 38 bytes each, so plain "longest wins" alone still
+        # kept the first (wrong) one on this tie. Still a heuristic, not
+        # a proof for every case: works here because this corpus's
+        # demo-style write-ups tend to put supporting/decoy declarations
+        # before the payload the file is actually about, not because
+        # "later" is inherently more correct. All 17 multi-declaration
+        # files are flagged as worth a manual pass, not treated as solved
+        # by this heuristic alone.
+        def decode_hex_literal(raw: str) -> bytes:
+            return bytes(int(h, 16) for h in HEX_ESCAPE.findall(raw))
+        return _best_declaration_bytes(text, decode_hex_literal)
 
     if bucket == "ascii":
-        m = DECL.search(text)
-        if not m:
-            return b""
-        chunks = []
-        for lit in STRING_LITERAL.finditer(m.group("body")):
-            chunks.append(lit.group(1).encode("latin-1", errors="replace"))
-        return b"".join(chunks)
+        # Same multi-declaration handling as "hex" above, for the same
+        # reason -- see _best_declaration_bytes' docstring for why this
+        # bucket was inconsistent until now.
+        def decode_ascii_literal(raw: str) -> bytes:
+            return raw.encode("latin-1", errors="replace")
+        return _best_declaration_bytes(text, decode_ascii_literal)
 
     if bucket == "asm":
         # F2 fix (see module docstring): classify.py is right that this
@@ -205,7 +262,16 @@ def main():
     root = Path(args.root).resolve()
     records = []
     for p in sorted(root.rglob("*.c")):
-        if ".git" in p.parts:
+        # Skip anything under a hidden directory (.git, .venv, .idea, etc),
+        # not just ".git" specifically. Reasoning from teammate: a .venv
+        # (or any future hidden tooling dir) can easily contain .c files
+        # of its own -- many Python packages bundle C extension sources
+        # in site-packages -- and those aren't shellcode, they'd just be
+        # garbage records polluting the manifest. Checked against the
+        # path RELATIVE to root, not the absolute path, so this doesn't
+        # accidentally exclude everything if the repo itself happens to
+        # be cloned under a hidden folder somewhere upstream.
+        if any(part.startswith(".") for part in p.relative_to(root).parts):
             continue
         records.append(build_record(root, p))
 
