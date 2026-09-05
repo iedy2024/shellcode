@@ -116,8 +116,63 @@ HEX_ESCAPE = re.compile(r"\\x([0-9a-fA-F]{2})")
 # defensive fix for a real failure mode, not yet a live bug on this data.
 LOOSE_HEX_RUN = re.compile(r"(?:\\x[0-9a-fA-F]{2}\s*){8,}")
 
+# THIRD distinct pattern, found while chasing the semicolon fix (not the
+# same bug, a different one that happened to surface at the same time):
+# Osx/x86-64/reverse_tcp_shellcode.c has a bare ';shellcode =' label (no
+# 'char' keyword at all -- DECL never matches) followed by QUOTED chunks
+# joined with a trailing '+' per line, Perl/Python-concatenation style,
+# not C-adjacency style:
+#     ;"\x41\xB0\x02..." +
+#     ;"\x31\xD2\x48..." +
+#     ...
+# After LEADING_SEMICOLON strips the ';', a '+' still sits between each
+# closing quote and the next line's opening quote -- not whitespace, so
+# it broke DECL's body-continuation the same way an un-stripped ';' or a
+# comment did in the other two cases. This file's own header comment
+# states the real length ("131 bytes"), which is what this fallback was
+# verified against, not just "produces something plausible".
+QUOTED_RUN_WITH_PLUS = re.compile(
+    r'(?:"(?:\\.|[^"\\])*"\s*\+?\s*){2,}'
+)
+
 COMMENT_BLOCK = re.compile(r"/\*.*?\*/", re.DOTALL)
 COMMENT_LINE = re.compile(r"//[^\n]*")
+
+# NASM/assembly-style line comments (';' to end of line). Two DIFFERENT
+# situations need two DIFFERENT treatments -- conflating them was the bug:
+#
+# 1. A real inline comment explaining an instruction
+#    (`mov al, 113  ;syscall sys_setreuid`) -- the ';' and everything
+#    after it on that line is genuinely just prose, strip it entirely,
+#    same as a C '//' comment.
+#
+# 2. A documentation block where EVERY line of a real C-style hex-string
+#    declaration is individually prefixed with ';' -- found on
+#    Linux/x86-64/add_user_with_passwd.c:
+#        ;char shellcode[] =
+#        ;   "\x48\x31\xc0\x48\x31\xdb..."
+#        ;   "\xc0\xb0\x72\x48\x31\xdb..."
+#    Stripping ';' to end-of-line here would delete the exact bytes we're
+#    trying to recover -- the hex IS the content, not commentary about it.
+#    12 files in the corpus have this pattern (some with 60+ prefixed
+#    lines). manifest.py was extracting single-digit or teens-of-bytes
+#    fragments for all of them (confirmed: 2, 15, 14 bytes for payloads
+#    that are clearly much longer) because the leading ';' on each
+#    continuation line broke the multi-line run, same failure shape as
+#    the earlier F2 multi-line gap, just with a ';' in the way instead of
+#    nothing.
+#
+# Fix: strip ONLY a leading ';' (plus one optional following space) at
+# the START of a line, everywhere, BEFORE doing anything else. This
+# turns case 2's block back into a plain, normal-looking multi-line C
+# declaration that the existing DECL/STRING_LITERAL machinery already
+# handles correctly -- no new extraction path needed, just don't feed it
+# corrupted input. Case 1's inline comments are handled separately below
+# by COMMENT_LINE_SEMICOLON, which still strips ';' onward on lines
+# where it does NOT start the line (i.e. instruction ; comment stays
+# comment-stripped as before).
+LEADING_SEMICOLON = re.compile(r"(?m)^[ \t]*;[ \t]?")
+COMMENT_LINE_SEMICOLON = re.compile(r"(?<!^);[^\n]*", re.MULTILINE)
 
 KNOWN_ARCH_DIRS = {
     "x86", "x86-64", "32bits", "arm", "strongarm", "mips", "sparc", "ppc",
@@ -135,13 +190,22 @@ ARCH_NORMALISE = {
 
 
 def strip_comments(text: str) -> str:
-    """Strip C comments before hunting for a declaration -- a comment
+    """Strip comments before hunting for a declaration -- a comment
     between two concatenated string literals stops naive concatenation
     dead (found on Bind_TCP_Port.c: a trailing /* port number */ comment
     truncated extraction from 103 bytes to 4). Comments are removed
-    first so that trap can't happen."""
+    first so that trap can't happen.
+
+    Order matters: LEADING_SEMICOLON runs BEFORE the inline-comment
+    strip, so a ';'-prefixed multi-line hex-string block (see
+    LEADING_SEMICOLON's comment above) gets its line-start markers
+    removed and survives as real content, while a genuine inline
+    comment '; explanation' (';' not at line start) still gets stripped
+    by COMMENT_LINE_SEMICOLON afterward, same as it always should."""
     text = COMMENT_BLOCK.sub(" ", text)
     text = COMMENT_LINE.sub(" ", text)
+    text = LEADING_SEMICOLON.sub(" ", text)
+    text = COMMENT_LINE_SEMICOLON.sub(" ", text)
     return text
 
 
@@ -213,8 +277,44 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
     if bucket == "asm":
         # F2 fix (see module docstring): classify.py is right that this
         # is asm *format*, but recon.md's point stands -- "asm" must
-        # never silently mean "no bytes". Look for a bare \x run before
-        # giving up.
+        # never silently mean "no bytes".
+        #
+        # Try the real declaration-based extractor FIRST now (not just
+        # the bare loose-hex-run fallback). Reason: after strip_comments
+        # removes leading ';' markers (see LEADING_SEMICOLON), a file
+        # that classify.py correctly buckets as "asm" (it IS real NASM
+        # source -- BITS 64, global _start, etc, that classification is
+        # right) can ALSO contain a fully-formed 'char shellcode[] =
+        # "\x.." "\x..";' declaration that was just hidden behind a
+        # leading ';' on every line (documentation-style). Found on
+        # Linux/x86-64/add_user_with_passwd.c: before this fix, only the
+        # bare loose-blob path ran, which only grabbed one line's worth
+        # (15 bytes) because the (now-stripped) leading ';' on each
+        # continuation line broke the run. The declaration-based
+        # extractor, run on the SAME already-semicolon-stripped text,
+        # finds the real multi-line block properly (same machinery
+        # that's handled multi-line hex arrays correctly all along).
+        def decode_hex_literal(raw: str) -> bytes:
+            return bytes(int(h, 16) for h in HEX_ESCAPE.findall(raw))
+        decl_bytes = _best_declaration_bytes(text, decode_hex_literal)
+        if decl_bytes:
+            return decl_bytes
+
+        # Second fallback: quoted chunks joined by '+' (Perl/Python style
+        # concatenation, no 'char' keyword present so DECL never matches
+        # at all) -- see QUOTED_RUN_WITH_PLUS's comment above.
+        plus_runs = QUOTED_RUN_WITH_PLUS.findall(text)
+        if plus_runs:
+            best_plus = b""
+            for run_text in QUOTED_RUN_WITH_PLUS.finditer(text):
+                chunks = [decode_hex_literal(lit.group(1))
+                          for lit in STRING_LITERAL.finditer(run_text.group(0))]
+                candidate = b"".join(chunks)
+                if len(candidate) > len(best_plus):
+                    best_plus = candidate
+            if best_plus:
+                return best_plus
+
         runs = LOOSE_HEX_RUN.findall(text)
         if not runs:
             return b""
