@@ -5,21 +5,19 @@ corpus.py
 Selects N from manifest.json and writes corpus.json — the frozen set the
 validation run is performed over.
 
-Three jobs, in order:
+Two jobs, in order:
 
   1. FILTER    to what is in scope: os == linux, arch in {x86, x86_64}, and
                bytes actually extracted. See docs/scope.md.
 
-  2. NORMALISE to the vocabulary in docs/schema.md. manifest.py emits the raw
-               directory names ("Linux", "x86-64") and its own key names; the
-               schema mandates "linux", "x86_64", and path/length/bytes/format.
-               The translation happens here, at the boundary, so nothing
-               downstream of corpus.json ever sees the un-normalised form.
-
-  3. SELECT    ~N, spread across effect categories and both architectures
+  2. SELECT    ~N, spread across effect categories and both architectures
                rather than picked for likelihood of passing. The deliverable
                is a failure taxonomy; a corpus of clean execve payloads yields
                one bucket and no signal.
+
+There is deliberately no normalisation step. manifest.py emits the
+docs/schema.md vocabulary directly, so records are consumed as they are
+found.
 
 Selection is deterministic — same manifest in, same corpus out, so the
 committed file diffs cleanly when the mirror changes.
@@ -35,8 +33,8 @@ from pathlib import Path
 
 # --- scope ------------------------------------------------------------------
 
-ARCH_NORMALISE = {"x86": "x86", "x86-64": "x86_64"}   # docs/schema.md vocabulary
-OS_NORMALISE = {"Linux": "linux"}
+IN_SCOPE_OS = "linux"
+IN_SCOPE_ARCH = ("x86", "x86_64")
 
 # --- effect categories ------------------------------------------------------
 # Derived from docs/classes.md. Ordered: first match wins, so the more specific
@@ -58,8 +56,23 @@ RULES = [
 ]
 
 
+def _match_text(claimed_effect: str) -> str:
+    """
+    Filename form -> matchable text: drop the .c, underscores to spaces.
+
+    manifest.py stores claimed_effect as the raw filename
+    ("Read_-etc-passwd.c"). RULES is written against prose, and two of its
+    patterns match on a trailing space, so matching against the raw form
+    would silently stop firing. Derived on the fly rather than stored --
+    the category it produces is already on the record, and a second stored
+    field would only be able to disagree with the first.
+    """
+    stem = claimed_effect.rsplit(".", 1)[0]
+    return re.sub(r"\s+", " ", stem.replace("_", " ")).strip().lower()
+
+
 def categorise(claimed_effect: str) -> str:
-    s = claimed_effect.lower()
+    s = _match_text(claimed_effect)
     for name, pattern in RULES:
         if re.search(pattern, s):
             return name
@@ -87,6 +100,34 @@ def doc_ratio(path: Path) -> float:
     return comment / len(text)
 
 
+ESCAPE = re.compile(r"\\x[0-9a-fA-F]{2}")
+
+
+def truncated(path: Path, bucket: str, length: int) -> bool:
+    """
+    True if far fewer bytes came out than the source obviously contains.
+
+    Guards one known defect in manifest.py's F2 handling: LOOSE_HEX_RUN
+    matches a *contiguous* run of escapes and keeps only the longest, so a
+    payload printed as a `;`-prefixed comment block -- one line per 13 bytes,
+    which is how several x86_64 files in this mirror are written -- yields a
+    single line and silently discards the rest.
+
+    Deliberately narrow. Only the asm bucket is checked, because that is the
+    only place the longest-run behaviour applies; the hex and ascii paths read
+    a real declaration and are not affected. Remove this once the extractor is
+    fixed upstream -- it is a gate on untrustworthy input, not a second
+    extractor.
+    """
+    if bucket != "asm":
+        return False
+    try:
+        found = len(ESCAPE.findall(path.read_text(errors="replace")))
+    except OSError:
+        return False
+    return found > 0 and length < found
+
+
 def spread(items, k):
     """Take k items evenly spaced across a sorted list, always including both ends."""
     if k >= len(items):
@@ -107,29 +148,32 @@ def main():
 
     records = json.loads(Path(args.manifest).read_text())
 
-    # 1. filter + 2. normalise
+    # 1. filter
     pool = []
+    excluded = []
     for r in records:
-        if r["os"] not in OS_NORMALISE or r["arch"] not in ARCH_NORMALISE:
+        if r["os"] != IN_SCOPE_OS or r["arch"] not in IN_SCOPE_ARCH:
             continue
         if not r["supported"]:
             continue
-        path = r["source_file"]
+        src = Path(args.root) / r["path"]
+        if truncated(src, r["bucket"], r["length"]):
+            excluded.append(r["path"])
+            continue
         pool.append({
-            "path": path,
-            "os": OS_NORMALISE[r["os"]],
-            "arch": ARCH_NORMALISE[r["arch"]],
+            "path": r["path"],
+            "os": r["os"],
+            "arch": r["arch"],
             "claimed_effect": r["claimed_effect"],
             "category": categorise(r["claimed_effect"]),
-            "length": r["byte_count"],
-            "bytes": r["bytes_hex"],
-            "source_title": Path(path).name,
-            "format": r["bucket"],
-            "doc_ratio": round(doc_ratio(Path(args.root) / path), 3),
+            "length": r["length"],
+            "bytes": r["bytes"],
+            "bucket": r["bucket"],
+            "doc_ratio": round(doc_ratio(Path(args.root) / r["path"]), 3),
             "flags": [],
         })
 
-    # 3. select
+    # 2. select
     by_cat = defaultdict(list)
     for r in pool:
         by_cat[r["category"]].append(r)
@@ -171,6 +215,12 @@ def main():
     Path(args.out).write_text(json.dumps(selected, indent=2) + "\n")
 
     # summary
+    if excluded:
+        print(f"EXCLUDED {len(excluded)} record(s) with truncated extraction "
+              f"(see truncated() -- upstream defect in manifest.py):")
+        for e in excluded:
+            print(f"  {e}")
+        print()
     print(f"pool (in scope, bytes extracted): {len(pool)}")
     print(f"selected: {len(selected)} -> {args.out}\n")
     print(f"{'category':16} {'pool':>5} {'sel':>4} {'x86':>4} {'x86_64':>7}")
