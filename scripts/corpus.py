@@ -17,7 +17,7 @@ Two jobs, in order:
 
 There is deliberately no normalisation step. manifest.py emits the
 docs/schema.md vocabulary directly, so records are consumed as they are
-found.
+found. The manifest is checked for freshness first -- see check_fresh().
 
 Selection is deterministic — same manifest in, same corpus out, so the
 committed file diffs cleanly when the mirror changes.
@@ -100,34 +100,6 @@ def doc_ratio(path: Path) -> float:
     return comment / len(text)
 
 
-ESCAPE = re.compile(r"\\x[0-9a-fA-F]{2}")
-
-
-def truncated(path: Path, bucket: str, length: int) -> bool:
-    """
-    True if far fewer bytes came out than the source obviously contains.
-
-    Guards one known defect in manifest.py's F2 handling: LOOSE_HEX_RUN
-    matches a *contiguous* run of escapes and keeps only the longest, so a
-    payload printed as a `;`-prefixed comment block -- one line per 13 bytes,
-    which is how several x86_64 files in this mirror are written -- yields a
-    single line and silently discards the rest.
-
-    Deliberately narrow. Only the asm bucket is checked, because that is the
-    only place the longest-run behaviour applies; the hex and ascii paths read
-    a real declaration and are not affected. Remove this once the extractor is
-    fixed upstream -- it is a gate on untrustworthy input, not a second
-    extractor.
-    """
-    if bucket != "asm":
-        return False
-    try:
-        found = len(ESCAPE.findall(path.read_text(errors="replace")))
-    except OSError:
-        return False
-    return found > 0 and length < found
-
-
 # Smallest payload that could possibly implement each effect. Only categories
 # where "too short to be real" is a matter of physics are listed: a socket
 # plus bind/listen/accept plus dup2 plus execve cannot fit in 20 bytes, and
@@ -147,13 +119,14 @@ def implausible(category: str, length: int) -> bool:
     """
     True if the payload is too short to be what it claims.
 
-    Catches extraction failures that the truncated() check cannot see because
-    they happen in the hex bucket, where the extractor reads a real (but
-    wrong) declaration rather than a partial one. The live example is
-    Linux/x86/connect_back&send;&exit;_-etc-shadow.c, which yields 2 bytes:
-    its file documents a `char shellcode[]="\x31\xdb"` snippet inside a `;`
-    asm comment, and comment stripping upstream only handles /* */ and //, so
-    the snippet is matched as the declaration.
+    A backstop against extraction regressions. It excludes nothing on the
+    current manifest -- the case it was written for,
+    Linux/x86/connect_back&send;&exit;_-etc-shadow.c, extracted 2 bytes when
+    `;` comments went unstripped and a documentation snippet was read as the
+    declaration; it now extracts its full 155. The check is kept because it
+    reasons about the payload rather than about the extractor, so it stays
+    valid as the extractor changes, and because a silently short payload
+    enters the taxonomy as a broken shellcode rather than as a broken tool.
 
     A ratio test was tried first and rejected -- extracted-versus-present
     ratios form a continuous distribution in which real egghunters (16%) sit
@@ -175,13 +148,47 @@ def spread(items, k):
     return [items[round(i * step)] for i in range(k)]
 
 
+def check_fresh(manifest: Path, generator: Path) -> str | None:
+    """
+    Return a complaint if the manifest is older than the tool that writes it.
+
+    corpus.py consumes manifest.json as a file rather than importing
+    manifest.py, so nothing structurally ties the two together and a manifest
+    left over from a previous version of the extractor reads as perfectly
+    valid. That has happened three times: once the key names had changed and
+    the scope filter would have matched nothing, and twice the extraction
+    itself had improved and the corpus was selected from superseded bytes. In
+    none of those cases was an error raised.
+
+    mtime is a crude signal but the right one here -- a checkout or a rebase
+    that brings in a new extractor touches its mtime, which is exactly the
+    condition worth refusing on.
+    """
+    if not manifest.exists() or not generator.exists():
+        return None
+    if generator.stat().st_mtime <= manifest.stat().st_mtime:
+        return None
+    return (f"{manifest} is older than {generator}.\n"
+            f"The manifest was produced by a previous version of the "
+            f"extractor; regenerate it first:\n"
+            f"    python3 {generator} . --out {manifest}\n"
+            f"Pass --allow-stale to select from it anyway.")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", default="manifest.json")
     ap.add_argument("--out", default="corpus.json")
     ap.add_argument("-n", type=int, default=60)
     ap.add_argument("--root", default=".")
+    ap.add_argument("--allow-stale", action="store_true",
+                    help="select even if the manifest predates the extractor")
     args = ap.parse_args()
+
+    complaint = check_fresh(Path(args.manifest),
+                            Path(__file__).parent / "manifest.py")
+    if complaint and not args.allow_stale:
+        raise SystemExit(f"REFUSING: {complaint}")
 
     records = json.loads(Path(args.manifest).read_text())
 
@@ -195,9 +202,6 @@ def main():
             continue
         src = Path(args.root) / r["path"]
         category = categorise(r["claimed_effect"])
-        if truncated(src, r["bucket"], r["length"]):
-            excluded.append(("truncated", r["path"], r["length"]))
-            continue
         if implausible(category, r["length"]):
             excluded.append(("implausible", r["path"], r["length"]))
             continue
@@ -257,7 +261,7 @@ def main():
     # summary
     if excluded:
         print(f"EXCLUDED {len(excluded)} record(s) -- upstream extraction "
-              f"defects in manifest.py, see truncated() and implausible():")
+              f"defects in manifest.py, see implausible():")
         for reason, path, length in sorted(excluded):
             print(f"  {reason:12} {length:4}b  {path}")
         print()

