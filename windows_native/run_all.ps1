@@ -192,12 +192,20 @@ $reason = "unknown"
 
 if ($loaderExitCode -eq "OUTER_TIMEOUT" -or $loaderExitCode -eq "4") {
     $verdict = "inconclusive"; $reason = "timeout"
-} elseif ($loaderExitCode -ne "0") {
-    $verdict = "inconclusive"; $reason = "emulator_error"
 } elseif ($events.Count -eq 0) {
     $verdict = "fail"; $reason = "no_syscalls"
 } elseif ($Category -eq "winexec_cmd") {
-    $winexec = $events | Where-Object { $_.Operation -eq "Process Create" -and $_.Detail -match "cmd" }
+    # Checking .Path, not .Detail -- confirmed the hard way on the first
+    # real capture: "Process Create" events carry the target executable
+    # in the Path column ("C:\Windows\SysWOW64\cmd.exe"), Detail was
+    # empty for this operation type. Also NOT gating on loaderExitCode
+    # here anymore (see the note above the exit-code read, further up in
+    # this script) -- a real ExitProcess() call from the shellcode tears
+    # down the whole loader process before main()'s own clean-exit path
+    # runs, so the exit code is unreliable exactly in the success case
+    # where the shellcode did what it claimed. Trust what Procmon
+    # actually observed over an ambiguous process exit code.
+    $winexec = $events | Where-Object { $_.Operation -eq "Process Create" -and $_.Path -match "cmd" }
     if ($winexec) { $verdict = "pass"; $reason = "ok" }
     else { $verdict = "fail"; $reason = "wrong_syscall" }
 } else {
