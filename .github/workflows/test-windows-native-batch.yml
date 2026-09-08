@@ -1,0 +1,46 @@
+name: Test Windows Native Harness (Batch)
+
+# Manual trigger only -- same reasoning as test-windows-native.yml: this
+# runs real, unmodified shellcode bytes on windows-latest, one after
+# another, sharing a single Procmon capture. Untested batch-specific
+# logic (see run_batch.ps1's module docstring) -- not something to wire
+# to automatic triggers until a real run has been confirmed clean.
+on:
+  workflow_dispatch:
+    inputs:
+      max_files:
+        description: "Max number of Windows shellcodes to test (0 = all)"
+        required: false
+        default: "5"
+      arch:
+        description: "x86 or x64"
+        required: false
+        default: "x86"
+
+jobs:
+  run-native-windows-batch:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run the batch native harness
+        shell: powershell
+        continue-on-error: true
+        run: |
+          .\windows_native\run_batch.ps1 `
+            -ManifestPath manifest.json `
+            -MaxFiles ${{ github.event.inputs.max_files }} `
+            -Arch "${{ github.event.inputs.arch }}" `
+            -WorkDir "${{ github.workspace }}\run_out"
+
+      - name: Upload capture + report (runs even if the step above failed)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-windows-batch-capture
+          path: |
+            run_out\*.csv
+            run_out\*.pml
+            run_out\*.json
+            run_out\sc_*.bin
+          if-no-files-found: warn
