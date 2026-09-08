@@ -185,7 +185,35 @@ while ((Get-Process -Name "Procmon","Procmon64" -ErrorAction SilentlyContinue)) 
 }
 $csvPath = Join-Path $WorkDir "batch_capture.csv"
 & $procmonExe /OpenLog "$pmlPath" /SaveAs "$csvPath" /Quiet /AcceptEula
-Start-Sleep -Seconds 2
+
+# /SaveAs, same as /Terminate earlier, does not block until the
+# underlying work is actually done -- confirmed the hard way: a fixed
+# Start-Sleep that was enough for the single-file version wasn't enough
+# here (bigger combined CSV from 5 runs). Poll for the file to actually
+# be openable instead of guessing a sleep duration -- same principle as
+# the Procmon-process-exit poll loop above, applied to the file handle
+# instead of the process.
+function Wait-FileReady {
+    param([string]$Path, [int]$TimeoutSeconds = 30)
+    $waited = 0
+    while ($waited -lt $TimeoutSeconds) {
+        if (Test-Path $Path) {
+            try {
+                $stream = [System.IO.File]::Open($Path, 'Open', 'Read', 'None')
+                $stream.Close()
+                return $true
+            } catch {
+                # still locked by whatever background process /SaveAs spawned
+            }
+        }
+        Start-Sleep -Seconds 1
+        $waited++
+    }
+    return $false
+}
+if (-not (Wait-FileReady -Path $csvPath -TimeoutSeconds 30)) {
+    Write-Warning "CSV file still locked/missing after 30s -- proceeding anyway, Import-Csv may fail"
+}
 Remove-NetFirewallRule -DisplayName $ruleNameOut -ErrorAction SilentlyContinue | Out-Null
 Remove-NetFirewallRule -DisplayName $ruleNameIn -ErrorAction SilentlyContinue | Out-Null
 
