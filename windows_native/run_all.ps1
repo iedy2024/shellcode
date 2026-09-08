@@ -124,9 +124,26 @@ if (-not $finished) {
     Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
     $loaderExitCode = "OUTER_TIMEOUT"
 } else {
+    # .NET gotcha, confirmed the hard way on the first real run (exit
+    # code came back BLANK): WaitForExit(int) returning true does not
+    # guarantee .ExitCode is synced yet. The documented fix is calling
+    # the PARAMETERLESS WaitForExit() once more right after -- it
+    # returns instantly since the process has already exited, but it
+    # forces the Process object to flush/sync exit state before
+    # .ExitCode is read.
+    $proc.WaitForExit()
     $loaderExitCode = "$($proc.ExitCode)"
 }
 Write-Host "    loader exit code: $loaderExitCode"
+
+# Small settling delay before telling Procmon to stop -- confirmed the
+# hard way that starting Procmon and terminating it again within well
+# under a second (as happened when the loader itself finishes almost
+# immediately) can leave Procmon in a state where /Terminate doesn't
+# cleanly stop it (30s poll timeout hit on the first real run). Giving
+# it a couple of seconds of breathing room before asking it to stop is
+# a cheap, low-risk thing to try first before something more invasive.
+Start-Sleep -Seconds 2
 
 # =====================================================================
 # STEP 6: stop Procmon, export CSV, clean up the firewall rule
@@ -135,8 +152,12 @@ Write-Host "[6/7] Stopping Procmon and exporting CSV"
 & $procmonExe /Terminate
 $waited = 0
 while ((Get-Process -Name "Procmon","Procmon64" -ErrorAction SilentlyContinue)) {
+    if ($waited -ge 15) {
+        Write-Warning "Procmon still running after 15s -- retrying /Terminate once more"
+        & $procmonExe /Terminate
+    }
     if ($waited -ge 30) {
-        Write-Warning "Procmon did not exit after 30s of polling -- capture may be incomplete"
+        Write-Warning "Procmon did not exit after 30s total -- capture may be incomplete"
         break
     }
     Start-Sleep -Seconds 1
