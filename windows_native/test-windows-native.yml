@@ -1,0 +1,60 @@
+name: Test Windows Native Harness
+
+# Manual trigger only (workflow_dispatch), on purpose -- this exercises
+# real execution of shellcode bytes on windows-latest (see
+# windows_native/loader.c and run_all.ps1's module docstrings for why:
+# not emulated, actually runs, network blocked + non-admin as the safety
+# net instead of instruction-level interception). Not something to fire
+# automatically on every push while it's still unverified end to end --
+# switch this to `push`/`pull_request` only once a real run has been
+# confirmed clean, not before.
+on:
+  workflow_dispatch:
+    inputs:
+      hex_bytes:
+        description: "Shellcode as hex (leave empty for the embedded WinExec ground-truth sample)"
+        required: false
+        default: ""
+      category:
+        description: "Category for the verdict checker (winexec_cmd is the only one implemented so far)"
+        required: false
+        default: "winexec_cmd"
+      arch:
+        description: "x86 or x64"
+        required: false
+        default: "x86"
+
+jobs:
+  run-native-windows-harness:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run the all-in-one native harness
+        shell: powershell
+        # continue-on-error: this is the FIRST real run of an untested
+        # script -- we want the artifact-upload step below to run
+        # regardless of whether this succeeds, fails, or partially
+        # completes, so we can actually see what happened instead of
+        # just a red X with no logs.
+        continue-on-error: true
+        run: |
+          .\windows_native\run_all.ps1 `
+            -HexBytes "${{ github.event.inputs.hex_bytes }}" `
+            -Category "${{ github.event.inputs.category }}" `
+            -Arch "${{ github.event.inputs.arch }}" `
+            -WorkDir "${{ github.workspace }}\run_out"
+
+      - name: Upload capture + logs (runs even if the step above failed)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-windows-capture
+          path: |
+            run_out\*.csv
+            run_out\*.pml
+            run_out\*.bin
+          if-no-files-found: warn  # don't fail the whole job just because
+                                    # nothing was produced -- that's exactly
+                                    # the kind of information this first
+                                    # test run needs to surface, not hide

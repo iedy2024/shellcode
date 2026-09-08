@@ -2,3 +2,4 @@ __pycache__/
 CLAUDE.md
 notes.md
 scripts/getshellcode.py
+rootfs/
