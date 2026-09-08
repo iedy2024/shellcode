@@ -112,6 +112,18 @@ Start-Process -FilePath $procmonExe -ArgumentList `
     "/AcceptEula /Quiet /Minimized /BackingFile `"$pmlPath`""
 & $procmonExe /WaitForIdle | Out-Null
 
+# /WaitForIdle returning does not necessarily mean Procmon is ACTUALLY
+# intercepting kernel events yet -- confirmed the hard way: a run where
+# the loader's whole lifetime was under 200ms (it calls a real
+# ExitProcess() almost immediately, same reason the exit-code read is
+# unreliable -- see below) produced ZERO captured events despite the
+# shellcode visibly running (a real cmd.exe window still appeared in the
+# log). Giving Procmon a few real seconds of settling time after
+# /WaitForIdle, before the loader even starts, is a cheap hedge against
+# that race -- cheaper than trying to prove exactly how long Procmon's
+# internal startup takes.
+Start-Sleep -Seconds 3
+
 # =====================================================================
 # STEP 5: run the loader with a timeout
 # =====================================================================
@@ -179,7 +191,13 @@ if (-not (Test-Path $csvPath)) {
 # =====================================================================
 Write-Host "[7/7] Parsing capture and computing verdict"
 $allEvents = Import-Csv -Path $csvPath
-$events = $allEvents | Where-Object { $_.'Process Name' -like "*loader*" }
+# PID match, not name match -- "Process Name" -like "*loader*" worked so
+# far, but a name-based filter is inherently less precise than the exact
+# PID we already captured from Start-Process earlier ($proc.Id). Fixed
+# proactively during a full re-read, not because it caused an observed
+# failure yet -- cheap to get right now rather than debug later if two
+# processes ever share part of a name on some runner image.
+$events = $allEvents | Where-Object { $_.PID -eq "$($proc.Id)" }
 
 Write-Host ""
 Write-Host "--- $($events.Count) event(s) attributed to the loader process ---"
