@@ -239,3 +239,14 @@ $result = [ordered]@{
     work_dir = $WorkDir
 }
 $result | ConvertTo-Json
+
+# Explicit exit 0 -- without this, PowerShell/the CI step inherits
+# whatever exit code was left over from the LAST external command
+# invoked (Procmon, most likely), even when our own verdict computation
+# above completed correctly. Confirmed the hard way: a run that printed
+# a fully correct "pass"/"ok" result still showed the GitHub Actions
+# step as failed (exit code 1) because of this. This script's own
+# success/failure as reported to CI should reflect whether IT completed
+# its job (produced a verdict), not whatever state an external tool
+# happened to leave behind.
+exit 0
