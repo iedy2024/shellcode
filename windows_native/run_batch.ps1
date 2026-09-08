@@ -229,9 +229,18 @@ if (-not (Test-Path $csvPath)) {
 Write-Host "[8/8] Parsing combined capture and splitting by file"
 $allEvents = Import-Csv -Path $csvPath
 
+# Group ONCE by PID instead of filtering the full event array separately
+# for every file -- confirmed the hard way: with 15 files this step took
+# nearly 2 minutes (repeated Where-Object scans over the same array,
+# O(files x events) instead of O(events)). Group-Object builds a
+# PID -> events lookup in one pass; indexing into it per file afterward
+# is cheap. Matters more as the file count grows toward the full ~41.
+$eventsByPid = $allEvents | Group-Object -Property PID -AsHashTable -AsString
+
 $results = @()
 foreach ($run in $runLog) {
-    $events = $allEvents | Where-Object { $_.PID -eq "$($run.Pid_)" }
+    $events = $eventsByPid["$($run.Pid_)"]
+    if ($null -eq $events) { $events = @() }
     $results += [PSCustomObject]@{
         path = $run.Path
         exit_code = $run.ExitCode
