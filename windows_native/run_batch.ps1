@@ -65,7 +65,7 @@ if ($Arch -eq "x86") {
 # =====================================================================
 Write-Host "[2/8] Loading manifest: $ManifestPath"
 $manifest = Get-Content -Raw -Path $ManifestPath | ConvertFrom-Json
-$records = $manifest | Where-Object { $_.os -eq "windows" -and $_.supported -eq $true }
+$records = $manifest | Where-Object { $_.os -in @("windows","windows-64") -and $_.supported -eq $true }
 if ($OnlyPaths.Count -gt 0) {
     $records = $records | Where-Object { $OnlyPaths -contains $_.path }
 }
@@ -274,5 +274,63 @@ $reportPath = Join-Path $WorkDir "batch_report.json"
 $results | ConvertTo-Json -Depth 5 | Out-File -FilePath $reportPath -Encoding utf8
 Write-Host ""
 Write-Host "Full report written to: $reportPath"
+
+# =====================================================================
+# Classification + summary -- coarse, not a real pass/fail verdict (no
+# per-file category exists in manifest.json to check against, same
+# limitation noted throughout this whole batch approach). Buckets by
+# what's directly observable:
+#   crashed          -- WerFault.exe was launched (Windows' own crash
+#                        handler; unambiguous signal, not a guess)
+#   real_activity     -- notable events present, no crash seen
+#   no_notable_activity -- ran, but nothing in the watched operation set
+#                        fired (could still have done something outside
+#                        that set -- see the full CSV for the real
+#                        picture, this is a coarse triage aid only)
+# =====================================================================
+$crashed = @($results | Where-Object { $_.notable_events.path -contains "C:\Windows\SysWOW64\WerFault.exe" -or $_.notable_events.path -contains "C:\Windows\System32\WerFault.exe" })
+$realActivity = @($results | Where-Object { $_.notable_events.Count -gt 0 -and $_ -notin $crashed })
+$noActivity = @($results | Where-Object { $_.notable_events.Count -eq 0 })
+
+Write-Host ""
+Write-Host "=== SUMMARY ==="
+Write-Host "  $($results.Count) total"
+Write-Host "  $($crashed.Count) crashed (WerFault.exe launched)"
+Write-Host "  $($realActivity.Count) real observed activity, no crash"
+Write-Host "  $($noActivity.Count) no notable activity captured"
+
+# Write to GitHub's step summary if running in Actions -- shows up
+# directly on the run's summary page, no artifact download needed.
+if ($env:GITHUB_STEP_SUMMARY) {
+    $md = @()
+    $md += "## Native Windows batch results"
+    $md += ""
+    $md += "| | Count |"
+    $md += "|---|---|"
+    $md += "| Total | $($results.Count) |"
+    $md += "| Crashed (WerFault.exe) | $($crashed.Count) |"
+    $md += "| Real activity, no crash | $($realActivity.Count) |"
+    $md += "| No notable activity captured | $($noActivity.Count) |"
+    $md += ""
+    if ($realActivity.Count -gt 0) {
+        $md += "### Real activity, no crash"
+        foreach ($r in $realActivity) {
+            $md += "- **$($r.path)** -- $($r.notable_events.Count) notable event(s)"
+        }
+        $md += ""
+    }
+    if ($noActivity.Count -gt 0) {
+        $md += "### No notable activity captured"
+        foreach ($r in $noActivity) {
+            $md += "- $($r.path) ($($r.event_count) total events, none in the watched set)"
+        }
+        $md += ""
+    }
+    $md += "### Crashed"
+    foreach ($r in $crashed) {
+        $md += "- $($r.path)"
+    }
+    $md -join "`n" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+}
 
 exit 0
