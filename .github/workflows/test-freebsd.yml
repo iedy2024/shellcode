@@ -1,0 +1,27 @@
+name: Test FreeBSD Harness
+
+# Manual trigger for now, same caution as the Windows workflows when
+# they were new -- this one is lower-risk (pure Qiling emulation, no
+# real execution, already confirmed working with self_test() passing
+# 2/2 before this workflow existed), so once a real CI run confirms it
+# behaves the same way here as it did locally, this is a reasonable
+# candidate to switch to push/pull_request triggers, unlike the native
+# Windows workflows which should probably stay manual.
+on:
+  workflow_dispatch:
+
+jobs:
+  freebsd-self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Qiling 1.4.6 (pinned -- 1.4.11 regression, see freebsd_harness.py)
+        run: pip install "qiling==1.4.6"
+
+      - name: Run FreeBSD harness self-test
+        run: python3 scripts/freebsd_harness.py --self-test

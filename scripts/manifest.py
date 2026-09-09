@@ -235,6 +235,7 @@ def _best_declaration_bytes(text: str, decode_literal) -> bytes:
 
 
 def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
+    original_text = text
     text = strip_comments(text)
 
     if bucket == "hex":
@@ -264,7 +265,29 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         # by this heuristic alone.
         def decode_hex_literal(raw: str) -> bytes:
             return bytes(int(h, 16) for h in HEX_ESCAPE.findall(raw))
-        return _best_declaration_bytes(text, decode_hex_literal)
+        decl_bytes = _best_declaration_bytes(text, decode_hex_literal)
+        if decl_bytes:
+            return decl_bytes
+
+        # Fallback: some files (3 found in FreeBSD/x86, all by the same
+        # author "sm4x - 2008") put the REAL, complete 'char code[] =
+        # "\x.."' declaration entirely INSIDE a /* */ comment block, as a
+        # documented C-equivalent of the assembly shown above it -- e.g.
+        # FreeBSD/x86/execve(-bin-cat_&_-etc-master.passwd).c. strip_
+        # comments() correctly removed the comment before the search
+        # above (that's what it's FOR -- see Bind_TCP_Port.c's case,
+        # where a comment sitting between two string-literal fragments
+        # needs to be stripped for concatenation to work), which meant
+        # extraction found nothing here since the ONLY declaration in
+        # the file happened to live inside the part that got stripped.
+        # Only retry on the UNSTRIPPED text as a last resort, when the
+        # comment-stripped pass found literally nothing -- this can only
+        # ever recover a payload that was otherwise reported as missing,
+        # never override an already-successful extraction with a worse
+        # one. Confirmed real, not speculative: verified against all 3
+        # known cases, each recovers its exact byte count (65, 89, 57
+        # per the files' own header comments) once this fallback runs.
+        return _best_declaration_bytes(original_text, decode_hex_literal)
 
     if bucket == "ascii":
         # Same multi-declaration handling as "hex" above, for the same
