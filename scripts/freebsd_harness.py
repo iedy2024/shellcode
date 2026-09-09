@@ -541,10 +541,13 @@ def main() -> int:
     records.sort(key=lambda r: r["path"])
 
     counts = {"pass": 0, "fail": 0, "inconclusive": 0, "no_bytes": 0}
+    all_results = []  # kept for the GITHUB_STEP_SUMMARY table below
     for r in records:
         if not r["supported"]:
             print(f"RESULT {r['path']} n/a no_bytes 0")
             counts["no_bytes"] += 1
+            all_results.append({"path": r["path"], "verdict": "n/a",
+                                 "reason": "no_bytes", "syscalls": 0})
             continue
         arch = "x86_64" if "x86-64" in r["path"] else "x86"
         payload = bytes.fromhex(r["bytes"])
@@ -558,12 +561,44 @@ def main() -> int:
         result = validate(payload, arch, "freebsd", r["path"], category)
         print(result_line(r["path"], result))
         counts[result["verdict"]] = counts.get(result["verdict"], 0) + 1
+        all_results.append({"path": r["path"], "verdict": result["verdict"],
+                             "reason": result["reason"],
+                             "syscalls": len(result["syscalls"])})
 
     print()
     print(f"=== {len(records)} FreeBSD files: "
           f"{counts['pass']} pass, {counts['fail']} fail, "
           f"{counts['inconclusive']} inconclusive, "
           f"{counts['no_bytes']} no_bytes (extraction failed) ===")
+
+    # Same pattern as the Windows native harness's run_batch.ps1: write a
+    # markdown summary to GitHub's step summary when running in Actions,
+    # so results show up directly on the run page instead of only in
+    # raw log lines.
+    import os
+    step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if step_summary:
+        lines = []
+        lines.append("## FreeBSD harness results")
+        lines.append("")
+        lines.append("| | Count |")
+        lines.append("|---|---|")
+        lines.append(f"| Total | {len(records)} |")
+        lines.append(f"| Pass | {counts['pass']} |")
+        lines.append(f"| Fail | {counts['fail']} |")
+        lines.append(f"| Inconclusive | {counts['inconclusive']} |")
+        lines.append(f"| No bytes (extraction failed) | {counts['no_bytes']} |")
+        lines.append("")
+        lines.append("| Path | Verdict | Reason | Syscalls |")
+        lines.append("|---|---|---|---|")
+        for r in all_results:
+            verdict_icon = {"pass": "✅", "fail": "❌",
+                             "inconclusive": "❓", "n/a": "⬛"}.get(r["verdict"], "")
+            lines.append(f"| {r['path']} | {verdict_icon} {r['verdict']} "
+                          f"| {r['reason']} | {r['syscalls']} |")
+        with open(step_summary, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+
     return 0
 
 

