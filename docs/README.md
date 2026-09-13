@@ -11,7 +11,7 @@ Academic practicum project — automated framework for validating whether shellc
 
 The corpus contains ~480 shellcode files, each claiming an effect via its filename (`execve_-bin-sh.c`, `Bind_TCP_Port.c`, etc.) or a comment. Filenames and comments are not proof — a file could be mislabeled, broken, or simply not do what it says. This project runs each shellcode in an emulator (or, where emulation isn't trustworthy, real hardware) and checks whether the *actual observed behaviour* (the syscalls it made) matches the claim.
 
-Every result is one of three verdicts, defined in [`docs/schema.md`](docs/schema.md):
+Every result is one of three verdicts, defined in [`docs/schema.md`](schema.md):
 
 | Verdict | Meaning |
 |---|---|
@@ -19,7 +19,7 @@ Every result is one of three verdicts, defined in [`docs/schema.md`](docs/schema
 | `fail` | The harness got a trustworthy observation, and it contradicts the claim — a statement about the **shellcode** |
 | `inconclusive` | The harness could not get a trustworthy observation — a statement about the **harness**, not the shellcode |
 
-The scope frozen in [`docs/scope.md`](docs/scope.md) is **Linux, x86/x86-64, N≈60 curated files**. Everything else in this repo (Windows, FreeBSD, a partial macOS investigation) is validated extra coverage beyond that frozen scope, not a requirement.
+The scope frozen in [`docs/scope.md`](scope.md) is **Linux, x86/x86-64, N≈60 curated files**. Everything else in this repo (Windows, FreeBSD, a partial macOS investigation) is validated extra coverage beyond that frozen scope, not a requirement.
 
 ## Repo layout
 
