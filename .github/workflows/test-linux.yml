@@ -1,0 +1,35 @@
+name: Test Linux Harness
+
+on:
+  workflow_dispatch:
+
+jobs:
+  linux-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Qiling
+        run: pip install qiling
+
+      - name: Self-test (ground truth gate)
+        run: python3 scripts/harness.py --self-test
+
+      - name: Run curated corpus (corpus.json, real verdicts)
+        run: python3 scripts/harness.py --corpus corpus.json --skip-self-test | tee /tmp/corpus_out.txt
+
+      - name: Run full in-scope manifest (all ~259 Linux x86/x86_64 files, heuristic categories where corpus.json has none)
+        run: python3 scripts/harness.py --manifest manifest.json --corpus corpus.json --skip-self-test --guess-categories | tee /tmp/manifest_out.txt
+
+      - name: Upload full results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-harness-results
+          path: |
+            /tmp/corpus_out.txt
+            /tmp/manifest_out.txt
