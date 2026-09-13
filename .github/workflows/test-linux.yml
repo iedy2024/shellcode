@@ -1,7 +1,25 @@
 name: Test Linux Harness
 
+# Runs automatically when the files it actually depends on change, not on
+# every push -- safe to automate (pure Qiling emulation, no real host
+# execution, ~2s runtime) unlike the native Windows workflows, which stay
+# manual-trigger-only for exactly the opposite reason (they run real
+# bytes on real windows-latest hardware).
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/harness.py"
+      - "scripts/manifest.py"
+      - "manifest.json"
+      - "corpus.json"
+      - ".github/workflows/test-linux.yml"
+  pull_request:
+    paths:
+      - "scripts/harness.py"
+      - "scripts/manifest.py"
+      - "manifest.json"
+      - "corpus.json"
 
 jobs:
   linux-harness:
