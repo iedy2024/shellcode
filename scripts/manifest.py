@@ -95,6 +95,49 @@ DECL = re.compile(r"""
 STRING_LITERAL = re.compile(r'"((?:\\.|[^"\\])*)"', re.DOTALL)
 HEX_ESCAPE = re.compile(r"\\x([0-9a-fA-F]{2})")
 
+
+def decode_mixed_c_string(raw: str) -> bytes:
+    """Decode a C string literal's content to raw bytes, handling BOTH
+    \\x.. hex escapes AND literal ASCII characters in the same string --
+    confirmed necessary on real corpus data, not hypothetical: found on
+    Linux/x86/stdin_re-open_and_-bin-sh_execute.c and 13 other corpus
+    files (9 of them in-scope Linux), all of which write short path
+    fragments like "/tty" or "/dev" as literal characters INSIDE a
+    string that's otherwise \\x-escaped -- valid C, since an ASCII
+    character literally already IS the byte value it represents, no
+    hex-escaping required. The previous decoder (HEX_ESCAPE.findall()
+    alone) only matched \\x.. escapes and silently DROPPED every literal
+    character, which doesn't just lose a few bytes -- it corrupts the
+    alignment of every instruction after the drop. Confirmed on
+    stdin_re-open...c specifically: the old decoder produced a
+    disassembly with a stray `leave` instruction mid-payload and a
+    nonsense pushed value, while this decoder reproduces the file's own
+    documented disassembly (close/open("/dev/tty")/execve("/bin/sh"))
+    exactly. Walks the string once, left to right, consuming either a
+    \\x.. escape, a common named C escape, or a single literal character
+    at each step -- standard C string literal semantics, not a shortcut."""
+    out = bytearray()
+    i = 0
+    n = len(raw)
+    while i < n:
+        if raw[i] == "\\" and i + 3 < n and raw[i + 1] == "x":
+            try:
+                out.append(int(raw[i + 2:i + 4], 16))
+                i += 4
+                continue
+            except ValueError:
+                pass  # looked like \x.. but wasn't valid hex -- fall through
+        if raw[i] == "\\" and i + 1 < n:
+            named = {"n": 0x0A, "t": 0x09, "r": 0x0D, "0": 0x00,
+                     "\\": 0x5C, '"': 0x22, "'": 0x27}
+            if raw[i + 1] in named:
+                out.append(named[raw[i + 1]])
+                i += 2
+                continue
+        out.append(ord(raw[i]) & 0xFF)
+        i += 1
+    return bytes(out)
+
 # F2 fix: a run of \xNN escapes with NO quotes required at all -- the
 # blob in these files sits bare after a "Shellcode:" label (see
 # Linux/x86-64/Read_-etc-passwd.c, recon.md's named example). Threshold
@@ -189,6 +232,49 @@ ARCH_NORMALISE = {
 }
 
 
+def _strip_line_comments_string_aware(text: str) -> str:
+    """Replacement for COMMENT_LINE.sub() -- strips '//...' to end of
+    line, but NOT when the '//' is inside an active (unescaped) double-
+    quoted string literal.
+
+    Confirmed necessary on real corpus data: "/bin//sh" is a common
+    shellcode idiom (the doubled slash pads the string to a length
+    divisible by 4, a classic NUL-byte-avoidance/alignment trick), and
+    the blind regex `//[^\\n]*` treated the `//` inside
+    "\\x68//sh\\x68/bin..." as a line comment, silently deleting
+    everything after it on that line -- which, on
+    Linux/x86/stdin_re-open_and_-bin-sh_execute.c, ate the ENTIRE final
+    execve() portion of the payload (the close()+open() portion earlier
+    in the same declaration decoded fine, since its slashes happened to
+    fall inside a quoted "/tty"/"/dev" with no adjacent second slash).
+    Tracks in-string state per line by toggling on each unescaped '"',
+    which is enough for this corpus's style (no literal newlines inside
+    a single string, quotes always properly closed per line) without
+    needing a full C tokenizer."""
+    out_lines = []
+    for line in text.split("\n"):
+        in_string = False
+        i = 0
+        n = len(line)
+        cut_at = None
+        while i < n:
+            ch = line[i]
+            if ch == "\\" and in_string:
+                i += 2  # skip an escaped character inside a string --
+                         # e.g. \" must not toggle in_string
+                continue
+            if ch == '"':
+                in_string = not in_string
+                i += 1
+                continue
+            if not in_string and ch == "/" and i + 1 < n and line[i + 1] == "/":
+                cut_at = i
+                break
+            i += 1
+        out_lines.append(line[:cut_at] if cut_at is not None else line)
+    return "\n".join(out_lines)
+
+
 def strip_comments(text: str) -> str:
     """Strip comments before hunting for a declaration -- a comment
     between two concatenated string literals stops naive concatenation
@@ -203,13 +289,13 @@ def strip_comments(text: str) -> str:
     comment '; explanation' (';' not at line start) still gets stripped
     by COMMENT_LINE_SEMICOLON afterward, same as it always should."""
     text = COMMENT_BLOCK.sub(" ", text)
-    text = COMMENT_LINE.sub(" ", text)
+    text = _strip_line_comments_string_aware(text)
     text = LEADING_SEMICOLON.sub(" ", text)
     text = COMMENT_LINE_SEMICOLON.sub(" ", text)
     return text
 
 
-def _best_declaration_bytes(text: str, decode_literal) -> bytes:
+def _best_declaration_bytes(text: str, decode_literal, require_hex_escape: bool = True) -> bytes:
     """Shared by the hex and ascii buckets: scan ALL char[]/char* declarations
     in the file (not just the first), decode each one's payload with
     `decode_literal`, and keep the best candidate -- longest wins, and on
@@ -224,10 +310,34 @@ def _best_declaration_bytes(text: str, decode_literal) -> bytes:
     the corpus today and it has a single declaration, so this was zero
     live impact -- but there's no reason for the two buckets to be
     inconsistent, and "it hasn't happened yet" isn't a reason to leave a
-    known bug pattern half-fixed."""
+    known bug pattern half-fixed.
+
+    require_hex_escape (default True, the hex/asm buckets' setting):
+    skip a fragment entirely (0 bytes) unless it has at least one real
+    \\x escape, regardless of what decode_literal would produce for it.
+    Found necessary the hard way, not preemptively: once decode_
+    mixed_c_string started correctly handling literal ASCII characters
+    mixed with \\x escapes, it ALSO started "successfully" decoding
+    unrelated pure-literal strings elsewhere in the same file (e.g. a
+    `char *ip_addr = "127.0.0.1"` a few lines from the real payload)
+    into 9 bytes of nonsense -- enough to short-circuit past the
+    comment-hidden-declaration fallback that would otherwise have found
+    the REAL 88-byte payload on
+    FreeBSD/x86/reverse_portbind_-bin-sh.c. A genuine regression, caught
+    by the existing regression suite before it reached anyone else.
+    MUST be False for the ascii bucket's caller, though -- ascii-armoured
+    shellcode is, by definition of that bucket, plain text with no \\x
+    escapes at all; requiring one there would make every ascii-bucket
+    fragment decode to nothing."""
     best = b""
     for m in DECL.finditer(text):
-        chunks = [decode_literal(lit.group(1)) for lit in STRING_LITERAL.finditer(m.group("body"))]
+        chunks = []
+        for lit in STRING_LITERAL.finditer(m.group("body")):
+            raw = lit.group(1)
+            if require_hex_escape and not HEX_ESCAPE.search(raw):
+                continue  # no real \x escape in this fragment -- not
+                          # shellcode data, skip it (see docstring)
+            chunks.append(decode_literal(raw))
         candidate = b"".join(chunks)
         if len(candidate) >= len(best):
             best = candidate
@@ -263,9 +373,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         # "later" is inherently more correct. All 17 multi-declaration
         # files are flagged as worth a manual pass, not treated as solved
         # by this heuristic alone.
-        def decode_hex_literal(raw: str) -> bytes:
-            return bytes(int(h, 16) for h in HEX_ESCAPE.findall(raw))
-        decl_bytes = _best_declaration_bytes(text, decode_hex_literal)
+        decl_bytes = _best_declaration_bytes(text, decode_mixed_c_string)
         if decl_bytes:
             return decl_bytes
 
@@ -287,7 +395,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         # one. Confirmed real, not speculative: verified against all 3
         # known cases, each recovers its exact byte count (65, 89, 57
         # per the files' own header comments) once this fallback runs.
-        return _best_declaration_bytes(original_text, decode_hex_literal)
+        return _best_declaration_bytes(original_text, decode_mixed_c_string)
 
     if bucket == "ascii":
         # Same multi-declaration handling as "hex" above, for the same
@@ -295,7 +403,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         # bucket was inconsistent until now.
         def decode_ascii_literal(raw: str) -> bytes:
             return raw.encode("latin-1", errors="replace")
-        return _best_declaration_bytes(text, decode_ascii_literal)
+        return _best_declaration_bytes(text, decode_ascii_literal, require_hex_escape=False)
 
     if bucket == "asm":
         # F2 fix (see module docstring): classify.py is right that this
@@ -317,9 +425,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         # extractor, run on the SAME already-semicolon-stripped text,
         # finds the real multi-line block properly (same machinery
         # that's handled multi-line hex arrays correctly all along).
-        def decode_hex_literal(raw: str) -> bytes:
-            return bytes(int(h, 16) for h in HEX_ESCAPE.findall(raw))
-        decl_bytes = _best_declaration_bytes(text, decode_hex_literal)
+        decl_bytes = _best_declaration_bytes(text, decode_mixed_c_string)
         if decl_bytes:
             return decl_bytes
 
@@ -330,7 +436,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         if plus_runs:
             best_plus = b""
             for run_text in QUOTED_RUN_WITH_PLUS.finditer(text):
-                chunks = [decode_hex_literal(lit.group(1))
+                chunks = [decode_mixed_c_string(lit.group(1))
                           for lit in STRING_LITERAL.finditer(run_text.group(0))]
                 candidate = b"".join(chunks)
                 if len(candidate) > len(best_plus):
@@ -342,7 +448,7 @@ def extract_bytes_for_bucket(text: str, bucket: str) -> bytes:
         if not runs:
             return b""
         longest = max(runs, key=len)
-        return bytes(int(h, 16) for h in HEX_ESCAPE.findall(longest))
+        return decode_mixed_c_string(longest)
 
     return b""  # other / empty -- genuinely nothing to extract
 
